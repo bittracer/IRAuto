@@ -88,6 +88,9 @@
 		A4F2F4B71A9F19230062ADAD /* musicplayer_icn-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F2F4B41A9F19230062ADAD /* musicplayer_icn-Small.png */; };
 		A4F2F4B81A9F19230062ADAD /* tv_icn-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F2F4B51A9F19230062ADAD /* tv_icn-Small.png */; };
 		A4F2F4BB1A9F43DE0062ADAD /* irkit-logo-h200.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F2F4BA1A9F43DE0062ADAD /* irkit-logo-h200.png */; };
+		CE6B79DB1AD28BC200BF9DFE /* celcius.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6B79DA1AD28BC200BF9DFE /* celcius.png */; };
+		CE6B79DF1AD28CA200BF9DFE /* notification_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6B79DE1AD28CA200BF9DFE /* notification_icn.png */; };
+		CE6B79E11AD28D6300BF9DFE /* celcius_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6B79E01AD28D6300BF9DFE /* celcius_icn.png */; };
 		D53B2A5CC634FD1EB6A9477E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E55D02A3BDF792F52CA7003 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -207,6 +210,9 @@
 		A4F2F4B51A9F19230062ADAD /* tv_icn-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tv_icn-Small.png"; sourceTree = "<group>"; };
 		A4F2F4BA1A9F43DE0062ADAD /* irkit-logo-h200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "irkit-logo-h200.png"; sourceTree = "<group>"; };
 		B0CB6737383D7379369D213A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CE6B79DA1AD28BC200BF9DFE /* celcius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = celcius.png; path = "../IRKIT/Vaibhavi/Icon 8/celcius.png"; sourceTree = "<group>"; };
+		CE6B79DE1AD28CA200BF9DFE /* notification_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notification_icn.png; path = "../IRKIT/Vaibhavi/Icon 26/notification_icn.png"; sourceTree = "<group>"; };
+		CE6B79E01AD28D6300BF9DFE /* celcius_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = celcius_icn.png; path = "../IRKIT/Vaibhavi/Icon 8/celcius_icn.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,7 +429,10 @@
 			children = (
 				A4C40F881AA5DF7F0083BE8C /* AC */,
 				A4C4A03B1AA72C17006F5E72 /* swipe.png */,
+				CE6B79DA1AD28BC200BF9DFE /* celcius.png */,
 				A4C4D1891AA44C940037FD60 /* back_btn-Small.png */,
+				CE6B79E01AD28D6300BF9DFE /* celcius_icn.png */,
+				CE6B79DE1AD28CA200BF9DFE /* notification_icn.png */,
 				A43E8A131A9CA35200665CDE /* profile_icn@3x.png */,
 				A4C5AC451A9C59CB006CFA65 /* Home@3x.png */,
 				A4C6FBFE1A970F4200AD7F21 /* LeftView */,
@@ -664,6 +673,7 @@
 				A4C40FAB1AA5E7620083BE8C /* turbo_icn@3x.png in Resources */,
 				A4C4A02C1AA6D3B9006F5E72 /* auto_active_icn-Small-50@2x.png in Resources */,
 				A4C4A0321AA6D3B9006F5E72 /* dry_active_icn-Small-50@2x.png in Resources */,
+				CE6B79DF1AD28CA200BF9DFE /* notification_icn.png in Resources */,
 				A4C40FAA1AA5E7620083BE8C /* timer_btn@3x.png in Resources */,
 				A4C40FAC1AA5E7620083BE8C /* off_btn@3x.png in Resources */,
 				A4C4A02E1AA6D3B9006F5E72 /* heat_icn-Small-50@2x.png in Resources */,
@@ -672,6 +682,7 @@
 				A4C4A03C1AA72C17006F5E72 /* swipe.png in Resources */,
 				A4C4A02F1AA6D3B9006F5E72 /* heat_active_icn-Small-50@2x.png in Resources */,
 				A4C6FC991A9754C400AD7F21 /* email_invalid-Small.png in Resources */,
+				CE6B79E11AD28D6300BF9DFE /* celcius_icn.png in Resources */,
 				A4C6558D1AA858A200B34FE1 /* minus.png in Resources */,
 				A4C6558F1AA858E400B34FE1 /* plus.png in Resources */,
 				A4C4A0341AA6FEA2006F5E72 /* timer.png in Resources */,
@@ -694,6 +705,7 @@
 				A4C6FC511A970F4300AD7F21 /* contact_icn-Small.png in Resources */,
 				A4C6FC9A1A9754C400AD7F21 /* call_valid-Small.png in Resources */,
 				A4E4BD501ACD258F00784732 /* swing_v_btn@3x.png in Resources */,
+				CE6B79DB1AD28BC200BF9DFE /* celcius.png in Resources */,
 				A4C6FC981A9754C400AD7F21 /* email_valid-Small.png in Resources */,
 				A4C4A02D1AA6D3B9006F5E72 /* cool_active_icn-Small-50@2x.png in Resources */,
 				A4F2F4B71A9F19230062ADAD /* musicplayer_icn-Small.png in Resources */,
