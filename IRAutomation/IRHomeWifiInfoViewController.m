@@ -32,7 +32,7 @@ static NSString *ssidCache = nil;
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
-    [self addPickerView];
+    [self initpickerView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -182,7 +182,7 @@ static NSString *ssidCache = nil;
 }
 
 
--(void)addPickerView{
+-(void)initpickerView{
     pickerArray = [[NSArray alloc]initWithObjects:@"NONE",
                    @"WPA2",@"WEP", nil];
    
