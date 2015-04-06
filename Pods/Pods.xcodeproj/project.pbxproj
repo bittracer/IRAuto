@@ -1,0 +1,1207 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05E62F370D4AB50244C8B5DE /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C365A1720D2217A459FD78 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		09030A0D123D9A25948AC06C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C973DE83967A2ABA809E03AD /* SystemConfiguration.framework */; };
+		09A68E771103092D0B1D7B41 /* IRPeripherals+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B08A1DBA72C29AB94E7F988E /* IRPeripherals+UIKit.h */; };
+		0A194762082B416C12A1E076 /* IRHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A29B827291F1F14E1F188D3B /* IRHTTPClient.h */; };
+		0D5C81454C209F4AF967C1C4 /* NSOperationQueue+HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 5676F3568403B8CB2ACEC1FE /* NSOperationQueue+HTTP.h */; };
+		1085544690710343AB7F2C91 /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EDCE9D2C68A9261632DE6B /* UIViewController+MMDrawerController.h */; };
+		139B9D2DFD965C6F123177A7 /* IRGuidePowerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F64FB0C040F8EBD83C45C347 /* IRGuidePowerViewController.h */; };
+		152A7BF4F2E439DD9E5AEE24 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4ED62AD4B7EB29AC42C96D /* Log.m */; };
+		162A54A58D69CE88A114B358 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06C3805C2697E865DC6A522 /* UIKit.framework */; };
+		182859DD3AB664CBB6903962 /* IRWifiEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE0E9F72D9E8F6E73E36F1 /* IRWifiEditViewController.m */; };
+		18541DEE241CF6DE6FCF423D /* IRSignalSendOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9238AE76CC91B6A419ECF /* IRSignalSendOperationQueue.m */; };
+		1B5A32AA620673CB37247189 /* IRHTTPClient+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C3235E58D00297E745A518 /* IRHTTPClient+UIKit.m */; };
+		20A9F619DAC48A815FB37D0A /* IRSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8E9CF4DD125498AFBD34F0 /* IRSignal.h */; };
+		2193B76392293520E67D7BBC /* IRHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D8622ED7DBFA654090CC3E4 /* IRHelper.h */; };
+		27AA7E92044B98D08A2ED0C5 /* Pods-MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2E9F9677BF4CB3627A0C67 /* Pods-MMDrawerController-dummy.m */; };
+		2A41398F846D4FA39D1221CD /* CRC8.c in Sources */ = {isa = PBXBuildFile; fileRef = DB125651DC20D927F5B2A594 /* CRC8.c */; };
+		2ABF2F5D6DAB9DEF355AD882 /* IRNewSignalScene1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFFA1AEE75E5620F11CAC74 /* IRNewSignalScene1ViewController.m */; };
+		2B6BEBDFE682C92F089887E4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B9C90519380C7B9A73BAE0 /* AVFoundation.framework */; };
+		2C2891E09F3D139741A8D874 /* IRGuidePowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BA8D634E1CE7B70B6EB93 /* IRGuidePowerViewController.m */; };
+		2CD95A2226422D22B5787127 /* IRGuideWifiViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 829D2DDDA87FC7BB6008C6F1 /* IRGuideWifiViewController.h */; };
+		315C127235499C5F20137B44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEE4B5B66E6328EC45E6D93 /* QuartzCore.framework */; };
+		39BFFDF896FDE8B0E0DBA21B /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = C1308CDD277409040A2590CC /* Log.h */; };
+		3B937F8C4C832484B8BCEFDA /* ISHTTPOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFD9B80FEA10F56D3551DA2 /* ISHTTPOperationQueue.h */; };
+		3D3646BA1C7771FC9291B878 /* IRNewSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBAE35B197F258D1DB15D4 /* IRNewSignalViewController.m */; };
+		3F78ED063630399FD40FDF17 /* IRPeripheralCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B27DC2BA218A342CBFBCC464 /* IRPeripheralCell.h */; };
+		40B1E4F99D962529D0217FD9 /* IRPeripheral.h in Headers */ = {isa = PBXBuildFile; fileRef = 48688E035DCA0A0A960FD2F3 /* IRPeripheral.h */; };
+		431230B7C9426C3BA98149D7 /* IRKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9FB0C7A6B87F21896E1775 /* IRKeys.h */; };
+		46911B5EBCF4A145EF27901B /* IRSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1F1256287125CF2FEBA1FE /* IRSearcher.m */; };
+		46A9997FCEEC292AC96A3F1B /* IRProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BF8719B942CDD6D1317DC49 /* IRProgressView.h */; };
+		46B7FBD706715C5E4C9670C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DFBF6C8011FEE7D87D4D66 /* CoreGraphics.framework */; };
+		46D869EC2C2EDD5096BF49CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674049FAA40792795CF70A7C /* Foundation.framework */; };
+		48057FD26F2EDA5126E4E389 /* IRPeripherals.m in Sources */ = {isa = PBXBuildFile; fileRef = A5407F4B2DE46DD3AE457E16 /* IRPeripherals.m */; };
+		489CEE73B57DAEDB22438D36 /* IRSignalNameEditViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AAE7959C6DF0B007FA1A6E3 /* IRSignalNameEditViewController.h */; };
+		499FFE6081A630E8FC9DAA72 /* IRSignalNameEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B6D3B216111CD8E3B7E5F /* IRSignalNameEditViewController.m */; };
+		4E0BD3B89E6E1E840AAEFA54 /* IRSignalSendOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 29218F59B94E89CE37FAD899 /* IRSignalSendOperationQueue.h */; };
+		4EFEA72C4D350BB5F4183E68 /* IRPeripheralNameEditViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 33A786E66576E14462188C05 /* IRPeripheralNameEditViewController.h */; };
+		4F2577503DEA4B402693F9AF /* IRWifiSecuritySelectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AFDE87C60E829FC38194E6E4 /* IRWifiSecuritySelectViewController.h */; };
+		523C87DDF794133276E1B822 /* IRViewHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C7A8D7D4623B7EE1F009 /* IRViewHelper.h */; };
+		53072593CC2CB773C66102CA /* IRKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 39FC2EF57A900EC8AB1F4E6A /* IRKit.h */; };
+		533350F9AD588C1D47551E40 /* IRSignals.m in Sources */ = {isa = PBXBuildFile; fileRef = F56AA842D28661C04AD2E101 /* IRSignals.m */; };
+		539E7DA56D9B508BF1E3778E /* IRPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EC46DF5FA64F78B9CF9D242 /* IRPersistentStore.h */; };
+		558FE951917F501C00EAF1A5 /* IRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF30BE23A9134E0192AB29 /* IRProgressView.m */; };
+		5732EB4101A5D7924B3F3899 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEE4B5B66E6328EC45E6D93 /* QuartzCore.framework */; };
+		57E4018479C543886C2E129B /* IRHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7622390BC7C451DC947B /* IRHTTPClient.m */; };
+		5AA43EE4BC175BC42D6C852E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674049FAA40792795CF70A7C /* Foundation.framework */; };
+		5DC23C805240F8008ED06D73 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA488398956063D7E2EB849 /* CoreTelephony.framework */; };
+		60EAB2A38FD666CBEF5AB1E1 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 49B5CA5BD57F711CAEC33137 /* MMDrawerBarButtonItem.h */; };
+		6472B83A33937C0B3863E8D2 /* IRFAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C62AD00D5430E078263CD9D /* IRFAQViewController.m */; };
+		6623F97D29DFD3E5F67E632A /* NSOperationQueue+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FC424E0EDAE853F8252A0D /* NSOperationQueue+HTTP.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		68B62863ADA4609D03775110 /* IRPeripheralNameEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8838BA0AC463F4099172B4 /* IRPeripheralNameEditViewController.m */; };
+		6C9E98D166D6C7EE53968BCD /* IRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBAF5B6D30D16CD6FB27029 /* IRHelper.m */; };
+		70E15CE0DEFD9B4A81A40F90 /* IRSignalSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4814A58243CAC72182FC74 /* IRSignalSequence.h */; };
+		72D397C7C33E3097E09C55B4 /* IRKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC26FFA52F04650AF150293 /* IRKit.m */; };
+		74F23901949D3079934D228B /* ISHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FD378C0CEF7F138ECEC787 /* ISHTTPOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7632E423F05F29792BB13A10 /* Pods-IRKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EC3D5B6D62799DB17E4EC6 /* Pods-IRKit-dummy.m */; };
+		777396796E4345ABA4FB54DD /* IRNewPeripheralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28651240C9E45A014D57107 /* IRNewPeripheralViewController.m */; };
+		7EA717A4F317B24C3C81AED5 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BE8B6B00AB926280C0028EC /* MMDrawerController.h */; };
+		806855C17EB44FA16BD466A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674049FAA40792795CF70A7C /* Foundation.framework */; };
+		838572C131E86F008A58E2BF /* IRReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FEBED3FE7CC707AE1F510D3 /* IRReachability.h */; };
+		84744E75C791F77053E9BDEF /* IRViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A8055020BC6610E9CA597F /* IRViewHelper.m */; };
+		87E129F971FC8C3997DE34B7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2E5FDAD54D8964E2BF6047 /* MediaPlayer.framework */; };
+		88809B84582AA46E960078B5 /* CRC8.h in Headers */ = {isa = PBXBuildFile; fileRef = 647A020AB665AF65DF6736F8 /* CRC8.h */; };
+		8D5B12F2CCFB1A10C427BEA1 /* IRHTTPOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E6CC72FE58E9CF5B3467C /* IRHTTPOperationQueue.m */; };
+		90EC55CFA905685CF31B471D /* IRHTTPOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = F401A2A5BF55747E9A09E1D5 /* IRHTTPOperationQueue.h */; };
+		93238560EA310BF5B32273FC /* IRPeripherals.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C04678FDD6203E79125217E /* IRPeripherals.h */; };
+		95C0628E0C0E81B0AD09AC96 /* IRHTTPJSONOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FF4E3D883F7C0C408F0604C /* IRHTTPJSONOperation.h */; };
+		97579A457563236020895535 /* IRSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD9C06D0616282D2AAFD83 /* IRSignal.m */; };
+		98E4910FEE81FB9D0CD65A59 /* IREditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F10FF3F19B407C6A99CE421C /* IREditCell.m */; };
+		9BAFA121BDE9312AAB66356F /* IRSignalSendOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EB23B438241F48418FE7C77 /* IRSignalSendOperation.h */; };
+		9E6B3E88F3DCDCEA8510E652 /* Pods-ISHTTPOperation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2852F045C78D7E591E70D848 /* Pods-ISHTTPOperation-dummy.m */; };
+		A16BEE669853CC2D8503B791 /* IRSignalSendOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01083DEBC2EDA9AE5B5311B3 /* IRSignalSendOperation.m */; };
+		A4B47064907DA728435FC308 /* IREditCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E7BDC62F3DF6BA4836A563A6 /* IREditCell.h */; };
+		A793A021199E635CE5B9178D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674049FAA40792795CF70A7C /* Foundation.framework */; };
+		A7BE987FED67C49A2B4C3D8F /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617E4BAA2CAF698DAE7D1416 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A7E1CFDF689FE2D27B19848E /* IRNewPeripheralViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B087018EE4632D4BF973B6CC /* IRNewPeripheralViewController.h */; };
+		A7F88A506F3AB00E13A08402 /* ISHTTPOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51227E4DF6BE8BC83111BBBC /* ISHTTPOperationQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A83E9DE4F599E1C7B231E269 /* IRUserDefaultsStore.h in Headers */ = {isa = PBXBuildFile; fileRef = B9191C214B105C37E448D255 /* IRUserDefaultsStore.h */; };
+		A8478A5E3F316FCC46F9FEC9 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C35668DFFB4BCA9AE2469A4C /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AC8DA30AAD5952C88615FFD8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 643D70F5146CAD8D7E1F17F6 /* AudioToolbox.framework */; };
+		ADB27DBFAC84593745EC8C9E /* IRNewSignalScene1ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BCF0E6C303C857129AF28458 /* IRNewSignalScene1ViewController.h */; };
+		AEBFA9AD5C5A6CA1894D4481 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D58F82CD0D0F2EB932A32C4 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B2485462C1930213456EEC28 /* IRViewCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCB47CC86BB8DE5DD20E75 /* IRViewCustomizer.m */; };
+		B5DE9AA0698F737091751104 /* IRFAQViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 289F685AC152E9AAF0290394 /* IRFAQViewController.h */; };
+		BCDE5281B68CD7F577103CA6 /* IRConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 18F844E2DFB6E16273886C37 /* IRConst.h */; };
+		C2FE82B7C7E9E68E887BA580 /* IRViewCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = D1D836CB831EB13C14A90FEA /* IRViewCustomizer.h */; };
+		C5C256E86A14E2535EB80B63 /* ISHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 81265302F2ECB365BE2BCA1A /* ISHTTPOperation.h */; };
+		C6B9A34260F4C88B2B217546 /* IRSearcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E704C2F64D8C2D4CE6F60D1 /* IRSearcher.h */; };
+		D8F73583D302B667BDE957E9 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 19B63A00881A0FB6FFF50C60 /* MMDrawerController+Subclass.h */; };
+		DA323760ED62C37D8F3F1E88 /* IRKit+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C28760605072C7D7F02256B /* IRKit+Internal.h */; };
+		DC234F999E84AE07E29634D6 /* IRNewSignalViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 913C5BDF7DF05D397544C608 /* IRNewSignalViewController.h */; };
+		E2570CF1833991172D3F1BF6 /* IRKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E795686E0C1907A0D05FE11 /* IRKeys.m */; };
+		E3352B5FC35D1E4775DE7D2C /* IRPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = A858543410F3D1153110457E /* IRPeripheral.m */; };
+		E37B72BF81AFBDF926D79ED2 /* IRWifiSecuritySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C00C56ACF47251F0D0F989 /* IRWifiSecuritySelectViewController.m */; };
+		E3E56DE5B07EF67A0C98E5DE /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E14C10DFCB076CB65A3F97 /* Pods-dummy.m */; };
+		E48B356FF7B3F8E466090D83 /* IRSignalSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4FB0A36F3480D30680FF03 /* IRSignalSequence.m */; };
+		E93B640C82EBD9EC418AC0B3 /* IRPeripheralCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 773A5D84B102D72A659FD887 /* IRPeripheralCell.m */; };
+		EA85BDACD98D81AFE093FA3A /* IRHTTPClient+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FD6B3A72DC22F8A44C5282A /* IRHTTPClient+UIKit.h */; };
+		F1A32B31D857EC68AF588E09 /* IRSignals.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F9DCF1A9CD44443DB89DEB /* IRSignals.h */; };
+		F2B1371197F4ED67078812FE /* IRWifiEditViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 061F7F7B52E992A1EE115CA2 /* IRWifiEditViewController.h */; };
+		F5445277EEBD1550BD6272C3 /* IRPeripherals+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C881E41D69471E41EF2C5336 /* IRPeripherals+UIKit.m */; };
+		F568AB2B3266059AE74BB052 /* IRReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB17819795D01F6883F0ACC /* IRReachability.m */; };
+		FA8EF361FDB76F0C22A25C62 /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = E951F55B25CF627356EDD566 /* MMDrawerVisualState.h */; };
+		FAC09D056BFB925AC15095C6 /* IRKit+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 30332FE2CFA7333636E969B1 /* IRKit+Internal.m */; };
+		FB2E8B8E4E4113AA7F58E7A2 /* IRUserDefaultsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EB2CA3A0ECD70B0194D282 /* IRUserDefaultsStore.m */; };
+		FCE3FFB65679A716EB109D5F /* IRHTTPJSONOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F191FA84499E43E8C55AA2 /* IRHTTPJSONOperation.m */; };
+		FF20A07E01B5327D64EFFCEA /* IRGuideWifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE1E57733684D23C0087293 /* IRGuideWifiViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		008CD9C0DAA55B63A7A5BF6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 473533926B0622E00B4727F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF5F2692164410CD62F8723D;
+			remoteInfo = "Pods-ISHTTPOperation";
+		};
+		1F70D673658915524A33D459 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 473533926B0622E00B4727F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B73C0AECB4209CC57451BE7;
+			remoteInfo = "Pods-IRKit";
+		};
+		774959F50C18405AF62576DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 473533926B0622E00B4727F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51B4079FAD55F42D62DCBE76;
+			remoteInfo = "Pods-MMDrawerController";
+		};
+		DC1D0075D57DBEC6E5CA5F88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 473533926B0622E00B4727F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF5F2692164410CD62F8723D;
+			remoteInfo = "Pods-ISHTTPOperation";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01083DEBC2EDA9AE5B5311B3 /* IRSignalSendOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRSignalSendOperation.m; path = IRKit/IRKit/IRSignalSendOperation.m; sourceTree = "<group>"; };
+		04EDCE9D2C68A9261632DE6B /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		061F7F7B52E992A1EE115CA2 /* IRWifiEditViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRWifiEditViewController.h; path = IRKit/IRKit/IRWifiEditViewController.h; sourceTree = "<group>"; };
+		07FD378C0CEF7F138ECEC787 /* ISHTTPOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ISHTTPOperation.m; path = ISHTTPOperation/ISHTTPOperation.m; sourceTree = "<group>"; };
+		0DB17819795D01F6883F0ACC /* IRReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRReachability.m; path = IRKit/IRKit/IRReachability.m; sourceTree = "<group>"; };
+		0E704C2F64D8C2D4CE6F60D1 /* IRSearcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRSearcher.h; path = IRKit/IRKit/IRSearcher.h; sourceTree = "<group>"; };
+		0F0179B6FA51164E313D0938 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0FD6B3A72DC22F8A44C5282A /* IRHTTPClient+UIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IRHTTPClient+UIKit.h"; path = "IRKit/IRKit/IRHTTPClient+UIKit.h"; sourceTree = "<group>"; };
+		0FF4E3D883F7C0C408F0604C /* IRHTTPJSONOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRHTTPJSONOperation.h; path = IRKit/IRKit/IRHTTPJSONOperation.h; sourceTree = "<group>"; };
+		11766A25B1EA017C3F5ACC3E /* Pods-ISHTTPOperation-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISHTTPOperation-Private.xcconfig"; sourceTree = "<group>"; };
+		12DFBF6C8011FEE7D87D4D66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		14FC424E0EDAE853F8252A0D /* NSOperationQueue+HTTP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSOperationQueue+HTTP.m"; path = "ISHTTPOperation/NSOperationQueue+HTTP.m"; sourceTree = "<group>"; };
+		15C00C56ACF47251F0D0F989 /* IRWifiSecuritySelectViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRWifiSecuritySelectViewController.m; path = IRKit/IRKit/IRWifiSecuritySelectViewController.m; sourceTree = "<group>"; };
+		18F844E2DFB6E16273886C37 /* IRConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRConst.h; path = IRKit/IRKit/IRConst.h; sourceTree = "<group>"; };
+		193CFD449CAE1AE94F7F68AA /* libPods-MMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMDrawerController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B63A00881A0FB6FFF50C60 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		1A4814A58243CAC72182FC74 /* IRSignalSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRSignalSequence.h; path = IRKit/IRKit/IRSignalSequence.h; sourceTree = "<group>"; };
+		1CF51A0134A43A7C74C663CE /* Pods-ISHTTPOperation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISHTTPOperation.xcconfig"; sourceTree = "<group>"; };
+		1F9FB0C7A6B87F21896E1775 /* IRKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRKeys.h; path = IRKit/IRKit/IRKeys.h; sourceTree = "<group>"; };
+		23F0CB6EFC5B393C404D609B /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		2852F045C78D7E591E70D848 /* Pods-ISHTTPOperation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ISHTTPOperation-dummy.m"; sourceTree = "<group>"; };
+		289F685AC152E9AAF0290394 /* IRFAQViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRFAQViewController.h; path = IRKit/IRKit/IRFAQViewController.h; sourceTree = "<group>"; };
+		29218F59B94E89CE37FAD899 /* IRSignalSendOperationQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRSignalSendOperationQueue.h; path = IRKit/IRKit/IRSignalSendOperationQueue.h; sourceTree = "<group>"; };
+		2BC26FFA52F04650AF150293 /* IRKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRKit.m; path = IRKit/IRKit/IRKit.m; sourceTree = "<group>"; };
+		2EAE0E9F72D9E8F6E73E36F1 /* IRWifiEditViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRWifiEditViewController.m; path = IRKit/IRKit/IRWifiEditViewController.m; sourceTree = "<group>"; };
+		2F1F1256287125CF2FEBA1FE /* IRSearcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRSearcher.m; path = IRKit/IRKit/IRSearcher.m; sourceTree = "<group>"; };
+		30332FE2CFA7333636E969B1 /* IRKit+Internal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IRKit+Internal.m"; path = "IRKit/IRKit/IRKit+Internal.m"; sourceTree = "<group>"; };
+		33A786E66576E14462188C05 /* IRPeripheralNameEditViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRPeripheralNameEditViewController.h; path = IRKit/IRKit/IRPeripheralNameEditViewController.h; sourceTree = "<group>"; };
+		39AD9C06D0616282D2AAFD83 /* IRSignal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRSignal.m; path = IRKit/IRKit/IRSignal.m; sourceTree = "<group>"; };
+		39B9C90519380C7B9A73BAE0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		39FC2EF57A900EC8AB1F4E6A /* IRKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRKit.h; path = IRKit/IRKit/IRKit.h; sourceTree = "<group>"; };
+		3ADE21E5DD97DD619643C46C /* Pods-IRKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IRKit-Private.xcconfig"; sourceTree = "<group>"; };
+		3C8838BA0AC463F4099172B4 /* IRPeripheralNameEditViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRPeripheralNameEditViewController.m; path = IRKit/IRKit/IRPeripheralNameEditViewController.m; sourceTree = "<group>"; };
+		3C8B6D3B216111CD8E3B7E5F /* IRSignalNameEditViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRSignalNameEditViewController.m; path = IRKit/IRKit/IRSignalNameEditViewController.m; sourceTree = "<group>"; };
+		3D8622ED7DBFA654090CC3E4 /* IRHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRHelper.h; path = IRKit/IRKit/IRHelper.h; sourceTree = "<group>"; };
+		3DCCB47CC86BB8DE5DD20E75 /* IRViewCustomizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRViewCustomizer.m; path = IRKit/IRKit/IRViewCustomizer.m; sourceTree = "<group>"; };
+		3DE9238AE76CC91B6A419ECF /* IRSignalSendOperationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRSignalSendOperationQueue.m; path = IRKit/IRKit/IRSignalSendOperationQueue.m; sourceTree = "<group>"; };
+		3E795686E0C1907A0D05FE11 /* IRKeys.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRKeys.m; path = IRKit/IRKit/IRKeys.m; sourceTree = "<group>"; };
+		3E8E9CF4DD125498AFBD34F0 /* IRSignal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRSignal.h; path = IRKit/IRKit/IRSignal.h; sourceTree = "<group>"; };
+		3EC46DF5FA64F78B9CF9D242 /* IRPersistentStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRPersistentStore.h; path = IRKit/IRKit/IRPersistentStore.h; sourceTree = "<group>"; };
+		3FEBED3FE7CC707AE1F510D3 /* IRReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRReachability.h; path = IRKit/IRKit/IRReachability.h; sourceTree = "<group>"; };
+		427374E0663A9791B5F93AFF /* IRKit.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IRKit.bundle; path = IRKit/IRKit.bundle; sourceTree = "<group>"; };
+		47B1694B0EEFFF33575A6874 /* libPods-ISHTTPOperation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ISHTTPOperation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48688E035DCA0A0A960FD2F3 /* IRPeripheral.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRPeripheral.h; path = IRKit/IRKit/IRPeripheral.h; sourceTree = "<group>"; };
+		49B5CA5BD57F711CAEC33137 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		4AAE7959C6DF0B007FA1A6E3 /* IRSignalNameEditViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRSignalNameEditViewController.h; path = IRKit/IRKit/IRSignalNameEditViewController.h; sourceTree = "<group>"; };
+		4FF038BE0DBFAC1B1BC34C59 /* Pods-MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
+		51227E4DF6BE8BC83111BBBC /* ISHTTPOperationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ISHTTPOperationQueue.m; path = ISHTTPOperation/ISHTTPOperationQueue.m; sourceTree = "<group>"; };
+		5676F3568403B8CB2ACEC1FE /* NSOperationQueue+HTTP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSOperationQueue+HTTP.h"; path = "ISHTTPOperation/NSOperationQueue+HTTP.h"; sourceTree = "<group>"; };
+		589E6CC72FE58E9CF5B3467C /* IRHTTPOperationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRHTTPOperationQueue.m; path = IRKit/IRKit/IRHTTPOperationQueue.m; sourceTree = "<group>"; };
+		5B8C7622390BC7C451DC947B /* IRHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRHTTPClient.m; path = IRKit/IRKit/IRHTTPClient.m; sourceTree = "<group>"; };
+		5C04678FDD6203E79125217E /* IRPeripherals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRPeripherals.h; path = IRKit/IRKit/IRPeripherals.h; sourceTree = "<group>"; };
+		5EB23B438241F48418FE7C77 /* IRSignalSendOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRSignalSendOperation.h; path = IRKit/IRKit/IRSignalSendOperation.h; sourceTree = "<group>"; };
+		617E4BAA2CAF698DAE7D1416 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		643D70F5146CAD8D7E1F17F6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		647A020AB665AF65DF6736F8 /* CRC8.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRC8.h; path = IRKit/IRKit/CRC8.h; sourceTree = "<group>"; };
+		64C365A1720D2217A459FD78 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		674049FAA40792795CF70A7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6EFFA1AEE75E5620F11CAC74 /* IRNewSignalScene1ViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRNewSignalScene1ViewController.m; path = IRKit/IRKit/IRNewSignalScene1ViewController.m; sourceTree = "<group>"; };
+		773A5D84B102D72A659FD887 /* IRPeripheralCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRPeripheralCell.m; path = IRKit/IRKit/IRPeripheralCell.m; sourceTree = "<group>"; };
+		7ACD7FD5FBE99519D86B4A6F /* Pods-IRKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IRKit.xcconfig"; sourceTree = "<group>"; };
+		7BF8719B942CDD6D1317DC49 /* IRProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRProgressView.h; path = IRKit/IRKit/IRProgressView.h; sourceTree = "<group>"; };
+		7EEE4B5B66E6328EC45E6D93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		7FEBAE35B197F258D1DB15D4 /* IRNewSignalViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRNewSignalViewController.m; path = IRKit/IRKit/IRNewSignalViewController.m; sourceTree = "<group>"; };
+		81265302F2ECB365BE2BCA1A /* ISHTTPOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISHTTPOperation.h; path = ISHTTPOperation/ISHTTPOperation.h; sourceTree = "<group>"; };
+		829D2DDDA87FC7BB6008C6F1 /* IRGuideWifiViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRGuideWifiViewController.h; path = IRKit/IRKit/IRGuideWifiViewController.h; sourceTree = "<group>"; };
+		82E64308AEAC6B455B61FBD4 /* Pods-MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
+		856E7CD33E7A9D29E974353F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		8C2E5FDAD54D8964E2BF6047 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		8D4FB0A36F3480D30680FF03 /* IRSignalSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRSignalSequence.m; path = IRKit/IRKit/IRSignalSequence.m; sourceTree = "<group>"; };
+		8D58F82CD0D0F2EB932A32C4 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		913C5BDF7DF05D397544C608 /* IRNewSignalViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRNewSignalViewController.h; path = IRKit/IRKit/IRNewSignalViewController.h; sourceTree = "<group>"; };
+		91859307A08582941CDB4650 /* Pods-ISHTTPOperation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ISHTTPOperation-prefix.pch"; sourceTree = "<group>"; };
+		96E14C10DFCB076CB65A3F97 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		9BA8861DB9B67CBDDC8205AC /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		9BE8B6B00AB926280C0028EC /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+		9C28760605072C7D7F02256B /* IRKit+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IRKit+Internal.h"; path = "IRKit/IRKit/IRKit+Internal.h"; sourceTree = "<group>"; };
+		9C62AD00D5430E078263CD9D /* IRFAQViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRFAQViewController.m; path = IRKit/IRKit/IRFAQViewController.m; sourceTree = "<group>"; };
+		A1369176EE07F2385FBFFF63 /* Pods-MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MMDrawerController.xcconfig"; sourceTree = "<group>"; };
+		A29B827291F1F14E1F188D3B /* IRHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRHTTPClient.h; path = IRKit/IRKit/IRHTTPClient.h; sourceTree = "<group>"; };
+		A5407F4B2DE46DD3AE457E16 /* IRPeripherals.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRPeripherals.m; path = IRKit/IRKit/IRPeripherals.m; sourceTree = "<group>"; };
+		A6F191FA84499E43E8C55AA2 /* IRHTTPJSONOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRHTTPJSONOperation.m; path = IRKit/IRKit/IRHTTPJSONOperation.m; sourceTree = "<group>"; };
+		A7FF30BE23A9134E0192AB29 /* IRProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRProgressView.m; path = IRKit/IRKit/IRProgressView.m; sourceTree = "<group>"; };
+		A858543410F3D1153110457E /* IRPeripheral.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRPeripheral.m; path = IRKit/IRKit/IRPeripheral.m; sourceTree = "<group>"; };
+		A8734EA5F2A8CD88DB36C54E /* Pods-IRKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IRKit-prefix.pch"; sourceTree = "<group>"; };
+		AAFD9B80FEA10F56D3551DA2 /* ISHTTPOperationQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISHTTPOperationQueue.h; path = ISHTTPOperation/ISHTTPOperationQueue.h; sourceTree = "<group>"; };
+		ACBAF5B6D30D16CD6FB27029 /* IRHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRHelper.m; path = IRKit/IRKit/IRHelper.m; sourceTree = "<group>"; };
+		ADAC80500C43F29D3B9B9D5A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFDE87C60E829FC38194E6E4 /* IRWifiSecuritySelectViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRWifiSecuritySelectViewController.h; path = IRKit/IRKit/IRWifiSecuritySelectViewController.h; sourceTree = "<group>"; };
+		B087018EE4632D4BF973B6CC /* IRNewPeripheralViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRNewPeripheralViewController.h; path = IRKit/IRKit/IRNewPeripheralViewController.h; sourceTree = "<group>"; };
+		B08A1DBA72C29AB94E7F988E /* IRPeripherals+UIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IRPeripherals+UIKit.h"; path = "IRKit/IRKit/IRPeripherals+UIKit.h"; sourceTree = "<group>"; };
+		B27DC2BA218A342CBFBCC464 /* IRPeripheralCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRPeripheralCell.h; path = IRKit/IRKit/IRPeripheralCell.h; sourceTree = "<group>"; };
+		B9191C214B105C37E448D255 /* IRUserDefaultsStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRUserDefaultsStore.h; path = IRKit/IRKit/IRUserDefaultsStore.h; sourceTree = "<group>"; };
+		BCF0E6C303C857129AF28458 /* IRNewSignalScene1ViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRNewSignalScene1ViewController.h; path = IRKit/IRKit/IRNewSignalScene1ViewController.h; sourceTree = "<group>"; };
+		C088C7A8D7D4623B7EE1F009 /* IRViewHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRViewHelper.h; path = IRKit/IRKit/IRViewHelper.h; sourceTree = "<group>"; };
+		C1308CDD277409040A2590CC /* Log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Log.h; path = IRKit/IRKit/Log.h; sourceTree = "<group>"; };
+		C28651240C9E45A014D57107 /* IRNewPeripheralViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRNewPeripheralViewController.m; path = IRKit/IRKit/IRNewPeripheralViewController.m; sourceTree = "<group>"; };
+		C35668DFFB4BCA9AE2469A4C /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		C881E41D69471E41EF2C5336 /* IRPeripherals+UIKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IRPeripherals+UIKit.m"; path = "IRKit/IRKit/IRPeripherals+UIKit.m"; sourceTree = "<group>"; };
+		C973DE83967A2ABA809E03AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		D06C3805C2697E865DC6A522 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D1D836CB831EB13C14A90FEA /* IRViewCustomizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRViewCustomizer.h; path = IRKit/IRKit/IRViewCustomizer.h; sourceTree = "<group>"; };
+		D1EB2CA3A0ECD70B0194D282 /* IRUserDefaultsStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRUserDefaultsStore.m; path = IRKit/IRKit/IRUserDefaultsStore.m; sourceTree = "<group>"; };
+		D7F9DCF1A9CD44443DB89DEB /* IRSignals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRSignals.h; path = IRKit/IRKit/IRSignals.h; sourceTree = "<group>"; };
+		DB125651DC20D927F5B2A594 /* CRC8.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = CRC8.c; path = IRKit/IRKit/CRC8.c; sourceTree = "<group>"; };
+		DF4ED62AD4B7EB29AC42C96D /* Log.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Log.m; path = IRKit/IRKit/Log.m; sourceTree = "<group>"; };
+		E3C3235E58D00297E745A518 /* IRHTTPClient+UIKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IRHTTPClient+UIKit.m"; path = "IRKit/IRKit/IRHTTPClient+UIKit.m"; sourceTree = "<group>"; };
+		E7BDC62F3DF6BA4836A563A6 /* IREditCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IREditCell.h; path = IRKit/IRKit/IREditCell.h; sourceTree = "<group>"; };
+		E951F55B25CF627356EDD566 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		E9A8055020BC6610E9CA597F /* IRViewHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRViewHelper.m; path = IRKit/IRKit/IRViewHelper.m; sourceTree = "<group>"; };
+		EDE1E57733684D23C0087293 /* IRGuideWifiViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRGuideWifiViewController.m; path = IRKit/IRKit/IRGuideWifiViewController.m; sourceTree = "<group>"; };
+		EE1FDC757DA90B45B865C40E /* libPods-IRKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IRKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10FF3F19B407C6A99CE421C /* IREditCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IREditCell.m; path = IRKit/IRKit/IREditCell.m; sourceTree = "<group>"; };
+		F401A2A5BF55747E9A09E1D5 /* IRHTTPOperationQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRHTTPOperationQueue.h; path = IRKit/IRKit/IRHTTPOperationQueue.h; sourceTree = "<group>"; };
+		F47FBB7F2ECDB7C8373FB883 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F4EC3D5B6D62799DB17E4EC6 /* Pods-IRKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IRKit-dummy.m"; sourceTree = "<group>"; };
+		F55BA8D634E1CE7B70B6EB93 /* IRGuidePowerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRGuidePowerViewController.m; path = IRKit/IRKit/IRGuidePowerViewController.m; sourceTree = "<group>"; };
+		F56AA842D28661C04AD2E101 /* IRSignals.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRSignals.m; path = IRKit/IRKit/IRSignals.m; sourceTree = "<group>"; };
+		F64FB0C040F8EBD83C45C347 /* IRGuidePowerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRGuidePowerViewController.h; path = IRKit/IRKit/IRGuidePowerViewController.h; sourceTree = "<group>"; };
+		F6D0175733D1C6F4AD3C2160 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		FC2E9F9677BF4CB3627A0C67 /* Pods-MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MMDrawerController-dummy.m"; sourceTree = "<group>"; };
+		FDA488398956063D7E2EB849 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		FEE9A784A36F086630D77C88 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CD1A506907A801490ABC305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				806855C17EB44FA16BD466A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		508254FA15F2354F333AE846 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B6BEBDFE682C92F089887E4 /* AVFoundation.framework in Frameworks */,
+				AC8DA30AAD5952C88615FFD8 /* AudioToolbox.framework in Frameworks */,
+				46B7FBD706715C5E4C9670C5 /* CoreGraphics.framework in Frameworks */,
+				5DC23C805240F8008ED06D73 /* CoreTelephony.framework in Frameworks */,
+				A793A021199E635CE5B9178D /* Foundation.framework in Frameworks */,
+				87E129F971FC8C3997DE34B7 /* MediaPlayer.framework in Frameworks */,
+				5732EB4101A5D7924B3F3899 /* QuartzCore.framework in Frameworks */,
+				09030A0D123D9A25948AC06C /* SystemConfiguration.framework in Frameworks */,
+				162A54A58D69CE88A114B358 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD18BF20D0F187BFC53E1827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46D869EC2C2EDD5096BF49CB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB8184578B18D1181EDBB9B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AA43EE4BC175BC42D6C852E /* Foundation.framework in Frameworks */,
+				315C127235499C5F20137B44 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00B3DBF5D9D885662BB70EA5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				39B9C90519380C7B9A73BAE0 /* AVFoundation.framework */,
+				643D70F5146CAD8D7E1F17F6 /* AudioToolbox.framework */,
+				12DFBF6C8011FEE7D87D4D66 /* CoreGraphics.framework */,
+				FDA488398956063D7E2EB849 /* CoreTelephony.framework */,
+				674049FAA40792795CF70A7C /* Foundation.framework */,
+				8C2E5FDAD54D8964E2BF6047 /* MediaPlayer.framework */,
+				7EEE4B5B66E6328EC45E6D93 /* QuartzCore.framework */,
+				C973DE83967A2ABA809E03AD /* SystemConfiguration.framework */,
+				D06C3805C2697E865DC6A522 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		10077579234D3B0AB9033554 /* MMDrawerBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				49B5CA5BD57F711CAEC33137 /* MMDrawerBarButtonItem.h */,
+				C35668DFFB4BCA9AE2469A4C /* MMDrawerBarButtonItem.m */,
+			);
+			name = MMDrawerBarButtonItem;
+			sourceTree = "<group>";
+		};
+		1D0A1BB428B670D087878457 /* ISHTTPOperation */ = {
+			isa = PBXGroup;
+			children = (
+				81265302F2ECB365BE2BCA1A /* ISHTTPOperation.h */,
+				07FD378C0CEF7F138ECEC787 /* ISHTTPOperation.m */,
+				AAFD9B80FEA10F56D3551DA2 /* ISHTTPOperationQueue.h */,
+				51227E4DF6BE8BC83111BBBC /* ISHTTPOperationQueue.m */,
+				5676F3568403B8CB2ACEC1FE /* NSOperationQueue+HTTP.h */,
+				14FC424E0EDAE853F8252A0D /* NSOperationQueue+HTTP.m */,
+				21203A909FC36CCB2AD41C66 /* Support Files */,
+			);
+			path = ISHTTPOperation;
+			sourceTree = "<group>";
+		};
+		1DCFABB6D05E040D8195A982 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00B3DBF5D9D885662BB70EA5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21203A909FC36CCB2AD41C66 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CF51A0134A43A7C74C663CE /* Pods-ISHTTPOperation.xcconfig */,
+				11766A25B1EA017C3F5ACC3E /* Pods-ISHTTPOperation-Private.xcconfig */,
+				2852F045C78D7E591E70D848 /* Pods-ISHTTPOperation-dummy.m */,
+				91859307A08582941CDB4650 /* Pods-ISHTTPOperation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-ISHTTPOperation";
+			sourceTree = "<group>";
+		};
+		4EFB0E8201B288182138BA55 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1369176EE07F2385FBFFF63 /* Pods-MMDrawerController.xcconfig */,
+				4FF038BE0DBFAC1B1BC34C59 /* Pods-MMDrawerController-Private.xcconfig */,
+				FC2E9F9677BF4CB3627A0C67 /* Pods-MMDrawerController-dummy.m */,
+				82E64308AEAC6B455B61FBD4 /* Pods-MMDrawerController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MMDrawerController";
+			sourceTree = "<group>";
+		};
+		50EF6ABAB2F2C9B2B2E99BD7 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Subclass;
+			sourceTree = "<group>";
+		};
+		6603C4E66757F8AF860B2B55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F47FBB7F2ECDB7C8373FB883 /* Pods-acknowledgements.markdown */,
+				9BA8861DB9B67CBDDC8205AC /* Pods-acknowledgements.plist */,
+				96E14C10DFCB076CB65A3F97 /* Pods-dummy.m */,
+				F6D0175733D1C6F4AD3C2160 /* Pods-environment.h */,
+				23F0CB6EFC5B393C404D609B /* Pods-resources.sh */,
+				856E7CD33E7A9D29E974353F /* Pods.debug.xcconfig */,
+				FEE9A784A36F086630D77C88 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		717C235817EDDECA39268B17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				757A94DB18D1DAF94913327B /* IRKit */,
+				1D0A1BB428B670D087878457 /* ISHTTPOperation */,
+				C1DF8851BDA1C9005FD3FE2E /* MMDrawerController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		757A94DB18D1DAF94913327B /* IRKit */ = {
+			isa = PBXGroup;
+			children = (
+				DB125651DC20D927F5B2A594 /* CRC8.c */,
+				647A020AB665AF65DF6736F8 /* CRC8.h */,
+				18F844E2DFB6E16273886C37 /* IRConst.h */,
+				E7BDC62F3DF6BA4836A563A6 /* IREditCell.h */,
+				F10FF3F19B407C6A99CE421C /* IREditCell.m */,
+				289F685AC152E9AAF0290394 /* IRFAQViewController.h */,
+				9C62AD00D5430E078263CD9D /* IRFAQViewController.m */,
+				F64FB0C040F8EBD83C45C347 /* IRGuidePowerViewController.h */,
+				F55BA8D634E1CE7B70B6EB93 /* IRGuidePowerViewController.m */,
+				829D2DDDA87FC7BB6008C6F1 /* IRGuideWifiViewController.h */,
+				EDE1E57733684D23C0087293 /* IRGuideWifiViewController.m */,
+				A29B827291F1F14E1F188D3B /* IRHTTPClient.h */,
+				5B8C7622390BC7C451DC947B /* IRHTTPClient.m */,
+				0FD6B3A72DC22F8A44C5282A /* IRHTTPClient+UIKit.h */,
+				E3C3235E58D00297E745A518 /* IRHTTPClient+UIKit.m */,
+				0FF4E3D883F7C0C408F0604C /* IRHTTPJSONOperation.h */,
+				A6F191FA84499E43E8C55AA2 /* IRHTTPJSONOperation.m */,
+				F401A2A5BF55747E9A09E1D5 /* IRHTTPOperationQueue.h */,
+				589E6CC72FE58E9CF5B3467C /* IRHTTPOperationQueue.m */,
+				3D8622ED7DBFA654090CC3E4 /* IRHelper.h */,
+				ACBAF5B6D30D16CD6FB27029 /* IRHelper.m */,
+				1F9FB0C7A6B87F21896E1775 /* IRKeys.h */,
+				3E795686E0C1907A0D05FE11 /* IRKeys.m */,
+				39FC2EF57A900EC8AB1F4E6A /* IRKit.h */,
+				2BC26FFA52F04650AF150293 /* IRKit.m */,
+				9C28760605072C7D7F02256B /* IRKit+Internal.h */,
+				30332FE2CFA7333636E969B1 /* IRKit+Internal.m */,
+				B087018EE4632D4BF973B6CC /* IRNewPeripheralViewController.h */,
+				C28651240C9E45A014D57107 /* IRNewPeripheralViewController.m */,
+				BCF0E6C303C857129AF28458 /* IRNewSignalScene1ViewController.h */,
+				6EFFA1AEE75E5620F11CAC74 /* IRNewSignalScene1ViewController.m */,
+				913C5BDF7DF05D397544C608 /* IRNewSignalViewController.h */,
+				7FEBAE35B197F258D1DB15D4 /* IRNewSignalViewController.m */,
+				48688E035DCA0A0A960FD2F3 /* IRPeripheral.h */,
+				A858543410F3D1153110457E /* IRPeripheral.m */,
+				B27DC2BA218A342CBFBCC464 /* IRPeripheralCell.h */,
+				773A5D84B102D72A659FD887 /* IRPeripheralCell.m */,
+				33A786E66576E14462188C05 /* IRPeripheralNameEditViewController.h */,
+				3C8838BA0AC463F4099172B4 /* IRPeripheralNameEditViewController.m */,
+				5C04678FDD6203E79125217E /* IRPeripherals.h */,
+				A5407F4B2DE46DD3AE457E16 /* IRPeripherals.m */,
+				B08A1DBA72C29AB94E7F988E /* IRPeripherals+UIKit.h */,
+				C881E41D69471E41EF2C5336 /* IRPeripherals+UIKit.m */,
+				3EC46DF5FA64F78B9CF9D242 /* IRPersistentStore.h */,
+				7BF8719B942CDD6D1317DC49 /* IRProgressView.h */,
+				A7FF30BE23A9134E0192AB29 /* IRProgressView.m */,
+				3FEBED3FE7CC707AE1F510D3 /* IRReachability.h */,
+				0DB17819795D01F6883F0ACC /* IRReachability.m */,
+				0E704C2F64D8C2D4CE6F60D1 /* IRSearcher.h */,
+				2F1F1256287125CF2FEBA1FE /* IRSearcher.m */,
+				3E8E9CF4DD125498AFBD34F0 /* IRSignal.h */,
+				39AD9C06D0616282D2AAFD83 /* IRSignal.m */,
+				4AAE7959C6DF0B007FA1A6E3 /* IRSignalNameEditViewController.h */,
+				3C8B6D3B216111CD8E3B7E5F /* IRSignalNameEditViewController.m */,
+				5EB23B438241F48418FE7C77 /* IRSignalSendOperation.h */,
+				01083DEBC2EDA9AE5B5311B3 /* IRSignalSendOperation.m */,
+				29218F59B94E89CE37FAD899 /* IRSignalSendOperationQueue.h */,
+				3DE9238AE76CC91B6A419ECF /* IRSignalSendOperationQueue.m */,
+				1A4814A58243CAC72182FC74 /* IRSignalSequence.h */,
+				8D4FB0A36F3480D30680FF03 /* IRSignalSequence.m */,
+				D7F9DCF1A9CD44443DB89DEB /* IRSignals.h */,
+				F56AA842D28661C04AD2E101 /* IRSignals.m */,
+				B9191C214B105C37E448D255 /* IRUserDefaultsStore.h */,
+				D1EB2CA3A0ECD70B0194D282 /* IRUserDefaultsStore.m */,
+				D1D836CB831EB13C14A90FEA /* IRViewCustomizer.h */,
+				3DCCB47CC86BB8DE5DD20E75 /* IRViewCustomizer.m */,
+				C088C7A8D7D4623B7EE1F009 /* IRViewHelper.h */,
+				E9A8055020BC6610E9CA597F /* IRViewHelper.m */,
+				061F7F7B52E992A1EE115CA2 /* IRWifiEditViewController.h */,
+				2EAE0E9F72D9E8F6E73E36F1 /* IRWifiEditViewController.m */,
+				AFDE87C60E829FC38194E6E4 /* IRWifiSecuritySelectViewController.h */,
+				15C00C56ACF47251F0D0F989 /* IRWifiSecuritySelectViewController.m */,
+				C1308CDD277409040A2590CC /* Log.h */,
+				DF4ED62AD4B7EB29AC42C96D /* Log.m */,
+				ED9DF72049FA7E808F9BFD02 /* Resources */,
+				E8C57770E7EF2DBB5B506B5C /* Support Files */,
+			);
+			path = IRKit;
+			sourceTree = "<group>";
+		};
+		AD4D1B00696B1522C9FE81DF = {
+			isa = PBXGroup;
+			children = (
+				0F0179B6FA51164E313D0938 /* Podfile */,
+				1DCFABB6D05E040D8195A982 /* Frameworks */,
+				717C235817EDDECA39268B17 /* Pods */,
+				FF912392FD772A4686F3F8E4 /* Products */,
+				B2D7DE0C77ED40E8A1AABCE0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B2D7DE0C77ED40E8A1AABCE0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6603C4E66757F8AF860B2B55 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B95AD285D08ABB824FC99490 /* MMDrawerVisualStates */ = {
+			isa = PBXGroup;
+			children = (
+				E951F55B25CF627356EDD566 /* MMDrawerVisualState.h */,
+				8D58F82CD0D0F2EB932A32C4 /* MMDrawerVisualState.m */,
+			);
+			name = MMDrawerVisualStates;
+			sourceTree = "<group>";
+		};
+		C1DF8851BDA1C9005FD3FE2E /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				C309DD76501346BE94F6E478 /* Core */,
+				10077579234D3B0AB9033554 /* MMDrawerBarButtonItem */,
+				B95AD285D08ABB824FC99490 /* MMDrawerVisualStates */,
+				50EF6ABAB2F2C9B2B2E99BD7 /* Subclass */,
+				4EFB0E8201B288182138BA55 /* Support Files */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		C309DD76501346BE94F6E478 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9BE8B6B00AB926280C0028EC /* MMDrawerController.h */,
+				617E4BAA2CAF698DAE7D1416 /* MMDrawerController.m */,
+				19B63A00881A0FB6FFF50C60 /* MMDrawerController+Subclass.h */,
+				04EDCE9D2C68A9261632DE6B /* UIViewController+MMDrawerController.h */,
+				64C365A1720D2217A459FD78 /* UIViewController+MMDrawerController.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E8C57770E7EF2DBB5B506B5C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ACD7FD5FBE99519D86B4A6F /* Pods-IRKit.xcconfig */,
+				3ADE21E5DD97DD619643C46C /* Pods-IRKit-Private.xcconfig */,
+				F4EC3D5B6D62799DB17E4EC6 /* Pods-IRKit-dummy.m */,
+				A8734EA5F2A8CD88DB36C54E /* Pods-IRKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-IRKit";
+			sourceTree = "<group>";
+		};
+		ED9DF72049FA7E808F9BFD02 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				427374E0663A9791B5F93AFF /* IRKit.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FF912392FD772A4686F3F8E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADAC80500C43F29D3B9B9D5A /* libPods.a */,
+				EE1FDC757DA90B45B865C40E /* libPods-IRKit.a */,
+				47B1694B0EEFFF33575A6874 /* libPods-ISHTTPOperation.a */,
+				193CFD449CAE1AE94F7F68AA /* libPods-MMDrawerController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0253B973BC624CE844997813 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EAB2A38FD666CBEF5AB1E1 /* MMDrawerBarButtonItem.h in Headers */,
+				D8F73583D302B667BDE957E9 /* MMDrawerController+Subclass.h in Headers */,
+				7EA717A4F317B24C3C81AED5 /* MMDrawerController.h in Headers */,
+				FA8EF361FDB76F0C22A25C62 /* MMDrawerVisualState.h in Headers */,
+				1085544690710343AB7F2C91 /* UIViewController+MMDrawerController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F580733643F72DA8D73DD81 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5C256E86A14E2535EB80B63 /* ISHTTPOperation.h in Headers */,
+				3B937F8C4C832484B8BCEFDA /* ISHTTPOperationQueue.h in Headers */,
+				0D5C81454C209F4AF967C1C4 /* NSOperationQueue+HTTP.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D51044331FAC16ADB9CB2ABE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88809B84582AA46E960078B5 /* CRC8.h in Headers */,
+				BCDE5281B68CD7F577103CA6 /* IRConst.h in Headers */,
+				A4B47064907DA728435FC308 /* IREditCell.h in Headers */,
+				B5DE9AA0698F737091751104 /* IRFAQViewController.h in Headers */,
+				139B9D2DFD965C6F123177A7 /* IRGuidePowerViewController.h in Headers */,
+				2CD95A2226422D22B5787127 /* IRGuideWifiViewController.h in Headers */,
+				EA85BDACD98D81AFE093FA3A /* IRHTTPClient+UIKit.h in Headers */,
+				0A194762082B416C12A1E076 /* IRHTTPClient.h in Headers */,
+				95C0628E0C0E81B0AD09AC96 /* IRHTTPJSONOperation.h in Headers */,
+				90EC55CFA905685CF31B471D /* IRHTTPOperationQueue.h in Headers */,
+				2193B76392293520E67D7BBC /* IRHelper.h in Headers */,
+				431230B7C9426C3BA98149D7 /* IRKeys.h in Headers */,
+				DA323760ED62C37D8F3F1E88 /* IRKit+Internal.h in Headers */,
+				53072593CC2CB773C66102CA /* IRKit.h in Headers */,
+				A7E1CFDF689FE2D27B19848E /* IRNewPeripheralViewController.h in Headers */,
+				ADB27DBFAC84593745EC8C9E /* IRNewSignalScene1ViewController.h in Headers */,
+				DC234F999E84AE07E29634D6 /* IRNewSignalViewController.h in Headers */,
+				40B1E4F99D962529D0217FD9 /* IRPeripheral.h in Headers */,
+				3F78ED063630399FD40FDF17 /* IRPeripheralCell.h in Headers */,
+				4EFEA72C4D350BB5F4183E68 /* IRPeripheralNameEditViewController.h in Headers */,
+				09A68E771103092D0B1D7B41 /* IRPeripherals+UIKit.h in Headers */,
+				93238560EA310BF5B32273FC /* IRPeripherals.h in Headers */,
+				539E7DA56D9B508BF1E3778E /* IRPersistentStore.h in Headers */,
+				46A9997FCEEC292AC96A3F1B /* IRProgressView.h in Headers */,
+				838572C131E86F008A58E2BF /* IRReachability.h in Headers */,
+				C6B9A34260F4C88B2B217546 /* IRSearcher.h in Headers */,
+				20A9F619DAC48A815FB37D0A /* IRSignal.h in Headers */,
+				489CEE73B57DAEDB22438D36 /* IRSignalNameEditViewController.h in Headers */,
+				9BAFA121BDE9312AAB66356F /* IRSignalSendOperation.h in Headers */,
+				4E0BD3B89E6E1E840AAEFA54 /* IRSignalSendOperationQueue.h in Headers */,
+				70E15CE0DEFD9B4A81A40F90 /* IRSignalSequence.h in Headers */,
+				F1A32B31D857EC68AF588E09 /* IRSignals.h in Headers */,
+				A83E9DE4F599E1C7B231E269 /* IRUserDefaultsStore.h in Headers */,
+				C2FE82B7C7E9E68E887BA580 /* IRViewCustomizer.h in Headers */,
+				523C87DDF794133276E1B822 /* IRViewHelper.h in Headers */,
+				F2B1371197F4ED67078812FE /* IRWifiEditViewController.h in Headers */,
+				4F2577503DEA4B402693F9AF /* IRWifiSecuritySelectViewController.h in Headers */,
+				39BFFDF896FDE8B0E0DBA21B /* Log.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B73C0AECB4209CC57451BE7 /* Pods-IRKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B80751C90B400EFD2A9970C0 /* Build configuration list for PBXNativeTarget "Pods-IRKit" */;
+			buildPhases = (
+				7F39E0325D0183E8A9D4469F /* Sources */,
+				508254FA15F2354F333AE846 /* Frameworks */,
+				D51044331FAC16ADB9CB2ABE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B843EF76C93D5C5A317793A4 /* PBXTargetDependency */,
+			);
+			name = "Pods-IRKit";
+			productName = "Pods-IRKit";
+			productReference = EE1FDC757DA90B45B865C40E /* libPods-IRKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		51B4079FAD55F42D62DCBE76 /* Pods-MMDrawerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A416AEB33986B41151FC65F /* Build configuration list for PBXNativeTarget "Pods-MMDrawerController" */;
+			buildPhases = (
+				986133E8CFCB498193A1473C /* Sources */,
+				DB8184578B18D1181EDBB9B2 /* Frameworks */,
+				0253B973BC624CE844997813 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MMDrawerController";
+			productName = "Pods-MMDrawerController";
+			productReference = 193CFD449CAE1AE94F7F68AA /* libPods-MMDrawerController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B4147A3190998443B0A5171F /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5C087FAB57F97FB5A5F6A4F /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				8CE0E0227656D66342A87C23 /* Sources */,
+				CD18BF20D0F187BFC53E1827 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D712333F9F2F29392A32BD7B /* PBXTargetDependency */,
+				060A29A916C6F099D235991B /* PBXTargetDependency */,
+				BD9BC05DE560A2905E21DB43 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = ADAC80500C43F29D3B9B9D5A /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DF5F2692164410CD62F8723D /* Pods-ISHTTPOperation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6B3479BF19348FDDE1EF8EA /* Build configuration list for PBXNativeTarget "Pods-ISHTTPOperation" */;
+			buildPhases = (
+				8948E28574E0287710DF5B2B /* Sources */,
+				1CD1A506907A801490ABC305 /* Frameworks */,
+				2F580733643F72DA8D73DD81 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ISHTTPOperation";
+			productName = "Pods-ISHTTPOperation";
+			productReference = 47B1694B0EEFFF33575A6874 /* libPods-ISHTTPOperation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		473533926B0622E00B4727F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+			};
+			buildConfigurationList = D3AEE6F37A1D0720CA26AB7B /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AD4D1B00696B1522C9FE81DF;
+			productRefGroup = FF912392FD772A4686F3F8E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4147A3190998443B0A5171F /* Pods */,
+				4B73C0AECB4209CC57451BE7 /* Pods-IRKit */,
+				DF5F2692164410CD62F8723D /* Pods-ISHTTPOperation */,
+				51B4079FAD55F42D62DCBE76 /* Pods-MMDrawerController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F39E0325D0183E8A9D4469F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A41398F846D4FA39D1221CD /* CRC8.c in Sources */,
+				98E4910FEE81FB9D0CD65A59 /* IREditCell.m in Sources */,
+				6472B83A33937C0B3863E8D2 /* IRFAQViewController.m in Sources */,
+				2C2891E09F3D139741A8D874 /* IRGuidePowerViewController.m in Sources */,
+				FF20A07E01B5327D64EFFCEA /* IRGuideWifiViewController.m in Sources */,
+				1B5A32AA620673CB37247189 /* IRHTTPClient+UIKit.m in Sources */,
+				57E4018479C543886C2E129B /* IRHTTPClient.m in Sources */,
+				FCE3FFB65679A716EB109D5F /* IRHTTPJSONOperation.m in Sources */,
+				8D5B12F2CCFB1A10C427BEA1 /* IRHTTPOperationQueue.m in Sources */,
+				6C9E98D166D6C7EE53968BCD /* IRHelper.m in Sources */,
+				E2570CF1833991172D3F1BF6 /* IRKeys.m in Sources */,
+				FAC09D056BFB925AC15095C6 /* IRKit+Internal.m in Sources */,
+				72D397C7C33E3097E09C55B4 /* IRKit.m in Sources */,
+				777396796E4345ABA4FB54DD /* IRNewPeripheralViewController.m in Sources */,
+				2ABF2F5D6DAB9DEF355AD882 /* IRNewSignalScene1ViewController.m in Sources */,
+				3D3646BA1C7771FC9291B878 /* IRNewSignalViewController.m in Sources */,
+				E3352B5FC35D1E4775DE7D2C /* IRPeripheral.m in Sources */,
+				E93B640C82EBD9EC418AC0B3 /* IRPeripheralCell.m in Sources */,
+				68B62863ADA4609D03775110 /* IRPeripheralNameEditViewController.m in Sources */,
+				F5445277EEBD1550BD6272C3 /* IRPeripherals+UIKit.m in Sources */,
+				48057FD26F2EDA5126E4E389 /* IRPeripherals.m in Sources */,
+				558FE951917F501C00EAF1A5 /* IRProgressView.m in Sources */,
+				F568AB2B3266059AE74BB052 /* IRReachability.m in Sources */,
+				46911B5EBCF4A145EF27901B /* IRSearcher.m in Sources */,
+				97579A457563236020895535 /* IRSignal.m in Sources */,
+				499FFE6081A630E8FC9DAA72 /* IRSignalNameEditViewController.m in Sources */,
+				A16BEE669853CC2D8503B791 /* IRSignalSendOperation.m in Sources */,
+				18541DEE241CF6DE6FCF423D /* IRSignalSendOperationQueue.m in Sources */,
+				E48B356FF7B3F8E466090D83 /* IRSignalSequence.m in Sources */,
+				533350F9AD588C1D47551E40 /* IRSignals.m in Sources */,
+				FB2E8B8E4E4113AA7F58E7A2 /* IRUserDefaultsStore.m in Sources */,
+				B2485462C1930213456EEC28 /* IRViewCustomizer.m in Sources */,
+				84744E75C791F77053E9BDEF /* IRViewHelper.m in Sources */,
+				182859DD3AB664CBB6903962 /* IRWifiEditViewController.m in Sources */,
+				E37B72BF81AFBDF926D79ED2 /* IRWifiSecuritySelectViewController.m in Sources */,
+				152A7BF4F2E439DD9E5AEE24 /* Log.m in Sources */,
+				7632E423F05F29792BB13A10 /* Pods-IRKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8948E28574E0287710DF5B2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F23901949D3079934D228B /* ISHTTPOperation.m in Sources */,
+				A7F88A506F3AB00E13A08402 /* ISHTTPOperationQueue.m in Sources */,
+				6623F97D29DFD3E5F67E632A /* NSOperationQueue+HTTP.m in Sources */,
+				9E6B3E88F3DCDCEA8510E652 /* Pods-ISHTTPOperation-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CE0E0227656D66342A87C23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3E56DE5B07EF67A0C98E5DE /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		986133E8CFCB498193A1473C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8478A5E3F316FCC46F9FEC9 /* MMDrawerBarButtonItem.m in Sources */,
+				A7BE987FED67C49A2B4C3D8F /* MMDrawerController.m in Sources */,
+				AEBFA9AD5C5A6CA1894D4481 /* MMDrawerVisualState.m in Sources */,
+				27AA7E92044B98D08A2ED0C5 /* Pods-MMDrawerController-dummy.m in Sources */,
+				05E62F370D4AB50244C8B5DE /* UIViewController+MMDrawerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		060A29A916C6F099D235991B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ISHTTPOperation";
+			target = DF5F2692164410CD62F8723D /* Pods-ISHTTPOperation */;
+			targetProxy = 008CD9C0DAA55B63A7A5BF6C /* PBXContainerItemProxy */;
+		};
+		B843EF76C93D5C5A317793A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ISHTTPOperation";
+			target = DF5F2692164410CD62F8723D /* Pods-ISHTTPOperation */;
+			targetProxy = DC1D0075D57DBEC6E5CA5F88 /* PBXContainerItemProxy */;
+		};
+		BD9BC05DE560A2905E21DB43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MMDrawerController";
+			target = 51B4079FAD55F42D62DCBE76 /* Pods-MMDrawerController */;
+			targetProxy = 774959F50C18405AF62576DC /* PBXContainerItemProxy */;
+		};
+		D712333F9F2F29392A32BD7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-IRKit";
+			target = 4B73C0AECB4209CC57451BE7 /* Pods-IRKit */;
+			targetProxy = 1F70D673658915524A33D459 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2109227D7E11F63A674E1CD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FF038BE0DBFAC1B1BC34C59 /* Pods-MMDrawerController-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MMDrawerController/Pods-MMDrawerController-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36CE0C7A4A7286076C896DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F995D20EEA9D4C33FBE4F9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		8F624038D9B4BEB1F56D468C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE9A784A36F086630D77C88 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D4F057670C0ACC8DFAE5DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ADE21E5DD97DD619643C46C /* Pods-IRKit-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-IRKit/Pods-IRKit-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B6402A0C435872E1D982842B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11766A25B1EA017C3F5ACC3E /* Pods-ISHTTPOperation-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ISHTTPOperation/Pods-ISHTTPOperation-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B8BE0A64B76749DD0019DF1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ADE21E5DD97DD619643C46C /* Pods-IRKit-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-IRKit/Pods-IRKit-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BD892FEB269C3A3B833C8B1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856E7CD33E7A9D29E974353F /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C3F384BD805CF25E872F0569 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FF038BE0DBFAC1B1BC34C59 /* Pods-MMDrawerController-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MMDrawerController/Pods-MMDrawerController-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E87A63D902AF3E3E654D0187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11766A25B1EA017C3F5ACC3E /* Pods-ISHTTPOperation-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ISHTTPOperation/Pods-ISHTTPOperation-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A416AEB33986B41151FC65F /* Build configuration list for PBXNativeTarget "Pods-MMDrawerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3F384BD805CF25E872F0569 /* Debug */,
+				2109227D7E11F63A674E1CD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6B3479BF19348FDDE1EF8EA /* Build configuration list for PBXNativeTarget "Pods-ISHTTPOperation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6402A0C435872E1D982842B /* Debug */,
+				E87A63D902AF3E3E654D0187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B80751C90B400EFD2A9970C0 /* Build configuration list for PBXNativeTarget "Pods-IRKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BE0A64B76749DD0019DF1E /* Debug */,
+				9D4F057670C0ACC8DFAE5DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5C087FAB57F97FB5A5F6A4F /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD892FEB269C3A3B833C8B1F /* Debug */,
+				8F624038D9B4BEB1F56D468C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3AEE6F37A1D0720CA26AB7B /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F995D20EEA9D4C33FBE4F9E /* Debug */,
+				36CE0C7A4A7286076C896DAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 473533926B0622E00B4727F4 /* Project object */;
+}
