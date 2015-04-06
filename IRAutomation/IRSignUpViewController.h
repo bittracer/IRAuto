@@ -38,6 +38,7 @@
 - (NSString *)validateForm ;
 - (void)setLeftView;
 -(void)gotoPrevTextfield;
+- (void) gotonexttextfield;
 
 - (IBAction)cancelBtnPressed:(id)sender;
 - (void)uploadOnParseCloud;
