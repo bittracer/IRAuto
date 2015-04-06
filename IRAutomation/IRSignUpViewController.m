@@ -204,6 +204,19 @@
 
 #pragma mark - Text Field delegate methods
 
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+  
+    [self createInputAccessoryView:textField];
+    
+    // Now add the view as an input accessory view to the selected textfield.
+    [textField setInputAccessoryView:_inputAccView];
+    
+    // Set the active field. We' ll need that if we want to move properly
+    // between our textfields.
+    _activeField = textField;
+}
+
+
 - (BOOL) textFieldShouldReturn:(UITextField *)theTextField {
     if (theTextField == _txtfname) {
         [_txtlname becomeFirstResponder];
@@ -269,29 +282,71 @@
     _scrollView.scrollIndicatorInsets = contentInsets;
 }
 
-//- (void) moveKeyboardUp{
-//    
-//    // move the view up by 30 pts
-//    CGRect frame = self.view.frame;
-//    if(frame.size.height >400){
-//    frame.origin.y += -10;
-//    }else{
-//         frame.origin.y += -30;
-//    }
-//    [UIView animateWithDuration:0.3 animations:^{
-//        self.view.frame = frame;
-//    }];
-//}
-//
-//- (void) moveKeyboardDown{
-//    
-//    // Make everything Normal
-//    CGRect frame = self.view.frame;
-//    frame.origin.y = 0;
-//    
-//    [UIView animateWithDuration:0.3 animations:^{
-//        self.view.frame = frame;
-//    }];
-//}
+-(void)createInputAccessoryView:(UITextField *)actextfield{
+    // Create the view that will play the part of the input accessory view.
+  
+    _inputAccView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 310.0, 40.0)];
+    
+    // Set the view’s background color. We’ ll set it here to gray. Use any color you want.
+//    [inputAccView setBackgroundColor:[UIColor ]];
+    [_inputAccView setAlpha: 0.8];
+    
+   
+    
+    //  the previous button.
+    _btnPrev = [UIButton buttonWithType: UIButtonTypeCustom];
+    [_btnPrev setFrame: CGRectMake(0.0, 0.0, 80.0, 40.0)];
+    [_btnPrev setTitle: @"Previous" forState: UIControlStateNormal];
+    [_btnPrev addTarget: self action: @selector(gotoPrevTextfield) forControlEvents: UIControlEventTouchUpInside];
+    
+    // Do the same for the two buttons left.
+    _btnNext = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_btnNext setFrame:CGRectMake(85.0f, 0.0f, 80.0f, 40.0f)];
+    [_btnNext setTitle:@"Next" forState:UIControlStateNormal];
+    [_btnNext setBackgroundColor:[UIColor blueColor]];
+    [_btnNext addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+    
+    if (actextfield==_txtconfpass) {
+        
+        _btnDone = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_btnDone setFrame:CGRectMake(240.0, 0.0f, 80.0f, 40.0f)];
+        [_btnDone setTitle:@"Done" forState:UIControlStateNormal];
+        [_btnDone setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_btnDone addTarget:self action:@selector(signUpBtnPressed) forControlEvents:UIControlEventTouchUpInside];
+        [_inputAccView addSubview:_btnDone];
+    }
+ 
+    
+    // Now that our buttons are ready we just have to add them to our view.
+    [_inputAccView addSubview:_btnPrev];
+    [_inputAccView addSubview:_btnNext];
+   
+}
+
+-(void)gotoPrevTextfield{
+    // If the active textfield is the first one, can't go to any previous
+    // field so just return.
+    if (_activeField == _txtfname) {
+        return;
+    }
+    else if (_activeField  == _txtlname) {
+        [_txtfname becomeFirstResponder];
+    }
+    else if( _activeField == _txtcontact){
+            [_txtlname becomeFirstResponder];
+        }
+    else if (_activeField == _txtemail){
+            [_txtcontact becomeFirstResponder];
+        }
+    else if (_activeField == _txtpass){
+            [_txtemail becomeFirstResponder];
+        }
+    else if (_activeField ==_txtconfpass){
+        
+            [_txtpass becomeFirstResponder];
+        }
+}
+
+
 
 @end

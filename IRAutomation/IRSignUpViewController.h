@@ -28,11 +28,17 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnPressed;
 @property (nonatomic) IRKeys *keys;
 
+@property (nonatomic, retain) UIView *inputAccView;
+@property (nonatomic, retain) UIButton *btnDone;
+@property (nonatomic, retain) UIButton *btnNext;
+@property (nonatomic, retain) UIButton *btnPrev;
+
+
 - (IBAction)signUpBtnPressed;
 - (NSString *)validateForm ;
 - (void)setLeftView;
-//- (void)moveKeyboardUp;
-//- (void)moveKeyboardDown;
+-(void)gotoPrevTextfield;
+
 - (IBAction)cancelBtnPressed:(id)sender;
 - (void)uploadOnParseCloud;
 

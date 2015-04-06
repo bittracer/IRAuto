@@ -121,6 +121,8 @@ static NSString *ssidCache = nil;
 #pragma mark - UITextFieldDelegate
 
 
+
+
 - (BOOL) textFieldShouldReturn:(UITextField *)theTextField {
     if (theTextField == _ssid) {
         [_security becomeFirstResponder];

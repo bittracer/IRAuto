@@ -16,6 +16,7 @@
 
 -(CGRect)textRectForBounds:(CGRect)bounds{
     CGRect inset = CGRectMake(bounds.origin.x + 40, bounds.origin.y, bounds.size.width - 40, bounds.size.height);
+ 
     return inset;
 }
 
@@ -23,5 +24,7 @@
     CGRect inset = CGRectMake(bounds.origin.x + 40, bounds.origin.y, bounds.size.width - 40, bounds.size.height);
     return inset;
 }
+
+
 
 @end

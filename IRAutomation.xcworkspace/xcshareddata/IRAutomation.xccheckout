@@ -10,6 +10,8 @@
 	<string>IRAutomation</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>80ACEDDB920F452090F3F5F9215BF2B933F1BE65</key>
+		<string>https://github.com/bittracer/IRAuto.git</string>
 		<key>F316AE2D325D7E75E54A1AB8D4CFA16C63A25939</key>
 		<string>https://github.com/bittracer/IRAutomation.git</string>
 	</dict>
@@ -17,17 +19,27 @@
 	<string>IRAutomation.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F316AE2D325D7E75E54A1AB8D4CFA16C63A25939</key>
+		<key>80ACEDDB920F452090F3F5F9215BF2B933F1BE65</key>
 		<string>..</string>
+		<key>F316AE2D325D7E75E54A1AB8D4CFA16C63A25939</key>
+		<string>../../IRAutomation</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/bittracer/IRAutomation.git</string>
+	<string>https://github.com/bittracer/IRAuto.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F316AE2D325D7E75E54A1AB8D4CFA16C63A25939</string>
+	<string>80ACEDDB920F452090F3F5F9215BF2B933F1BE65</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>80ACEDDB920F452090F3F5F9215BF2B933F1BE65</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IRAuto</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
