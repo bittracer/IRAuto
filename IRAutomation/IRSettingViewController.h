@@ -7,8 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "constant.h"
 
-@interface IRSettingViewController : UIViewController
+@interface IRSettingViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+{
+    
+    NSArray *imgList;
+    NSArray *nameList;
+    
+}
+
+
+- (void)initialize;
 
 - (IBAction)OpenClose:(id)sender;
 
