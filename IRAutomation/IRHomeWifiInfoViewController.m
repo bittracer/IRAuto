@@ -43,7 +43,7 @@ static NSString *ssidCache = nil;
 - (IBAction)submitBtnPressed{
     
     if (![IRKeys isPassword:_password.text validForSecurityType: _keys.security]) {
-        [[[UIAlertView alloc] initWithTitle: IRLocalizedString(@"Password Invalid", @"alert title in IRWifiEditViewController")
+        [[[UIAlertView alloc] initWithTitle: IRLocalizedString(@"Invalid Password", @"alert title in IRWifiEditViewController")
                                     message: nil
                                    delegate: nil
                           cancelButtonTitle: @"OK"
