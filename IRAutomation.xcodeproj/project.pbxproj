@@ -403,8 +403,6 @@
 		A4073B281A94A9030036EABF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A4C655851AA82F5300B34FE1 /* RS_SliderView.h */,
-				A4C655861AA82F5300B34FE1 /* RS_SliderView.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -412,8 +410,10 @@
 		A4073B2A1A94A90E0036EABF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A4C40F861AA5D7410083BE8C /* IRAcViewController.m */,
 				A4C40F851AA5D7410083BE8C /* IRAcViewController.h */,
+				A4C40F861AA5D7410083BE8C /* IRAcViewController.m */,
+				A4C655851AA82F5300B34FE1 /* RS_SliderView.h */,
+				A4C655861AA82F5300B34FE1 /* RS_SliderView.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

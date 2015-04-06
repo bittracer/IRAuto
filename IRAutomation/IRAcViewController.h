@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <IRKit/IRPeripheral.h>
 #import <IRKit+Internal.h>
+#import "RS_SliderView.h"
 
 @interface IRAcViewController : UIViewController <UIAlertViewDelegate> {
     
@@ -23,6 +24,8 @@
 - (IBAction)AcOnOff:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *temprature;
+
+
 //IRkit
 - (NSString *)stringOfURLEncodedDictionary:(NSDictionary *)params ;
 @property (nonatomic) IRPeripheral *Peripheral;
@@ -41,3 +44,4 @@
 
 NSUserDefaults *defaults;
 NSArray *signalNames;
+RS_SliderView *horSlider;

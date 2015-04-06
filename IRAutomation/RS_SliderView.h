@@ -13,12 +13,17 @@
 
 #import <UIKit/UIKit.h>
 
+
+CGPoint point2;
+CGPoint point1;
+
 @class RS_SliderView;
 
 typedef enum{
-    Vertical,
     Horizontal
 } Orientation;
+
+
 
 @protocol RSliderViewDelegate <NSObject>
 
@@ -26,6 +31,7 @@ typedef enum{
 
 -(void)sliderValueChanged:(RS_SliderView *)sender; // calls when user is swiping slider
 -(void)sliderValueChangeEnded:(RS_SliderView *)sender; // calls when user touchUpInside or toucUpOutside slider
+
 
 @end
 
@@ -45,5 +51,7 @@ typedef enum{
 -(void)setColorsForBackground:(UIColor *)bCol foreground:(UIColor *)fCol handle:(UIColor *)hCol border:(UIColor *)brdrCol;
 
 -(id)initWithFrame:(CGRect)frame andOrientation:(Orientation)orientation;
+- (void)changeStarForegroundViewWithPoint:(CGPoint)point;
+
 
 @end

@@ -21,6 +21,7 @@
 #import <IRKeys.h>
 #import <Log.h>
 #import <IRHTTPClient.h>
+#import "RS_SliderView.h"
 
 NSURL *url ;
 NSString *aStr;
@@ -32,6 +33,7 @@ NSString *First=@"@\"{\"format\":\"raw\",\"freq\":38,\"data\":";
 NSString *Last=@"}\"";
 NSString *Full=@"";
 NSString *CurrentStatus;
+
 
 
 @interface IRAcViewController () <RSliderViewDelegate>
@@ -50,7 +52,7 @@ int temprature;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _Peripheral=[[IRKit sharedInstance].peripherals objectAtIndex:0];
+    //_Peripheral=[[IRKit sharedInstance].peripherals objectAtIndex:0];
     _panelView.layer.borderColor =AC_PANEL_BORDER_COLOR;
     
      defaults = [NSUserDefaults standardUserDefaults];
@@ -214,11 +216,11 @@ if(signalscount < signalNames.count){
     
 }
 
-
+#pragma mark - Initialize Slider
 
 -(void) initialize{
     
-        RS_SliderView *horSlider = [[RS_SliderView alloc] initWithFrame:CGRectMake(10, 340, 300, 100) andOrientation:Horizontal];
+        horSlider = [[RS_SliderView alloc] initWithFrame:CGRectMake(10, 340, 300, 100) andOrientation:Horizontal];
         horSlider.delegate = self;
         [horSlider setColorsForBackground:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0]
                            foreground:[UIColor colorWithRed:0.0 green:132.0/255.0 blue:210.0/255.0 alpha:1.0]
@@ -234,23 +236,25 @@ if(signalscount < signalNames.count){
     
     
         UIButton *decreaseTemp = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    [decreaseTemp addTarget:self
-//               action:@selector(aMethod:)
-//     forControlEvents:UIControlEventTouchUpInside];
+    [decreaseTemp addTarget:self
+               action:@selector(decreaseTemp)
+     forControlEvents:UIControlEventTouchUpInside];
         [decreaseTemp setBackgroundImage:[UIImage imageNamed:@"minus.png"] forState:UIControlStateNormal];
         decreaseTemp.frame = CGRectMake(20,450,32,32);
         [self.view addSubview:decreaseTemp];
     
         UIButton *increaseTemp = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    [increaseTemp addTarget:self
-//                     action:@selector(aMethod:)
-//              forControlEvents:UIControlEventTouchUpInside];
+    [increaseTemp addTarget:self
+                     action:@selector(increaseTemp)
+              forControlEvents:UIControlEventTouchUpInside];
         [increaseTemp setBackgroundImage:[UIImage imageNamed:@"plus.png"] forState:UIControlStateNormal];
         increaseTemp.frame = CGRectMake(260,460,32,32);
         [self.view addSubview:increaseTemp];
     
 }
 
+
+#pragma mark - sliderValueChanged
 
 -(void)sliderValueChanged:(RS_SliderView *)sender {
     
@@ -261,10 +265,13 @@ if(signalscount < signalNames.count){
                                       , NSBaselineOffsetAttributeName : @22} range:NSMakeRange(2, 2)];
     
         _temprature.attributedText = attributedString;
+    
 }
 
+#pragma mark - sliderValueChangeEnded
+
 -(void)sliderValueChangeEnded:(RS_SliderView *)sender {
-    
+        NSLog(@"Value:%f",sender.value);
         temprature = sender.value *14;
         NSLog(@"Temprature: %d",  temprature +16);
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"%d\u00b0c", temprature +16]];
@@ -276,6 +283,32 @@ if(signalscount < signalNames.count){
     [self FetchData:temprature+16];
         
 }
+
+
+#pragma mark - IncreaseTemperature Manually
+
+-(void) increaseTemp{
+    
+    
+    point1.x=point1.x+20.0;
+    [horSlider changeStarForegroundViewWithPoint:point1];
+   [self sliderValueChangeEnded:horSlider];
+    
+}
+
+
+#pragma mark - DecreaseTemperature Manually
+
+-(void) decreaseTemp{
+    
+   
+    point1.x=point1.x-20.0;
+    [horSlider changeStarForegroundViewWithPoint:point1];
+    [self sliderValueChangeEnded:horSlider];
+
+}
+
+
 
 #pragma mark - RequestviaInternet
 

@@ -18,7 +18,7 @@
         [self setOrientation:orientation];
         [self initSlider];
     }
-    
+  
     return self;
 }
 
@@ -101,10 +101,10 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self];
+     point2 = [touch locationInView:self];
 
-        if (!(point.x < 0) && !(point.x > self.frame.size.width)) {
-            [self changeStarForegroundViewWithPoint:point];
+        if (!(point2.x < 0) && !(point2.x > self.frame.size.width)) {
+            [self changeStarForegroundViewWithPoint:point2];
         }
 
     if (self.delegate && [self.delegate respondsToSelector:@selector(sliderValueChanged:)]) {
@@ -115,17 +115,18 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
-   CGPoint point = [touch locationInView:self];
+    point1 = [touch locationInView:self];
     __weak __typeof(self)weakSelf = self;
     
     [UIView animateWithDuration:animationSpeed animations:^ {
-        [weakSelf changeStarForegroundViewWithPoint:point];
+        [weakSelf changeStarForegroundViewWithPoint:point1];
     } completion:^(BOOL finished) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(sliderValueChangeEnded:)]) {
             [self.delegate sliderValueChangeEnded:self];
         }
     }];
 }
+
 
 #pragma mark - Change Slider Foreground With Point
 

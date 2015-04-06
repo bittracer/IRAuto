@@ -37,7 +37,7 @@ static NSString *ssidCache = nil;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Dispose of ayooony resources that can be recreated.
 }
 
 - (IBAction)submitBtnPressed{
