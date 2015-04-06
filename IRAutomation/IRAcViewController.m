@@ -240,7 +240,7 @@ if(signalscount < signalNames.count){
                action:@selector(decreaseTemp)
      forControlEvents:UIControlEventTouchUpInside];
         [decreaseTemp setBackgroundImage:[UIImage imageNamed:@"minus.png"] forState:UIControlStateNormal];
-        decreaseTemp.frame = CGRectMake(20,450,32,32);
+        decreaseTemp.frame = CGRectMake(20,450,40,40);
         [self.view addSubview:decreaseTemp];
     
         UIButton *increaseTemp = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -248,7 +248,7 @@ if(signalscount < signalNames.count){
                      action:@selector(increaseTemp)
               forControlEvents:UIControlEventTouchUpInside];
         [increaseTemp setBackgroundImage:[UIImage imageNamed:@"plus.png"] forState:UIControlStateNormal];
-        increaseTemp.frame = CGRectMake(260,460,32,32);
+        increaseTemp.frame = CGRectMake(260,460,40,40);
         [self.view addSubview:increaseTemp];
     
 }
@@ -289,10 +289,10 @@ if(signalscount < signalNames.count){
 
 -(void) increaseTemp{
     
-    
-    point1.x=point1.x+20.0;
-    [horSlider changeStarForegroundViewWithPoint:point1];
-   [self sliderValueChangeEnded:horSlider];
+  
+        point1.x=point1.x+20.0;
+        [horSlider changeStarForegroundViewWithPoint:point1];
+        [self sliderValueChangeEnded:horSlider];
     
 }
 
@@ -301,11 +301,10 @@ if(signalscount < signalNames.count){
 
 -(void) decreaseTemp{
     
-   
-    point1.x=point1.x-20.0;
-    [horSlider changeStarForegroundViewWithPoint:point1];
-    [self sliderValueChangeEnded:horSlider];
-
+          point1.x=point1.x-20.0;
+          [horSlider changeStarForegroundViewWithPoint:point1];
+          [self sliderValueChangeEnded:horSlider];
+    
 }
 
 

@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "IRDBManager.h"
 #import <Parse/Parse.h>
+#import "IRRootView.h"
 
 
 @interface IRSignUpViewController ()
@@ -184,9 +185,11 @@
                             [_loading stopAnimating];
         if (!error) {
             
-            
-            [self.navigationController popToRootViewControllerAnimated:YES];
-            UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@" Successfully Registered" message:@"Please Sign In to continue" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            AppDelegate *appDel = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            [appDel userLogin:@"IRRootView"];
+        
+//            [self.navigationController popToRootViewControllerAnimated:YES];
+            UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@" Successfully Registered" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
         } else {
             
