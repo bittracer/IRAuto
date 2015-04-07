@@ -20,6 +20,7 @@
 #import "IRHomeWifiInfoViewController.h"
 #import <IRHTTPClient.h>
 #import <UIKit/UIResponder.h>
+#import "IRAdminViewConroller.h"
 
 @interface IRLoginViewController  ()
 
@@ -164,6 +165,8 @@
 }
 
 
+#pragma mark - searchOnParseCloud
+
 - (void) searchOnParseCloud{
     
     [PFUser logInWithUsernameInBackground:_userNametxtfield.text password:_passwordtxtfield.text
@@ -181,9 +184,20 @@
                     }
                     else{
                         
-                    AppDelegate *appDel = (AppDelegate *)[UIApplication sharedApplication].delegate;
-                        [appDel userLogin:@"IRRootView"];
                         
+                        // If the person is Admin
+                        if(([_userNametxtfield.text isEqualToString:ADMIN_LOGIN_ID]) && ([_passwordtxtfield.text isEqualToString:ADMIN_LOGIN_PASSWORD])){
+                            
+                            IRAdminViewConroller *admin= [[IRAdminViewConroller alloc] init];
+                            [self.navigationController pushViewController:admin animated:YES];
+                            
+                        }
+                        else{
+                        
+                         AppDelegate *appDel = (AppDelegate *)[UIApplication sharedApplication].delegate;
+                        [appDel userLogin:@"IRRootView"];
+                            
+                        }
                     }
                 
                 }

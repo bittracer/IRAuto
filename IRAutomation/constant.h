@@ -37,6 +37,10 @@
 
 #define SETTING_CELL_IDENTYFIER @"IRSetting"
 
+#define ADMIN_LOGIN_ID @"admin@admin.com"
+
+#define ADMIN_LOGIN_PASSWORD @"admin123"
+
 #define SETTING_CELL 40
 
 #define SELF_DEFINED  [[UIColor colorWithRed:209.0/255.0 green:201.0/255.0 blue:192.0/255.0 alpha:1.0] CGColor]

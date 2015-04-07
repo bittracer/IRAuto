@@ -184,6 +184,9 @@ static NSString *ssidCache = nil;
 }
 
 
+
+# pragma mark - Initialize PickerView
+
 -(void)initpickerView{
     pickerArray = [[NSArray alloc]initWithObjects:@"NONE",
                    @"WPA2",@"WEP", nil];

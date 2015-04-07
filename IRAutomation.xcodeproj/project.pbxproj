@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A406150B1AD3B4CD00353D8C /* IRAdminViewConroller.m in Sources */ = {isa = PBXBuildFile; fileRef = A406150A1AD3B4CD00353D8C /* IRAdminViewConroller.m */; };
 		A4073ACB1A949E600036EABF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4073ACA1A949E600036EABF /* main.m */; };
 		A4073ACE1A949E600036EABF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4073ACD1A949E600036EABF /* AppDelegate.m */; };
 		A4073AE51A949E600036EABF /* IRAutomationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4073AE41A949E600036EABF /* IRAutomationTests.m */; };
@@ -104,6 +105,8 @@
 /* Begin PBXFileReference section */
 		1E55D02A3BDF792F52CA7003 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		267FAD9922E57ED161F84BE6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A40615091AD3B4CD00353D8C /* IRAdminViewConroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRAdminViewConroller.h; sourceTree = "<group>"; };
+		A406150A1AD3B4CD00353D8C /* IRAdminViewConroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRAdminViewConroller.m; sourceTree = "<group>"; };
 		A4073AC51A949E600036EABF /* IRAutomation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRAutomation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4073AC91A949E600036EABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4073ACA1A949E600036EABF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -414,6 +417,8 @@
 				A4C40F861AA5D7410083BE8C /* IRAcViewController.m */,
 				A4C655851AA82F5300B34FE1 /* RS_SliderView.h */,
 				A4C655861AA82F5300B34FE1 /* RS_SliderView.m */,
+				A40615091AD3B4CD00353D8C /* IRAdminViewConroller.h */,
+				A406150A1AD3B4CD00353D8C /* IRAdminViewConroller.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -771,6 +776,7 @@
 				A4C820F11A9DACF400A1CAC8 /* IRTextField.m in Sources */,
 				A4C820F71A9DCB8E00A1CAC8 /* IRLoginViewController.m in Sources */,
 				A4C5E38F1A9EE34F003E6389 /* IRMenu.m in Sources */,
+				A406150B1AD3B4CD00353D8C /* IRAdminViewConroller.m in Sources */,
 				A4073ACB1A949E600036EABF /* main.m in Sources */,
 				A4C264B91ABFDAB700E30C48 /* IRHomeWifiInfoViewController.m in Sources */,
 				A4C5AC421A9C5000006CFA65 /* IRHomePageViewController.m in Sources */,

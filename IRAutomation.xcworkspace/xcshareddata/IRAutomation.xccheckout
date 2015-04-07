@@ -12,7 +12,6 @@
 	<dict>
 		<key>80ACEDDB920F452090F3F5F9215BF2B933F1BE65</key>
 		<string>https://github.com/bittracer/IRAuto.git</string>
-		
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>IRAutomation.xcworkspace</string>
@@ -20,8 +19,6 @@
 	<dict>
 		<key>80ACEDDB920F452090F3F5F9215BF2B933F1BE65</key>
 		<string>..</string>
-		<key>F316AE2D325D7E75E54A1AB8D4CFA16C63A25939</key>
-		<string>../../IRAutomation</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/bittracer/IRAuto.git</string>
@@ -31,13 +28,11 @@
 	<string>80ACEDDB920F452090F3F5F9215BF2B933F1BE65</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F316AE2D325D7E75E54A1AB8D4CFA16C63A25939</string>
-
+			<string>80ACEDDB920F452090F3F5F9215BF2B933F1BE65</string>
 			<key>IDESourceControlWCCName</key>
 			<string>IRAutomation</string>
 		</dict>
