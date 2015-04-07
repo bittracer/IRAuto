@@ -608,7 +608,7 @@
                                     <action selector="AcOnOff:" destination="Ew3-f7-clz" eventType="touchUpInside" id="Njk-XQ-42U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLB-qs-uDr">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLB-qs-uDr">
                                 <rect key="frame" x="166" y="506" width="130" height="32"/>
                                 <color key="backgroundColor" red="0.33725490200000002" green="0.40000000000000002" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SWING">
@@ -616,7 +616,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChS-Ng-dy7">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChS-Ng-dy7">
                                 <rect key="frame" x="19" y="506" width="140" height="32"/>
                                 <color key="backgroundColor" red="0.87058823529999996" green="0.21176470589999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SWING">
@@ -648,21 +648,47 @@
                                     <action selector="AcOnOff:" destination="Ew3-f7-clz" eventType="touchUpInside" id="XUh-9y-hUy"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h-swing@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="DQn-0k-PiK">
+                                <rect key="frame" x="123" y="513" width="25" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="CXl-k8-YNL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v-swing@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="dOi-bn-WlS">
+                                <rect key="frame" x="271" y="509" width="17" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="17" id="m1g-Gx-fzo"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DQn-0k-PiK" firstAttribute="bottom" secondItem="PLB-qs-uDr" secondAttribute="bottom" constant="-8" id="0Bi-NV-62R"/>
+                            <constraint firstItem="DQn-0k-PiK" firstAttribute="bottom" secondItem="dOi-bn-WlS" secondAttribute="bottom" constant="-4" id="2Pc-di-qoj"/>
+                            <constraint firstItem="DQn-0k-PiK" firstAttribute="leading" secondItem="bir-1p-XRR" secondAttribute="leading" constant="123" id="5cD-xZ-Noq"/>
+                            <constraint firstItem="dOi-bn-WlS" firstAttribute="leading" secondItem="PLB-qs-uDr" secondAttribute="trailing" constant="-25" id="6Mm-2R-S7q"/>
                             <constraint firstItem="LJL-xB-qU8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yQP-3g-6XR" secondAttribute="trailing" constant="21" id="73q-ow-cfz"/>
+                            <constraint firstItem="DQn-0k-PiK" firstAttribute="top" secondItem="ChS-Ng-dy7" secondAttribute="top" constant="7" id="Cl5-KI-Aa0"/>
+                            <constraint firstItem="dOi-bn-WlS" firstAttribute="trailing" secondItem="PLB-qs-uDr" secondAttribute="trailing" constant="-8" id="Gml-MV-EZU"/>
                             <constraint firstItem="yQP-3g-6XR" firstAttribute="top" secondItem="GRA-nS-MLg" secondAttribute="bottom" constant="33" id="Ka4-Ji-IcE"/>
                             <constraint firstAttribute="centerX" secondItem="GRA-nS-MLg" secondAttribute="centerX" id="Kt5-Lr-I6W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dOi-bn-WlS" secondAttribute="trailing" constant="16" id="LSK-fi-B6Y"/>
+                            <constraint firstItem="DQn-0k-PiK" firstAttribute="bottom" secondItem="ChS-Ng-dy7" secondAttribute="bottom" constant="-8" id="RO0-aE-7ly"/>
                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="GRA-nS-MLg" secondAttribute="trailing" constant="19" id="XId-gB-UTQ"/>
+                            <constraint firstItem="DQn-0k-PiK" firstAttribute="top" secondItem="dOi-bn-WlS" secondAttribute="top" constant="4" id="aSG-LG-wX7"/>
+                            <constraint firstItem="DQn-0k-PiK" firstAttribute="top" secondItem="PLB-qs-uDr" secondAttribute="top" constant="7" id="b35-xX-JRg"/>
                             <constraint firstItem="Dru-AM-lIw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aR0-I4-NTm" secondAttribute="trailing" priority="250" constant="21" id="blt-SN-MiX"/>
+                            <constraint firstItem="DQn-0k-PiK" firstAttribute="trailing" secondItem="ChS-Ng-dy7" secondAttribute="trailing" constant="-11" id="cOp-jy-hrZ"/>
+                            <constraint firstItem="RdC-O8-DQm" firstAttribute="top" secondItem="DQn-0k-PiK" secondAttribute="bottom" constant="38" id="d9t-he-aNx"/>
                             <constraint firstItem="GRA-nS-MLg" firstAttribute="leading" relation="lessThanOrEqual" secondItem="bir-1p-XRR" secondAttribute="leading" constant="19" id="gyf-ui-ZTF"/>
                             <constraint firstItem="yQP-3g-6XR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dru-AM-lIw" secondAttribute="trailing" constant="24" id="hhd-rI-NH4"/>
                             <constraint firstItem="GRA-nS-MLg" firstAttribute="top" secondItem="hat-LF-2aC" secondAttribute="bottom" constant="30" id="ia1-78-4oy"/>
                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="LJL-xB-qU8" secondAttribute="trailing" constant="27" id="jI7-KA-1em"/>
                             <constraint firstItem="aR0-I4-NTm" firstAttribute="leading" relation="lessThanOrEqual" secondItem="bir-1p-XRR" secondAttribute="leading" constant="27" id="jgt-TN-Kkp"/>
+                            <constraint firstItem="PLB-qs-uDr" firstAttribute="leading" secondItem="DQn-0k-PiK" secondAttribute="trailing" constant="18" id="ofd-r9-tzg"/>
                             <constraint firstItem="aR0-I4-NTm" firstAttribute="top" relation="lessThanOrEqual" secondItem="GRA-nS-MLg" secondAttribute="bottom" constant="33" id="re0-DP-DYO"/>
                             <constraint firstItem="Dru-AM-lIw" firstAttribute="top" secondItem="GRA-nS-MLg" secondAttribute="bottom" constant="33" id="tyP-nN-bvo"/>
+                            <constraint firstItem="DQn-0k-PiK" firstAttribute="leading" secondItem="ChS-Ng-dy7" secondAttribute="trailing" constant="-36" id="v9M-GP-Tc7"/>
                             <constraint firstItem="LJL-xB-qU8" firstAttribute="top" relation="lessThanOrEqual" secondItem="GRA-nS-MLg" secondAttribute="bottom" constant="33" id="wFm-bT-n8k"/>
                         </constraints>
                     </view>
@@ -676,6 +702,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="panelView" destination="GRA-nS-MLg" id="Woe-7z-9VY"/>
+                        <outlet property="swinh" destination="DQn-0k-PiK" id="ylV-yR-48D"/>
                         <outlet property="temprature" destination="Ybi-90-FeG" id="7R0-9W-YW5"/>
                     </connections>
                 </viewController>
@@ -1255,12 +1282,14 @@
         <image name="cool_icn-Small-50.png" width="50" height="50"/>
         <image name="dry_icn-Small-50.png" width="50" height="50"/>
         <image name="fan_icn-Small-50.png" width="50" height="50"/>
+        <image name="h-swing@3x.png" width="66" height="33"/>
         <image name="heat_icn-Small-50.png" width="50" height="50"/>
         <image name="night.png" width="50" height="50"/>
         <image name="off.png" width="50" height="50"/>
         <image name="profile_icn@3x.png" width="202" height="202"/>
         <image name="timer.png" width="50" height="50"/>
         <image name="turbo.png" width="50" height="50"/>
+        <image name="v-swing@3x.png" width="33" height="66"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

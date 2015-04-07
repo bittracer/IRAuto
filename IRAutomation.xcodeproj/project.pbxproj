@@ -91,6 +91,8 @@
 		A4F2F4BB1A9F43DE0062ADAD /* irkit-logo-h200.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F2F4BA1A9F43DE0062ADAD /* irkit-logo-h200.png */; };
 		CE51A0BF1AD3E743004E90D9 /* celcius_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51A0BE1AD3E743004E90D9 /* celcius_icn.png */; };
 		CE51A0C11AD3E74E004E90D9 /* notification_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51A0C01AD3E74E004E90D9 /* notification_icn.png */; };
+		CE51A0C31AD3EB15004E90D9 /* h-swing@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51A0C21AD3EB15004E90D9 /* h-swing@3x.png */; };
+		CE51A0C51AD3EB23004E90D9 /* v-swing@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51A0C41AD3EB23004E90D9 /* v-swing@3x.png */; };
 		D53B2A5CC634FD1EB6A9477E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E55D02A3BDF792F52CA7003 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -214,6 +216,8 @@
 		B0CB6737383D7379369D213A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CE51A0BE1AD3E743004E90D9 /* celcius_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = celcius_icn.png; sourceTree = "<group>"; };
 		CE51A0C01AD3E74E004E90D9 /* notification_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification_icn.png; sourceTree = "<group>"; };
+		CE51A0C21AD3EB15004E90D9 /* h-swing@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h-swing@3x.png"; sourceTree = "<group>"; };
+		CE51A0C41AD3EB23004E90D9 /* v-swing@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "v-swing@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,6 +439,8 @@
 				A4C40F881AA5DF7F0083BE8C /* AC */,
 				A4C4A03B1AA72C17006F5E72 /* swipe.png */,
 				A4C4D1891AA44C940037FD60 /* back_btn-Small.png */,
+				CE51A0C41AD3EB23004E90D9 /* v-swing@3x.png */,
+				CE51A0C21AD3EB15004E90D9 /* h-swing@3x.png */,
 				A43E8A131A9CA35200665CDE /* profile_icn@3x.png */,
 				A4C5AC451A9C59CB006CFA65 /* Home@3x.png */,
 				A4C6FBFE1A970F4200AD7F21 /* LeftView */,
@@ -680,8 +686,10 @@
 				A4C4A02E1AA6D3B9006F5E72 /* heat_icn-Small-50@2x.png in Resources */,
 				A4073B311A94AF1E0036EABF /* Images.xcassets in Resources */,
 				A4C6FC871A970F4300AD7F21 /* user_icn-Small.png in Resources */,
+				CE51A0C31AD3EB15004E90D9 /* h-swing@3x.png in Resources */,
 				A4C4A03C1AA72C17006F5E72 /* swipe.png in Resources */,
 				CE51A0BF1AD3E743004E90D9 /* celcius_icn.png in Resources */,
+				CE51A0C51AD3EB23004E90D9 /* v-swing@3x.png in Resources */,
 				A4C4A02F1AA6D3B9006F5E72 /* heat_active_icn-Small-50@2x.png in Resources */,
 				A4C6FC991A9754C400AD7F21 /* email_invalid-Small.png in Resources */,
 				A4C6558D1AA858A200B34FE1 /* minus.png in Resources */,

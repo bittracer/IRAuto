@@ -17,12 +17,13 @@
     UIAlertView *alertSignal;
     
 }
-@property (weak, nonatomic) IBOutlet UIView *panelView;
+
 
 
 - (IBAction)openClose:(id)sender;
 - (IBAction)AcOnOff:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIImageView *swinh;
 @property (weak, nonatomic) IBOutlet UILabel *temprature;
 
 
