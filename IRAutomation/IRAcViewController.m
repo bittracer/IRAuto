@@ -69,8 +69,10 @@ int temprature;
 
 -(void)viewDidAppear:(BOOL)animated{
   
-    [self checkIfAlreadyCollaborated];
-
+    if([((NSString *)[PFUser currentUser]) isEqualToString:ADMIN_LOGIN_ID]){
+        
+        [self checkIfAlreadyCollaborated];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

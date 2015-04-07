@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IRAdminViewConroller : UIViewController
+@interface IRAdminViewConroller : UIViewController <UIAlertViewDelegate>
+{
+    
+
+}
+
+-(void) addNewAppliance;
+
 
 @end
 

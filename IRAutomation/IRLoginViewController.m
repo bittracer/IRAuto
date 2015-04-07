@@ -184,7 +184,6 @@
                     }
                     else{
                         
-                        
                         // If the person is Admin
                         if(([_userNametxtfield.text isEqualToString:ADMIN_LOGIN_ID]) && ([_passwordtxtfield.text isEqualToString:ADMIN_LOGIN_PASSWORD])){
                             
