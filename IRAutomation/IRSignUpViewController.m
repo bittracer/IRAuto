@@ -298,36 +298,32 @@
     
     
    //  the previous button.
-    if (_activeField != _txtfname) {
+  
         
         _btnPrev = [UIButton buttonWithType: UIButtonTypeCustom];
-        [_btnPrev setFrame: CGRectMake(30.0, 0.0, 80.0, 40.0)];
+        [_btnPrev setFrame: CGRectMake(20.0, 0.0, 80.0, 40.0)];
         [_btnPrev setTitle: @"Previous" forState: UIControlStateNormal];
         // [_btnPrev setBackgroundColor:[UIColor grayColor]];
         [_btnPrev addTarget: self action: @selector(gotoPrevTextfield) forControlEvents: UIControlEventTouchUpInside];
         [_inputAccView addSubview:_btnPrev];
-    }
+    
     
    
- 
-        
     // Do the same for the two buttons left.
     _btnNext = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_btnNext setFrame:CGRectMake(150.0f, 0.0f, 80.0f, 40.0f)];
+    [_btnNext setFrame:CGRectMake(120.0f, 0.0f, 80.0f, 40.0f)];
     [_btnNext setTitle:@"Next" forState:UIControlStateNormal];
    // [_btnNext setBackgroundColor:[UIColor grayColor]];
     [_btnNext addTarget:self action:@selector(gotonexttextfield) forControlEvents:UIControlEventTouchUpInside];
     [_inputAccView addSubview:_btnNext];
-
     
-   
-        _btnDone = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_btnDone setFrame:CGRectMake(250.0, 0.0f, 80.0f, 40.0f)];
+
+         _btnDone = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_btnDone setFrame:CGRectMake(230.0, 0.0f, 80.0f, 40.0f)];
         [_btnDone setTitle:@"Done" forState:UIControlStateNormal];
         [_btnDone addTarget:self action:@selector(signUpBtnPressed) forControlEvents:UIControlEventTouchUpInside];
         [_inputAccView addSubview:_btnDone];
 
- 
     
     // Now that our buttons are ready we just have to add them to our view.
     [_inputAccView addSubview:_btnNext];

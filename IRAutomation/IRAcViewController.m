@@ -57,6 +57,8 @@ int temprature;
     
      defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[NSString stringWithFormat:@"true"] forKey:@"onoff"];
+    [defaults setObject:[NSString stringWithFormat:@"swtchof"] forKey:@"farenheit"];
+
     [defaults synchronize];
     
      signalNames=@[@"Ac/on",@"Ac/off",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
@@ -266,21 +268,52 @@ if(signalscount < signalNames.count){
         [attributedString setAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica-light" size:10.0]
                                       , NSBaselineOffsetAttributeName : @22} range:NSMakeRange(2, 2)];
     
-        _temprature.attributedText = attributedString;
+    NSString *swtch= [defaults objectForKey:@"farenheit"];
     
+    if ([swtch isEqualToString:@"swtchon"]) {
+        
+        //convert temprature to farenheit
+        
+        attributedString = [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"%d\u00b0f", (int)((((sender.value*14)+16)*1.8)+32)]];
+        _temprature.attributedText = attributedString;
+        
+    }
+    else{
+        
+        attributedString = [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"%d\u00b0c", temprature +16]];
+        _temprature.attributedText = attributedString;
+    }
 }
 
 #pragma mark - sliderValueChangeEnded
+NSMutableAttributedString *attributedString;
 
 -(void)sliderValueChangeEnded:(RS_SliderView *)sender {
-        NSLog(@"Value:%f",sender.value);
-        temprature = sender.value *14;
-        NSLog(@"Temprature: %d",  temprature +16);
-        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"%d\u00b0c", temprature +16]];
-        [attributedString setAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica-light" size:10.0]
-                                      , NSBaselineOffsetAttributeName : @22} range:NSMakeRange(2, 2)];
+    
+    
+    NSLog(@"Value:%f",sender.value);
+    temprature = sender.value *14;
+    NSLog(@"Temprature: %d", (temprature+16));
 
+    NSString *swtch= [defaults objectForKey:@"farenheit"];
+
+    
+    [attributedString setAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica-light" size:10.0]
+                                      , NSBaselineOffsetAttributeName : @22} range:NSMakeRange(2, 2)];
+    
+    if ([swtch isEqualToString:@"swtchon"]) {
+        
+        //convert temprature to farenheit
+        
+        attributedString = [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"%d\u00b0f", (int)((((sender.value*14)+16)*1.8)+32)]];
         _temprature.attributedText = attributedString;
+        
+    }
+    else{
+        
+        attributedString = [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"%d\u00b0c", temprature +16]];
+        _temprature.attributedText = attributedString;
+    }
     
     [self FetchData:temprature+16];
         

@@ -7,6 +7,7 @@
 //
 
 #import "IRSettingViewController.h"
+#import "IRAcViewController.h"
 #import <UIViewController+MMDrawerController.h>
 #import "AppDelegate.h"
 
@@ -63,6 +64,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = SETTING_CELL_IDENTYFIER;
+   
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
@@ -73,9 +75,50 @@
     
     cell.imageView.image=[UIImage imageNamed:[imgList objectAtIndex:indexPath.row]];
     
+    UISwitch *switchView = (UISwitch *)[cell.contentView viewWithTag:50];
+    cell.accessoryView = switchView;
+    [switchView setOn:NO animated:NO];
+    [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+    
+
+    
     //just removes the extra lines
     tableView.tableFooterView = [UIView new];
     
     return cell;
 }
+
+
+- (void) switchChanged:(id)sender {
+    
+    //to check at which line switch is toggled
+    
+    UISwitch *switchInCell = (UISwitch *)sender;
+    UITableViewCell * cell = (UITableViewCell*) switchInCell.superview;
+    NSIndexPath * indexpath = [_mytabelview indexPathForCell:cell];
+    
+    if (indexpath.row==0) {
+        
+        //code for notification
+        
+        return;
+    }
+    else
+    {
+        if (switchInCell.on) {
+            
+            switchInCell.onImage=[UIImage imageNamed:@"back_btn-Small"];
+        
+            [defaults setObject:[NSString stringWithFormat:@"swtchon"] forKey:@"farenheit"];
+        }
+        else
+        {
+            [defaults setObject:[NSString stringWithFormat:@"swtchof"]  forKey:@"farenheit"];
+        }
+        
+    }
+    
+}
+
+
 @end

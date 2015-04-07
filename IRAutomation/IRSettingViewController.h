@@ -18,6 +18,7 @@
     
 }
 
+@property (weak, nonatomic) IBOutlet UITableView *mytabelview;
 
 - (void)initialize;
 
@@ -25,3 +26,5 @@
 
 - (IBAction)backToAppliances:(id)sender;
 @end
+
+NSUserDefaults *defaults;
