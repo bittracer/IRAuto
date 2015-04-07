@@ -11,6 +11,9 @@
 #import <IRHelper.h>
 #import <IRGuideWifiViewController.h>
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "constant.h"
+#import "IRAdminViewConroller.h"
 
 static NSString *ssidCache = nil;
 
@@ -112,9 +115,19 @@ static NSString *ssidCache = nil;
 - (void)guideWifiViewController:(IRGuideWifiViewController *)viewController
               didFinishWithInfo:(NSDictionary *)info {
     
+    if( [((NSString *)[PFUser currentUser]) isEqualToString:ADMIN_LOGIN_ID] ){
+        
+        IRAdminViewConroller *admin= [[IRAdminViewConroller alloc] init];
+        [self.navigationController pushViewController:admin animated:YES];
+        
+    }
+    else
+    {
+        
     AppDelegate *appDel = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [appDel userLogin:@"IRRootView"];
-
+        
+    }
 }
 
 

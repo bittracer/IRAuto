@@ -187,8 +187,7 @@
                         // If the person is Admin
                         if(([_userNametxtfield.text isEqualToString:ADMIN_LOGIN_ID]) && ([_passwordtxtfield.text isEqualToString:ADMIN_LOGIN_PASSWORD])){
                             
-                            IRAdminViewConroller *admin= [[IRAdminViewConroller alloc] init];
-                            [self.navigationController pushViewController:admin animated:YES];
+                            [self performSegueWithIdentifier:@"fromLogin" sender:self];
                             
                         }
                         else{
@@ -248,8 +247,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    IRHomeWifiInfoViewController *vc= (IRHomeWifiInfoViewController *)[segue destinationViewController];
-    vc.keys=_keys;
+    if ([segue.identifier isEqualToString:@"IRHomeWifiInfoViewController"]) {
+        IRHomeWifiInfoViewController *vc= (IRHomeWifiInfoViewController *)[segue destinationViewController];
+        vc.keys=_keys;
+    }
     
 }
 

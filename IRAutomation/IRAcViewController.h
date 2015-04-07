@@ -25,7 +25,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *swinh;
 @property (weak, nonatomic) IBOutlet UILabel *temprature;
-
+@property (weak, nonatomic) IBOutlet UIView *panelView;
 
 //IRkit
 - (NSString *)stringOfURLEncodedDictionary:(NSDictionary *)params ;

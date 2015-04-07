@@ -482,7 +482,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRA-nS-MLg">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GRA-nS-MLg">
                                 <rect key="frame" x="19" y="94" width="282" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AUTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shA-Pd-DXG">
@@ -583,7 +583,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dru-AM-lIw">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dru-AM-lIw">
                                 <rect key="frame" x="98" y="267" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" image="night.png">
@@ -593,7 +593,7 @@
                                     <action selector="AcOnOff:" destination="Ew3-f7-clz" eventType="touchUpInside" id="vIX-EH-2QX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="500" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJL-xB-qU8">
+                            <button opaque="NO" tag="500" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJL-xB-qU8">
                                 <rect key="frame" x="243" y="267" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="h00-hZ-6nB"/>
@@ -624,7 +624,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-I4-NTm">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-I4-NTm">
                                 <rect key="frame" x="27" y="267" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fN3-0O-n9w"/>
@@ -638,7 +638,7 @@
                                     <action selector="AcOnOff:" destination="Ew3-f7-clz" eventType="touchUpInside" id="jFc-B8-HJS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQP-3g-6XR">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQP-3g-6XR">
                                 <rect key="frame" x="172" y="267" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" image="turbo.png">
@@ -1006,7 +1006,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kyn-Uu-jxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217" y="861"/>
+            <point key="canvasLocation" x="-234" y="931"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4wD-F6-mi0">
@@ -1191,6 +1191,7 @@
                         <outlet property="scrollView" destination="Gvq-Tq-yrV" id="Sho-VU-1ke"/>
                         <outlet property="userNametxtfield" destination="k2S-co-uhi" id="6VK-C8-mt1"/>
                         <segue destination="GKj-4m-mga" kind="push" identifier="IRHomeWifiInfoViewController" id="P3o-vX-Cp7"/>
+                        <segue destination="ySl-GJ-9sU" kind="push" identifier="fromLogin" id="iLh-eJ-0uJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTw-xr-zQx" sceneMemberID="firstResponder"/>

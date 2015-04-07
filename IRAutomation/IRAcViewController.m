@@ -72,10 +72,15 @@ int temprature;
 
 -(void)viewDidAppear:(BOOL)animated{
   
-    if([((NSString *)[PFUser currentUser]) isEqualToString:ADMIN_LOGIN_ID]){
+    [[PFUser currentUser]fetch];
+    NSString *str=[NSString stringWithFormat:@"%@",
+                   [[PFUser currentUser] objectForKey:@"username"]];
+    
+    if([str isEqualToString:ADMIN_LOGIN_ID]){
         
         [self checkIfAlreadyCollaborated];
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {
