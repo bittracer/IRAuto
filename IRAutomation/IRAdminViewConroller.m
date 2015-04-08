@@ -7,6 +7,8 @@
 //
 
 #import "IRAdminViewConroller.h"
+#import <Parse/Parse.h>
+#import "IRAcViewController.h"
 
 @interface IRAdminViewConroller ()
 
@@ -51,8 +53,38 @@ UITextField *_UITextField;
     if(buttonIndex==0)//OK button
     {
         NSLog(@"%@",_UITextField.text);
-        [self performSegueWithIdentifier:@"AcSetup" sender:self];
+        
+        // This will create the class on parse
+        object = [PFObject objectWithClassName:@"AcList"];
+        
+//        IRAcViewController *temp= [[IRAcViewController alloc]init];
+//        temp.nameOfAc=_UITextField.text;
+        
+        [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if(succeeded){
+
+                [self performSegueWithIdentifier:@"AcSetup" sender:self];
+
+            }
+            else{
+                
+                UIAlertView *alertView =[[UIAlertView alloc]initWithTitle:@"Failed" message:@"please Re-enter" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                [alertView show];
+                
+            }
+        }];
     }
+
 }
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+        IRAcViewController *vc= (IRAcViewController *)[segue destinationViewController];
+       vc.nameOfAc=_UITextField.text;
+        vc.dataPart=object;
+    
+}
+
 
 @end

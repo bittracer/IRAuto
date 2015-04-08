@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Parse/Parse.h>
 @interface IRAdminViewConroller : UIViewController <UIAlertViewDelegate>
 {
     
-
+    PFObject *object ;
 }
 
 -(void) addNewAppliance;

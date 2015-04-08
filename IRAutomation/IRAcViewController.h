@@ -10,6 +10,8 @@
 #import <IRKit/IRPeripheral.h>
 #import <IRKit+Internal.h>
 #import "RS_SliderView.h"
+#import "IRAdminViewConroller.h"
+#import <Parse/Parse.h>
 
 @interface IRAcViewController : UIViewController <UIAlertViewDelegate> {
     
@@ -26,6 +28,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *swinh;
 @property (weak, nonatomic) IBOutlet UILabel *temprature;
 @property (weak, nonatomic) IBOutlet UIView *panelView;
+@property (nonatomic , weak) PFObject *otherObject;
+@property (nonatomic,retain) NSString *nameOfAc;
+@property (nonatomic) PFObject *dataPart;
 
 //IRkit
 - (NSString *)stringOfURLEncodedDictionary:(NSDictionary *)params ;
