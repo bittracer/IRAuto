@@ -43,6 +43,14 @@
 
 #define SETTING_CELL 40
 
+
+#define AC_ON_OFF 1
+
+
+
+
+
+
 #define SELF_DEFINED  [[UIColor colorWithRed:209.0/255.0 green:201.0/255.0 blue:192.0/255.0 alpha:1.0] CGColor]
 
 #define SELF_DEFINED1  [[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0] CGColor]

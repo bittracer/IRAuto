@@ -98,7 +98,6 @@
 #pragma mark - Touch Events
 
 
-
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
      point2 = [touch locationInView:self];

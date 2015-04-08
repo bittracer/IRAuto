@@ -32,7 +32,7 @@ static sqlite3_stmt *statement = nil;
     docsDir = dirPaths[0];
     // Build the path to the database file
     databasePath = [[NSString alloc] initWithString:
-                    [docsDir stringByAppendingPathComponent: @"RegistrationDetails.db"]];
+                    [docsDir stringByAppendingPathComponent: @"acremote.db"]];
     BOOL isSuccess = YES;
     NSFileManager *filemgr = [NSFileManager defaultManager];
     if ([filemgr fileExistsAtPath: databasePath ] == NO)
@@ -41,7 +41,7 @@ static sqlite3_stmt *statement = nil;
         if (sqlite3_open(dbpath, &database) == SQLITE_OK)
         {
             char *errMsg;
-            const char *sql_stmt = "create table if not exists RegistrationDetails (firstname text , lastname text, mobile int, email text primary key, pass text, confpass text)";
+            const char *sql_stmt = "create table if not exists RegistrationDetails (mode text , lbltemp text, timer int, night text , turbo text, acon text,acoff text priamry key,slider text,swingh text,singv text)";
             if (sqlite3_exec(database, sql_stmt, NULL, NULL, &errMsg)
                 != SQLITE_OK)
             {
@@ -79,7 +79,28 @@ static sqlite3_stmt *statement = nil;
      }
     return NO;
 }
-                                
+//
+//-(BOOL) save:(NSString *)sender
+//{
+//    const char *dbpath = [databasePath UTF8String];
+//    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+//    {
+//        NSString *insertSQL = [NSString stringWithFormat:@"insert into acremote (firstname ,lastname, mobile, email, pass,confpass)values (\"%@\",\"%@\",\"%ld\",\"%@\",\"%@\",\"%@\")",
+//                               fname, lname, (long)[mobile integerValue],email,pass,confpass];
+//        const char *insert_stmt = [insertSQL UTF8String];
+//        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+//        if (sqlite3_step(statement) == SQLITE_DONE)
+//        {
+//            return YES;
+//        }
+//        else {
+//            return NO;
+//        }
+//    }
+//    return NO;
+//;
+//}
+
 -(BOOL) findByEmail:(NSString*)email pass:(NSString *)pass
             {
             const char *dbpath = [databasePath UTF8String];
