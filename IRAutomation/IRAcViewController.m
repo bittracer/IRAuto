@@ -26,7 +26,6 @@ NSString *aStr;
 NSString *a=@"true";
 static int signalscount=0;
 PFQuery *query;
-
 NSString *First=@"@\"{\"format\":\"raw\",\"freq\":38,\"data\":";
 NSString *Last=@"}\"";
 NSString *Full=@"";
@@ -51,7 +50,7 @@ int temprature;
     [super viewDidLoad];
     //_Peripheral=[[IRKit sharedInstance].peripherals objectAtIndex:0];
     _panelView.layer.borderColor =AC_PANEL_BORDER_COLOR;
-    NSLog(@"------------%@",_nameOfAc);
+    NSLog(@"Name of AC%@",_nameOfAc);
      defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[NSString stringWithFormat:@"false"] forKey:@"onoff"];
     [defaults setObject:[NSString stringWithFormat:@"swtchof"] forKey:@"farenheit"];
@@ -61,8 +60,10 @@ int temprature;
     query = [PFQuery queryWithClassName:@"AcList"];
 
    // dataPart = [PFObject objectWithClassName:@"AcList"];
-     _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
-    signalNames=@[@"Acoff",@"Acon",@"Auto",@"Cool",@"Dry",@"Fan",@"Heat",@"Timer",@"Night",@"Turbo",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
+  //    signalNames=@[@"Acoff",@"Acon",@"Auto",@"Cool",@"Dry",@"Fan",@"Heat",@"Timer",@"Night",@"Turbo",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
+    
+    _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
+ signalNames=@[@"Acoff",@"Acon",@"auto",@"cool",@"dry",@"fan",@"heat",@"timeroff",@"timeron",@"turboff",@"turboon",@"nightoff",@"nighton",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
     
    // Init UISlider
     [self initialize];
@@ -224,10 +225,8 @@ if(signalscount < signalNames.count){
                     [alert show];
                     
                 }
-            }];
-           
+          }];
         }
-     
     }];
     
     }else{

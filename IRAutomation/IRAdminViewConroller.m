@@ -59,9 +59,6 @@ UITextField *_UITextField;
         // This will create the class on parse
         object = [PFObject objectWithClassName:@"AcList"];
         
-//        IRAcViewController *temp= [[IRAcViewController alloc]init];
-//        temp.nameOfAc=_UITextField.text;
-        
         [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if(succeeded){
 
@@ -101,9 +98,6 @@ UITextField *_UITextField;
     
     return cell;
 }
-
-
-
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
