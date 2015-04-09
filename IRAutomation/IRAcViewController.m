@@ -105,22 +105,13 @@ int temprature;
     [defaults setObject:[NSString stringWithFormat:@"false"] forKey:@"onoff"];
     [defaults setObject:[NSString stringWithFormat:@"swtchof"] forKey:@"farenheit"];
     
-<<<<<<< HEAD
-    [defaults synchronize];
-=======
-    query = [PFQuery queryWithClassName:@"AcList"];
 
-   // dataPart = [PFObject objectWithClassName:@"AcList"];
-<<<<<<< HEAD
-  //    signalNames=@[@"Acoff",@"Acon",@"Auto",@"Cool",@"Dry",@"Fan",@"Heat",@"Timer",@"Night",@"Turbo",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
+    [defaults synchronize];
+
+    query = [PFQuery queryWithClassName:@"AcList"];
     
     _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
  signalNames=@[@"Acoff",@"Acon",@"auto",@"cool",@"dry",@"fan",@"heat",@"timeroff",@"timeron",@"turboff",@"turboon",@"nightoff",@"nighton",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
-=======
-     _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
-    signalNames=@[@"Acoff",@"Acon",@"Auto",@"Cool",@"Dry",@"Fan",@"Heat",@"Timer",@"Night",@"Turbo",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
->>>>>>> origin/master
->>>>>>> origin/master
     
    // Init UISlider
     [self initialize];
