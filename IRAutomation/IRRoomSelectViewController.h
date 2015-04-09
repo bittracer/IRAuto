@@ -10,11 +10,11 @@
 
 @interface IRRoomSelectViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-    NSArray *imgList;
-    NSArray *nameList;
-
+    NSString *image;
+    NSString *nameOfAc;
 }
 
 - (void)initialize;
+@property (nonatomic) NSArray *nameList;;
 
 @end

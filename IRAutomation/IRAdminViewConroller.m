@@ -7,6 +7,8 @@
 //
 
 #import "IRAdminViewConroller.h"
+#import <Parse/Parse.h>
+#import "IRAcViewController.h"
 
 @interface IRAdminViewConroller ()
 
@@ -23,6 +25,8 @@ UITextField *_UITextField;
     UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
                                    initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewAppliance)];
     self.navigationItem.rightBarButtonItem = flipButton;
+    image =@"aircondition_icn-Small";
+    self.navigationItem.hidesBackButton=YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,8 +55,64 @@ UITextField *_UITextField;
     if(buttonIndex==0)//OK button
     {
         NSLog(@"%@",_UITextField.text);
-        [self performSegueWithIdentifier:@"AcSetup" sender:self];
+        
+        // This will create the class on parse
+        object = [PFObject objectWithClassName:@"AcList"];
+        
+//        IRAcViewController *temp= [[IRAcViewController alloc]init];
+//        temp.nameOfAc=_UITextField.text;
+        
+        [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if(succeeded){
+
+                [self performSegueWithIdentifier:@"AcSetup" sender:self];
+
+            }
+            else{
+                
+                UIAlertView *alertView =[[UIAlertView alloc]initWithTitle:@"Failed" message:@"please Re-enter" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                [alertView show];
+                
+            }
+        }];
     }
+
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_listOfAc count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"fromLoginCellIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    UILabel *lblTitle = (UILabel *)[cell.contentView viewWithTag:31];
+    
+    lblTitle.text = [_listOfAc  objectAtIndex:indexPath.row];
+    cell.imageView.image=[UIImage imageNamed:image];
+    //just removes the extra lines
+    tableView.tableFooterView = [UIView new];
+   // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+}
+
+
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+        IRAcViewController *vc= (IRAcViewController *)[segue destinationViewController];
+       vc.nameOfAc=_UITextField.text;
+        vc.dataPart=object;
+    
+}
+
 
 @end

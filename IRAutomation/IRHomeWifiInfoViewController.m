@@ -115,7 +115,12 @@ static NSString *ssidCache = nil;
 - (void)guideWifiViewController:(IRGuideWifiViewController *)viewController
               didFinishWithInfo:(NSDictionary *)info {
     
-    if( [((NSString *)[PFUser currentUser]) isEqualToString:ADMIN_LOGIN_ID] ){
+    
+    [[PFUser currentUser]fetch];
+    NSString *str=[NSString stringWithFormat:@"%@",
+                   [[PFUser currentUser] objectForKey:@"username"]];
+
+    if( [str isEqualToString:ADMIN_LOGIN_ID] ){
         
         IRAdminViewConroller *admin= [[IRAdminViewConroller alloc] init];
         [self.navigationController pushViewController:admin animated:YES];

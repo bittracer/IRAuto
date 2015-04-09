@@ -8,18 +8,28 @@
 
 #import "IRRoomSelectViewController.h"
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "IRAcViewController.h"
 
 @interface IRRoomSelectViewController ()
 
 @end
 
+
 @implementation IRRoomSelectViewController
+
+
+- (void) viewWillAppear:(BOOL)animated{
+    
+    [self initialize];
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"WING";
     // Do any additional setup after loading the view.
-    [self initialize];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,16 +40,14 @@
 -(void) initialize{
     
     // Array of Images
-    imgList = @[@"aircondition_icn-Small", @"aircondition_icn-Small", @"aircondition_icn-Small"];
-    
-    //Array of TextField
-    nameList = @[@"Room 1 Left Wing",@"Room 1 Right Wing",@"Room 2"];
+    image =@"aircondition_icn-Small";
+
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [nameList count];
+    return [_nameList count];
 }
 
 
@@ -51,8 +59,8 @@
     
     UILabel *lblTitle = (UILabel *)[cell.contentView viewWithTag:30];
     
-    lblTitle.text = [nameList objectAtIndex:indexPath.row];
-    cell.imageView.image=[UIImage imageNamed:[imgList objectAtIndex:indexPath.row]];
+    lblTitle.text = [_nameList  objectAtIndex:indexPath.row];
+    cell.imageView.image=[UIImage imageNamed:image];
     //just removes the extra lines
     tableView.tableFooterView = [UIView new];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -63,6 +71,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    nameOfAc=_nameList[indexPath.row];
     
     switch (indexPath.row) {
         case 0:
@@ -81,4 +91,12 @@
     
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    
+    IRAcViewController *Ac=(IRAcViewController *)[segue destinationViewController];
+    Ac.nameOfAc=nameOfAc;
+    
+}
 @end

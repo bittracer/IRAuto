@@ -11,7 +11,7 @@
 #import <IRGuidePowerViewController.h>
 #import <IRNewPeripheralViewController.h>
 #import <IRSearcher.h>
-
+#import <Parse/Parse.h>
 
 @interface IRLoginViewController : UIViewController  <UITextFieldDelegate,IRSearcherDelegate>
 {
@@ -19,6 +19,8 @@
     UIImageView *imgview ;
     NSArray *textfield;
     NSArray *imgs;
+    PFQuery *query;
+    NSMutableArray *listOfAc;
 
 }
 

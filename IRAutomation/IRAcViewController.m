@@ -27,14 +27,13 @@ NSString *aStr;
 NSString *a=@"true";
 static int signalscount=0;
 PFQuery *query;
-PFObject *dataPart;
+
 NSString *First=@"@\"{\"format\":\"raw\",\"freq\":38,\"data\":";
 NSString *Last=@"}\"";
 NSString *Full=@"";
 NSString *CurrentStatus;
 NSInteger btnindex;
 NSInteger tempindex;
-
 
 
 @interface IRAcViewController () <RSliderViewDelegate>
@@ -102,12 +101,20 @@ int temprature;
     [super viewDidLoad];
     //_Peripheral=[[IRKit sharedInstance].peripherals objectAtIndex:0];
     _panelView.layer.borderColor =AC_PANEL_BORDER_COLOR;
-    
+    NSLog(@"------------%@",_nameOfAc);
      defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[NSString stringWithFormat:@"false"] forKey:@"onoff"];
     [defaults setObject:[NSString stringWithFormat:@"swtchof"] forKey:@"farenheit"];
     
+<<<<<<< HEAD
     [defaults synchronize];
+=======
+    query = [PFQuery queryWithClassName:@"AcList"];
+
+   // dataPart = [PFObject objectWithClassName:@"AcList"];
+     _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
+    signalNames=@[@"Acoff",@"Acon",@"Auto",@"Cool",@"Dry",@"Fan",@"Heat",@"Timer",@"Night",@"Turbo",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
+>>>>>>> origin/master
     
    // Init UISlider
     [self initialize];
@@ -207,14 +214,12 @@ int temprature;
 }
 
 
-
-
 // This will always be called before the use of remote so that to check whether there exist any signals in parse
 - (void) checkIfAlreadyCollaborated{
     
    
-    query = [PFQuery queryWithClassName:@"Signals"];
-    [query whereKey:@"state" equalTo:@"Ac/on"];
+    query = [PFQuery queryWithClassName:@"AcList"];
+    [query whereKey:@"state" equalTo:@"Acon"];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error){
         if (error) {
             
@@ -222,7 +227,7 @@ int temprature;
                 alert.tag=WELCOME_IF_FIRST_TIME;
                 [alert show];
                 alert = nil;
-            
+
         }
         else {
             
@@ -246,16 +251,15 @@ if(signalscount < signalNames.count){
     }
     
     _waiter = [IRHTTPClient waitForSignalWithCompletion:^(NSHTTPURLResponse *res, IRSignal *signal, NSError *error) {
-      
+
         if (signal) {
             
-            dataPart = [PFObject objectWithClassName:@"Signals"];
-            dataPart[@"signalData"] = [NSArray arrayWithObjects:signal.data,nil];
-            dataPart[@"state"]=[NSString stringWithFormat:@"%@",signalNames[signalscount]];
            
+            _dataPart[[NSString stringWithFormat:@"%@",signalNames[signalscount]]] = [NSArray arrayWithObjects:signal.data,nil];
+            
             signalscount++;
             
-            [dataPart saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            [_dataPart saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (succeeded) {
             
                     [alert dismissWithClickedButtonIndex:-1 animated:YES];
@@ -301,12 +305,21 @@ if(signalscount < signalNames.count){
 
 - (void)FetchData:(NSInteger)tag
 {
+<<<<<<< HEAD
   
     NSInteger temptag=tag-1;
     PFQuery *query = [PFQuery queryWithClassName:@"Signals"];
     [query selectKeys:@[@"state",@"signalData"]];
 
 
+=======
+    
+    NSInteger temptag=tag-4;
+    
+    
+    CurrentStatus =[defaults objectForKey:@"onoff"];
+    
+>>>>>>> origin/master
     if(tag==1){
             if (![[[IRDBManager getSharedInstance] fetchparti:@"acstate" columnid:tag-1] isEqualToString:@"acoff"]) {
                 tag--;
@@ -318,6 +331,7 @@ if(signalscount < signalNames.count){
             tag--;
             btnindex=tag;}
     }
+<<<<<<< HEAD
     else if (tag==12)
     {
         if (![[[IRDBManager getSharedInstance] fetchparti:@"turbo" columnid:tag-9] isEqualToString:@"turbooff"]) {
@@ -329,10 +343,16 @@ if(signalscount < signalNames.count){
         btnindex=0;
         tempindex=temptag;
         [query whereKey:@"state" equalTo:signalNames[temptag]];
+=======
+    if(temptag>=12 && temptag<=26){
+        [query selectKeys:@[@"nameOfAc",[NSString stringWithFormat:@"%@",signalNames[temptag]]]];
+        [query whereKey:@"nameOfAC" equalTo:_nameOfAc];
+        
+>>>>>>> origin/master
     }
     else{
-        
-        [query whereKey:@"state" equalTo:signalNames[tag]];
+        [query selectKeys:@[@"nameOfAc",[NSString stringWithFormat:@"%@",signalNames[temptag]]]];
+        [query whereKey:@"nameOfAc" equalTo:_nameOfAc];
     }
     
     
@@ -340,16 +360,16 @@ if(signalscount < signalNames.count){
         if (!error) {
             
             for (PFObject *object in objects) {
-                
-                NSLog(@"objectid %@",object.objectId);
-                NSLog(@"%@state",object[@"state"]);
-                dataPart= object[@"signalData"];
+//                
+//                NSLog(@"objectid %@",object.objectId);
+//                NSLog(@"%@state",object[@"state]]);
+                _dataPart= object[[NSString stringWithFormat:@"%@",signalNames[temptag]]];
                 
             }
             
             Full=@"";
             Full=[Full stringByAppendingString:[NSString stringWithFormat:@"%@",First]];
-            Full=[Full stringByAppendingString:[NSString stringWithFormat:@"%@",dataPart]];
+            Full=[Full stringByAppendingString:[NSString stringWithFormat:@"%@",_dataPart]];
             Full=[Full stringByAppendingString:[NSString stringWithFormat:@"%@",Last]];
             
             
