@@ -44,4 +44,6 @@
 @end
 NSUserDefaults *defaults;
 NSArray *signalNames;
+NSArray *imagesname;
+NSArray *database;
 RS_SliderView *horSlider;

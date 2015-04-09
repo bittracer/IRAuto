@@ -35,6 +35,8 @@
 
 #define SIGNAL_NOT_STORED 105
 
+#define DATABASE_NOT_UPDATED 106
+
 #define SETTING_CELL_IDENTYFIER @"IRSetting"
 
 #define ADMIN_LOGIN_ID @"admin@admin.com"
@@ -43,10 +45,10 @@
 
 #define SETTING_CELL 40
 
+#define SETTING_SWITCH 50
+
 
 #define AC_ON_OFF 1
-
-
 
 
 

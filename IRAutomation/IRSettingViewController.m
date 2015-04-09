@@ -75,7 +75,7 @@
     
     cell.imageView.image=[UIImage imageNamed:[imgList objectAtIndex:indexPath.row]];
     
-    UISwitch *switchView = (UISwitch *)[cell.contentView viewWithTag:50];
+    UISwitch *switchView = (UISwitch *)[cell.contentView viewWithTag:SETTING_SWITCH];
     cell.accessoryView = switchView;
     [switchView setOn:NO animated:NO];
     [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
