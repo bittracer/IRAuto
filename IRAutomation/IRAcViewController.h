@@ -17,7 +17,7 @@
     
     UIAlertView *alert;
     UIAlertView *alertSignal;
-    
+    PFQuery *query ;
 }
 
 

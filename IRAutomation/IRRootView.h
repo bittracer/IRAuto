@@ -13,9 +13,11 @@
     NSArray *imgList;
     NSArray *nameList;
     
+    
 }
 
 @property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic) NSMutableArray *name;
 
 - (IBAction)OpenClose:(id)sender;
 - (void)initialize;

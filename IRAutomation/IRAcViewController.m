@@ -58,6 +58,7 @@ int temprature;
 
     [defaults synchronize];
     
+    query = [PFQuery queryWithClassName:@"AcList"];
 
    // dataPart = [PFObject objectWithClassName:@"AcList"];
      _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
@@ -159,8 +160,6 @@ int temprature;
 }
 
 
-
-
 // This will always be called before the use of remote so that to check whether there exist any signals in parse
 - (void) checkIfAlreadyCollaborated{
     
@@ -259,7 +258,6 @@ if(signalscount < signalNames.count){
 {
     
     NSInteger temptag=tag-4;
-    PFQuery *query = [PFQuery queryWithClassName:@"AcList"];
     
     
     CurrentStatus =[defaults objectForKey:@"onoff"];

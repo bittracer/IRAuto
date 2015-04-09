@@ -9,6 +9,8 @@
 #import "IRRootView.h"
 #import <UIViewController+MMDrawerController.h>
 #import "constant.h"
+#import <Parse/Parse.h>
+#import "IRRoomSelectViewController.h"
 
 #define AC 0
 #define TV 1
@@ -22,11 +24,34 @@
 
 @implementation IRRootView
 
+PFQuery *query;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    query = [PFQuery queryWithClassName:@"AcList"];
+    [query selectKeys:@[@"nameOfAc"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        // iterate through the objects array, which contains PFObjects for each Student
+        
+        _name = [NSMutableArray arrayWithCapacity:objects.count]; // make an array to hold the cities
+        
+        for(PFObject* obj in objects) {
+            
+            [_name addObject:[obj objectForKey:@"nameOfAc"]];
+        }
+    }];
     [self initialize];
+    
    
    }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    IRRoomSelectViewController *root=(IRRoomSelectViewController *)[segue destinationViewController];
+    root.nameList=_name;
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
