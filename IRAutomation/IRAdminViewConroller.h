@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-@interface IRAdminViewConroller : UIViewController <UIAlertViewDelegate>
+@interface IRAdminViewConroller : UIViewController <UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     
     PFObject *object ;
+    NSString *image ;
 }
 
 -(void) addNewAppliance;
 
+@property (nonatomic) NSMutableArray *listOfAc;
 
 @end
 

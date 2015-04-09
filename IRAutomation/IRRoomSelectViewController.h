@@ -10,7 +10,7 @@
 
 @interface IRRoomSelectViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-    NSArray *imgList;
+    NSString *image;
     NSString *nameOfAc;
 }
 

@@ -32,7 +32,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-      [self registerForKeyboardNotifications];
+    [self registerForKeyboardNotifications];
+    
+    query = [PFQuery queryWithClassName:@"AcList"];
+    [query selectKeys:@[@"nameOfAc"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        // iterate through the objects array, which contains PFObjects for each Student
+        
+        listOfAc = [NSMutableArray arrayWithCapacity:objects.count]; // make an array to hold the cities
+        
+        for(PFObject* obj in objects) {
+            
+            [listOfAc addObject:[obj objectForKey:@"nameOfAc"]];
+        }
+    }];
+
+    
     [self addLeftView];
     
     _becomeActiveObserver = [[NSNotificationCenter defaultCenter] addObserverForName: UIApplicationDidBecomeActiveNotification
@@ -250,6 +265,11 @@
     if ([segue.identifier isEqualToString:@"IRHomeWifiInfoViewController"]) {
         IRHomeWifiInfoViewController *vc= (IRHomeWifiInfoViewController *)[segue destinationViewController];
         vc.keys=_keys;
+    }
+    else if ([segue.identifier isEqualToString:@"fromLogin"]) {
+
+        IRAdminViewConroller *admin=(IRAdminViewConroller *)[segue destinationViewController];
+        admin.listOfAc=listOfAc;
     }
     
 }

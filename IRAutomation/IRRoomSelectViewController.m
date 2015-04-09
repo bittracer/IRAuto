@@ -40,7 +40,7 @@
 -(void) initialize{
     
     // Array of Images
-    imgList = @[@"aircondition_icn-Small", @"aircondition_icn-Small"];
+    image =@"aircondition_icn-Small";
 
     
 }
@@ -60,7 +60,7 @@
     UILabel *lblTitle = (UILabel *)[cell.contentView viewWithTag:30];
     
     lblTitle.text = [_nameList  objectAtIndex:indexPath.row];
-    cell.imageView.image=[UIImage imageNamed:[imgList objectAtIndex:indexPath.row]];
+    cell.imageView.image=[UIImage imageNamed:image];
     //just removes the extra lines
     tableView.tableFooterView = [UIView new];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

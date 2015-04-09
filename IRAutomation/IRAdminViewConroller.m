@@ -25,6 +25,8 @@ UITextField *_UITextField;
     UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
                                    initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewAppliance)];
     self.navigationItem.rightBarButtonItem = flipButton;
+    image =@"aircondition_icn-Small";
+    self.navigationItem.hidesBackButton=YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,6 +78,32 @@ UITextField *_UITextField;
     }
 
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_listOfAc count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"fromLoginCellIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    UILabel *lblTitle = (UILabel *)[cell.contentView viewWithTag:31];
+    
+    lblTitle.text = [_listOfAc  objectAtIndex:indexPath.row];
+    cell.imageView.image=[UIImage imageNamed:image];
+    //just removes the extra lines
+    tableView.tableFooterView = [UIView new];
+   // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+}
+
+
+
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
