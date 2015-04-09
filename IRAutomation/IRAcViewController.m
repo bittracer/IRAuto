@@ -16,6 +16,7 @@
 #import <IRKit/IRKit.h>
 #import <IRPeripheral.h>
 #import <Parse/Parse.h>
+#import "IRDBManager.h"
 #import <IRKeys.h>
 #import <Log.h>
 #import <IRHTTPClient.h>
@@ -30,6 +31,8 @@ NSString *First=@"@\"{\"format\":\"raw\",\"freq\":38,\"data\":";
 NSString *Last=@"}\"";
 NSString *Full=@"";
 NSString *CurrentStatus;
+NSInteger btnindex;
+NSInteger tempindex;
 
 
 @interface IRAcViewController () <RSliderViewDelegate>
@@ -46,6 +49,53 @@ NSString *CurrentStatus;
 
 int temprature;
 
+-(void)loadView{
+  
+    
+    database=@[@"acstate",@"mode",@"timer",@"turbo",@"night",@"slider"];
+    
+ signalNames=@[@"Acoff",@"Acon",@"auto",@"cool",@"dry",@"fan",@"heat",@"timeroff",@"timeron",@"turboff",@"turboon",@"nightoff",@"nighton",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
+    
+    imagesname=@[@"Acoff",@"Acon",@"auto_active",@"cool_active",@"dry_active",@"fan_active",@"heat_active",@"timeroff",@"timeron",@"turbooff",@"turboon",@"nightoff",@"nighton"];
+    
+    
+    //fetch data from local databse
+    
+    NSArray *data = [[IRDBManager getSharedInstance] fetchdataFromDB];
+
+    //set slider and temprature label tp previously set value
+    
+    point1.x=point1.x+(int)data[5];
+    [horSlider changeStarForegroundViewWithPoint:point1];
+    
+    //sets images of all buttons in UI
+    
+  
+    for (int k=0; k<5; k++) {
+
+        if (k==1) {
+            int i=0;
+            while (signalNames[i] != data[1]) {
+                i++;
+            }
+            [(UIButton *)([self.view viewWithTag:i]) setImage:[UIImage imageNamed:[NSString stringWithFormat:[@"%@" stringByAppendingString:@"_active"],signalNames[i]]] forState:UIControlStateNormal];
+        }
+
+        int i=0;
+        while (signalNames[i] != data[k]) {
+            i++;
+        }
+        if (i%2 == 0) {
+            [(UIButton *)([self.view viewWithTag:i]) setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",signalNames[i]]] forState :UIControlStateNormal];
+        }
+        else{
+            [(UIButton *)([self.view viewWithTag:i++]) setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",signalNames[i]]] forState :UIControlStateNormal];}
+        
+    }
+
+        
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //_Peripheral=[[IRKit sharedInstance].peripherals objectAtIndex:0];
@@ -54,21 +104,30 @@ int temprature;
      defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[NSString stringWithFormat:@"false"] forKey:@"onoff"];
     [defaults setObject:[NSString stringWithFormat:@"swtchof"] forKey:@"farenheit"];
-
-    [defaults synchronize];
     
+<<<<<<< HEAD
+    [defaults synchronize];
+=======
     query = [PFQuery queryWithClassName:@"AcList"];
 
    // dataPart = [PFObject objectWithClassName:@"AcList"];
+<<<<<<< HEAD
   //    signalNames=@[@"Acoff",@"Acon",@"Auto",@"Cool",@"Dry",@"Fan",@"Heat",@"Timer",@"Night",@"Turbo",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
     
     _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
  signalNames=@[@"Acoff",@"Acon",@"auto",@"cool",@"dry",@"fan",@"heat",@"timeroff",@"timeron",@"turboff",@"turboon",@"nightoff",@"nighton",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
+=======
+     _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
+    signalNames=@[@"Acoff",@"Acon",@"Auto",@"Cool",@"Dry",@"Fan",@"Heat",@"Timer",@"Night",@"Turbo",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
+>>>>>>> origin/master
+>>>>>>> origin/master
     
    // Init UISlider
     [self initialize];
 
 }
+
+
 
 -(void)viewDidAppear:(BOOL)animated{
   
@@ -178,8 +237,7 @@ int temprature;
         }
         else {
             
-             NSLog(@"%@", object.objectId);
-           
+            NSLog(@"%@", object.objectId);
         }
     }];
     
@@ -240,48 +298,61 @@ if(signalscount < signalNames.count){
     
 }
 
-
--(void) retriveSignals{
-   
-    }
-
 #pragma mark - Remote button presssed
 
 - (IBAction)AcOnOff:(id)sender {
 
-    [self FetchData:[sender tag]];
+    btnindex=[sender tag];
+    [self FetchData:btnindex];
     
 }
 
 - (void)FetchData:(NSInteger)tag
 {
+<<<<<<< HEAD
+  
+    NSInteger temptag=tag-1;
+    PFQuery *query = [PFQuery queryWithClassName:@"Signals"];
+    [query selectKeys:@[@"state",@"signalData"]];
+
+
+=======
     
     NSInteger temptag=tag-4;
     
     
     CurrentStatus =[defaults objectForKey:@"onoff"];
     
+>>>>>>> origin/master
     if(tag==1){
-        if ([CurrentStatus isEqualToString:@"false"]) {
-            
-            NSLog(@"ON");
-            [defaults setObject:[NSString stringWithFormat:@"true"] forKey:@"onoff"];
-            [defaults synchronize];
-            [(UIButton *)([self.view viewWithTag:AC_ON_OFF]) setImage:[UIImage imageNamed:@"onn"] forState:UIControlStateNormal];
-            
-        }else{
-            tag--;
-            
-            NSLog(@"OFF");
-            [defaults setObject:[NSString stringWithFormat:@"false"] forKey:@"onoff"];
-            [defaults synchronize];
-            [(UIButton *)([self.view viewWithTag:AC_ON_OFF]) setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
-        }
+            if (![[[IRDBManager getSharedInstance] fetchparti:@"acstate" columnid:tag-1] isEqualToString:@"acoff"]) {
+                tag--;
+                btnindex=tag;}
     }
+    else if (tag==8 && tag==10)
+    {
+        if (![[[IRDBManager getSharedInstance] fetchparti:database[tag-6] columnid:tag-6] isEqualToString:database[tag-6]]) {
+            tag--;
+            btnindex=tag;}
+    }
+<<<<<<< HEAD
+    else if (tag==12)
+    {
+        if (![[[IRDBManager getSharedInstance] fetchparti:@"turbo" columnid:tag-9] isEqualToString:@"turbooff"]) {
+            tag--;
+            btnindex=tag;}
+    }
+    else if(temptag>=15 && temptag<=29){
+        
+        btnindex=0;
+        tempindex=temptag;
+        [query whereKey:@"state" equalTo:signalNames[temptag]];
+=======
     if(temptag>=12 && temptag<=26){
         [query selectKeys:@[@"nameOfAc",[NSString stringWithFormat:@"%@",signalNames[temptag]]]];
         [query whereKey:@"nameOfAC" equalTo:_nameOfAc];
         
+>>>>>>> origin/master
     }
     else{
         [query selectKeys:@[@"nameOfAc",[NSString stringWithFormat:@"%@",signalNames[temptag]]]];
@@ -329,6 +400,7 @@ if(signalscount < signalNames.count){
 #pragma mark - sliderValueChanged
 
 -(void)sliderValueChanged:(RS_SliderView *)sender {
+    
     
         temprature = sender.value *14;
         NSLog(@"Temprature: %d",  temprature +16);
@@ -435,8 +507,12 @@ NSMutableAttributedString *attributedString;
         [req setHTTPBody:data];
         NSLog(@"Request---%@",req);
         [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-            NSLog(@"%ld", (long)((NSHTTPURLResponse *)response).statusCode);
-            NSLog(@"%@", (NSHTTPURLResponse *)response);
+            NSInteger status= (long)((NSHTTPURLResponse *)response).statusCode;
+            if(status == 200)
+            {
+                [self insertDataToLocalDB];
+                
+            }
 
         }];
     
@@ -452,11 +528,66 @@ NSMutableAttributedString *attributedString;
     [req setHTTPMethod:@"POST"];
      
     [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        NSLog(@"%ld", (long)((NSHTTPURLResponse *)response).statusCode);
-        NSLog(@"%@", (NSHTTPURLResponse *)response);
+        
+        NSInteger status= (long)((NSHTTPURLResponse *)response).statusCode;
+        if(status == 200)
+        {
+            [self insertDataToLocalDB];
+
+        }
         
     }];
     
+}
+
+
+#pragma mark -Data insertion to Local Database
+
+- (void) insertDataToLocalDB
+{
+    BOOL success = NO;
+    NSString *alertString = @"Data Insertion to local DB failed";
+    
+    if (btnindex==0 && btnindex==1)
+    {
+        
+        success = [[IRDBManager getSharedInstance]save:database[0] value:signalNames[btnindex]];
+        if (success == NO) {
+            
+            alert = [[UIAlertView alloc]initWithTitle:
+                     alertString message:nil
+                                             delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            alert.tag=DATABASE_NOT_UPDATED;
+            [alert show];
+        }
+      [(UIButton *)([self.view viewWithTag:1]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
+    }
+    else if (btnindex>=2 && btnindex<=6) {
+
+    success = [[IRDBManager getSharedInstance]save:database[1] value:signalNames[btnindex]];
+          [(UIButton *)([self.view viewWithTag:btnindex]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
+    }
+    else if (btnindex==8)
+    {
+        success = [[IRDBManager getSharedInstance]save:database[btnindex-6] value:signalNames[btnindex]];
+         [(UIButton *)([self.view viewWithTag:8]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
+    }
+    else if (btnindex==10)
+    {
+        success = [[IRDBManager getSharedInstance]save:database[btnindex-6] value:signalNames[btnindex]];
+        [(UIButton *)([self.view viewWithTag:10]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
+    }
+    else if (btnindex ==12)
+    {
+        success = [[IRDBManager getSharedInstance]save:database[btnindex-9] value:signalNames[btnindex]];
+        [(UIButton *)([self.view viewWithTag:12]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
+        
+    }
+       else if (tempindex>=15 && tempindex<=29)
+    {
+        success = [[IRDBManager getSharedInstance]save:database[5] value:[NSString stringWithFormat:@"%f",point1. x]];
+
+    }
 }
 
 //add/retrive data to parse

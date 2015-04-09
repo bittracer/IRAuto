@@ -41,7 +41,7 @@ static sqlite3_stmt *statement = nil;
         if (sqlite3_open(dbpath, &database) == SQLITE_OK)
         {
             char *errMsg;
-            const char *sql_stmt = "create table if not exists RegistrationDetails (mode text , lbltemp text, timer int, night text , turbo text, acon text,acoff text priamry key,slider text,swingh text,singv text)";
+            const char *sql_stmt = "create table if not exists acremote (acstate text DEFAULT 'Acoff' priamry key,mode text,timer text DEFAULT 'timeroff',turbo text DEFAULT 'turbooff',night text DEFAULT 'nightoff, slider float)";
             if (sqlite3_exec(database, sql_stmt, NULL, NULL, &errMsg)
                 != SQLITE_OK)
             {
@@ -59,88 +59,120 @@ static sqlite3_stmt *statement = nil;
     return isSuccess;
 }
 
--(BOOL) saveData:(NSString*)fname lname:(NSString*)lname
-          mobile:(NSString*)mobile email:(NSString*)email pass:(NSString *)pass confpass:(NSString *)confpass
+- (BOOL)save:(NSString *)column value:(id)value
 {
     const char *dbpath = [databasePath UTF8String];
     if (sqlite3_open(dbpath, &database) == SQLITE_OK)
     {
-        NSString *insertSQL = [NSString stringWithFormat:@"insert into RegistrationDetails (firstname ,lastname, mobile, email, pass,confpass)values (\"%@\",\"%@\",\"%ld\",\"%@\",\"%@\",\"%@\")",
-                              fname, lname, (long)[mobile integerValue],email,pass,confpass];
-                                const char *insert_stmt = [insertSQL UTF8String];
-                                sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
-                                if (sqlite3_step(statement) == SQLITE_DONE)
-                                {
-                                    return YES;
-                                }
-                                else {
-                                    return NO;
-                                }
-     }
-    return NO;
-}
-//
-//-(BOOL) save:(NSString *)sender
-//{
-//    const char *dbpath = [databasePath UTF8String];
-//    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
-//    {
-//        NSString *insertSQL = [NSString stringWithFormat:@"insert into acremote (firstname ,lastname, mobile, email, pass,confpass)values (\"%@\",\"%@\",\"%ld\",\"%@\",\"%@\",\"%@\")",
-//                               fname, lname, (long)[mobile integerValue],email,pass,confpass];
-//        const char *insert_stmt = [insertSQL UTF8String];
-//        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
-//        if (sqlite3_step(statement) == SQLITE_DONE)
-//        {
-//            return YES;
-//        }
-//        else {
-//            return NO;
-//        }
-//    }
-//    return NO;
-//;
-//}
-
--(BOOL) findByEmail:(NSString*)email pass:(NSString *)pass
-            {
-            const char *dbpath = [databasePath UTF8String];
-            if (sqlite3_open(dbpath, &database) == SQLITE_OK)
-            {
-        NSString *querySQL = [NSString stringWithFormat: @"select * from RegistrationDetails where email=\"%@\" AND pass=\"%@\"",email,pass];
-                const char *query_stmt = [querySQL UTF8String];
-              // NSMutableArray *resultArray = [[NSMutableArray alloc]init];
-                if (sqlite3_prepare_v2(database,
-                                       query_stmt, -1, &statement, NULL) == SQLITE_OK)
-                {
-                    if (sqlite3_step(statement) == SQLITE_ROW)
-//                   {
-//                        NSString *firstname = [[NSString alloc] initWithUTF8String:
-//                                          (const char *) sqlite3_column_text(statement, 0)];
-//                        [resultArray addObject:firstname];
-//                        NSString *lastname = [[NSString alloc] initWithUTF8String:
-//                                                (const char *) sqlite3_column_text(statement, 1)];
-//                        [resultArray addObject:lastname];
-//                        NSString *mobile = [[NSString alloc]initWithUTF8String:
-//                                          (const char *) sqlite3_column_text(statement, 2)];
-//                        [resultArray addObject:mobile];
-//                       NSString *email = [[NSString alloc]initWithUTF8String:
-//                                           (const char *) sqlite3_column_text(statement, 3)];
-//                       [resultArray addObject:email];
-//                       NSString *pass = [[NSString alloc]initWithUTF8String:
-//                                           (const char *) sqlite3_column_text(statement, 4)];
-//                       [resultArray addObject:pass];
-//                       NSString *confpass = [[NSString alloc]initWithUTF8String:
-//                                           (const char *) sqlite3_column_text(statement, 5)];
-//                       [resultArray addObject:confpass];
-//                        return resultArray;
-                        return YES;
-                    }
-                    else{
-                        NSLog(@"Not found");
-                        return NO;
-                    }
-                 //   sqlite3_reset(statement);
-                }
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into acremote (\"%@\") values (\"%@\")",
+                               column,value];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
             return NO;
         }
+    }
+    return NO;
+
+}
+
+
+- (NSArray *) fetchdataFromDB
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat: @"select * from acremote"];
+        const char *query_stmt = [querySQL UTF8String];
+        NSMutableArray *resultArray = [[NSMutableArray alloc]init];
+        if (sqlite3_prepare_v2(database,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                
+                
+                for (int i=0; i<sqlite3_column_count(statement); i++)
+                    
+                {
+                    
+                    //Check the column type of retured data.
+                    
+                    int colType = sqlite3_column_type(statement, i);
+                    
+                    id  value;
+                    
+                    if (colType == SQLITE_TEXT) {
+                        
+                        const unsigned char *col = sqlite3_column_text(statement, i);
+                        
+                        value = [NSString stringWithFormat:@"%s", col];
+                        
+                    } else if (colType == SQLITE_INTEGER) {
+                        
+                        int col = sqlite3_column_int(statement, i);
+                        
+                        value = [NSNumber numberWithInt:col];
+                        
+                    } else if (colType == SQLITE_FLOAT) {
+                        
+                        double col = sqlite3_column_double(statement, i);
+                        
+                        value = [NSNumber numberWithDouble:col];
+                        
+                    }
+                    else if (colType == SQLITE_NULL) {
+                        
+                        value = [NSNull null];
+                        
+                    }
+                    else {
+                        
+                        NSLog(@"[SQLITE] UNKNOWN DATATYPE");
+                        
+                    }
+                    
+                    [resultArray addObject:value];
+                    
+                }
+                
+                [resultArray addObject:resultArray];
+            }
+            else{
+                NSLog(@"Not found");
+                }
+        
+    }
+      
+    }
+    return nil;
+}
+
+- (NSString *)fetchparti:acstate columnid:(NSInteger)columnid
+{
+    NSString *str;
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat: @"select \'%@' from acremote",acstate];
+        const char *query_stmt = [querySQL UTF8String];
+   
+        if (sqlite3_prepare_v2(database,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                str=[NSString stringWithFormat:@"%s",sqlite3_column_text(statement, (int)columnid)];
+                return  str;
+            }
+        }
+        return  str;
+        
+    }
+    return str;
+}
 @end

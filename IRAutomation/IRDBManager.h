@@ -18,9 +18,12 @@
 +(IRDBManager *)getSharedInstance;
 -(BOOL)createDB;
 
--(BOOL) save:(NSString *)sender;
--(BOOL) saveData:(NSString*)fname lname:(NSString*)lname
-          mobile:(NSString*)mobile email:(NSString*)email pass:(NSString *)pass confpass:(NSString *)confpass;
--(BOOL) findByEmail:(NSString*)email pass:(NSString *)pass;
+-(BOOL) save:(NSString *)column value:(id)value;
+
+
+- (NSArray *) fetchdataFromDB;
+
+
+- (NSString *)fetchparti:acstate columnid:(NSInteger)columnid;
 
 @end

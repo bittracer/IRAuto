@@ -49,4 +49,10 @@
 @end
 NSUserDefaults *defaults;
 NSArray *signalNames;
+<<<<<<< HEAD
+NSArray *imagesname;
+NSArray *database;
 RS_SliderView *horSlider;
+=======
+RS_SliderView *horSlider;
+>>>>>>> origin/master
