@@ -34,7 +34,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "188"
             endingLineNumber = "188"
-            landmarkName = "-alertView:didDismissWithButtonIndex:"
+            landmarkName = "-initializeForSlider"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -50,8 +50,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "200"
             endingLineNumber = "200"
-            landmarkName = "-alertView:didDismissWithButtonIndex:"
-            landmarkType = "5">
+            landmarkName = "@implementation IRAcViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -208,8 +208,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "212"
             endingLineNumber = "212"
-            landmarkName = "@implementation IRAcViewController"
-            landmarkType = "3">
+            landmarkName = "-alertView:didDismissWithButtonIndex:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -224,7 +224,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "214"
             endingLineNumber = "214"
-            landmarkName = "-checkIfAlreadyCollaborated"
+            landmarkName = "-alertView:didDismissWithButtonIndex:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -240,7 +240,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "215"
             endingLineNumber = "215"
-            landmarkName = "-checkIfAlreadyCollaborated"
+            landmarkName = "-alertView:didDismissWithButtonIndex:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -382,7 +382,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "191"
             endingLineNumber = "191"
-            landmarkName = "-alertView:didDismissWithButtonIndex:"
+            landmarkName = "-initializeForSlider"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
