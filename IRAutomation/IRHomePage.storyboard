@@ -613,7 +613,11 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+<<<<<<< HEAD
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dru-AM-lIw">
+=======
                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dru-AM-lIw">
+>>>>>>> origin/master
                                 <rect key="frame" x="98" y="267" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RFt-Rk-cLt"/>
@@ -645,12 +649,34 @@
                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLB-qs-uDr">
                                 <rect key="frame" x="166" y="506" width="130" height="32"/>
                                 <color key="backgroundColor" red="0.33725490200000002" green="0.40000000000000002" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="0II-FZ-nFw"/>
+                                    <constraint firstAttribute="width" constant="130" id="KRD-jC-Lvo"/>
+                                    <constraint firstAttribute="width" secondItem="PLB-qs-uDr" secondAttribute="height" multiplier="65:16" id="e6g-9u-tsl"/>
+                                </constraints>
                                 <state key="normal" title="SWING">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+<<<<<<< HEAD
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChS-Ng-dy7">
+                                <rect key="frame" x="19" y="506" width="140" height="32"/>
+                                <color key="backgroundColor" red="0.87058823529999996" green="0.21176470589999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ChS-Ng-dy7" secondAttribute="height" multiplier="35:8" id="nyS-2k-5dr"/>
+                                    <constraint firstAttribute="height" constant="32" id="rs6-aF-8ni"/>
+                                    <constraint firstAttribute="width" constant="140" id="zUD-EG-mQU"/>
+                                </constraints>
+                                <state key="normal" title="SWING">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-I4-NTm">
+=======
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-I4-NTm">
+>>>>>>> origin/master
                                 <rect key="frame" x="27" y="267" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fN3-0O-n9w"/>
@@ -664,7 +690,11 @@
                                     <action selector="AcOnOff:" destination="Ew3-f7-clz" eventType="touchUpInside" id="jFc-B8-HJS"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQP-3g-6XR">
+=======
                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQP-3g-6XR">
+>>>>>>> origin/master
                                 <rect key="frame" x="172" y="267" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="RNw-Vp-BZC"/>
@@ -707,12 +737,16 @@
                             <constraint firstItem="DQn-0k-PiK" firstAttribute="leading" secondItem="bir-1p-XRR" secondAttribute="leading" constant="123" id="5cD-xZ-Noq"/>
                             <constraint firstItem="dOi-bn-WlS" firstAttribute="leading" secondItem="PLB-qs-uDr" secondAttribute="trailing" constant="-25" id="6Mm-2R-S7q"/>
                             <constraint firstItem="LJL-xB-qU8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yQP-3g-6XR" secondAttribute="trailing" constant="21" id="73q-ow-cfz"/>
+                            <constraint firstItem="ChS-Ng-dy7" firstAttribute="leading" secondItem="bir-1p-XRR" secondAttribute="leading" constant="19" id="90z-pQ-yPc"/>
                             <constraint firstItem="DQn-0k-PiK" firstAttribute="top" secondItem="ChS-Ng-dy7" secondAttribute="top" constant="7" id="Cl5-KI-Aa0"/>
                             <constraint firstItem="dOi-bn-WlS" firstAttribute="trailing" secondItem="PLB-qs-uDr" secondAttribute="trailing" constant="-8" id="Gml-MV-EZU"/>
+                            <constraint firstItem="RdC-O8-DQm" firstAttribute="top" secondItem="ChS-Ng-dy7" secondAttribute="bottom" constant="30" id="ICZ-v5-Lj9"/>
                             <constraint firstItem="yQP-3g-6XR" firstAttribute="top" secondItem="GRA-nS-MLg" secondAttribute="bottom" constant="33" id="Ka4-Ji-IcE"/>
                             <constraint firstAttribute="centerX" secondItem="GRA-nS-MLg" secondAttribute="centerX" id="Kt5-Lr-I6W"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dOi-bn-WlS" secondAttribute="trailing" constant="16" id="LSK-fi-B6Y"/>
+                            <constraint firstItem="RdC-O8-DQm" firstAttribute="top" secondItem="PLB-qs-uDr" secondAttribute="bottom" constant="30" id="Njw-5N-snA"/>
                             <constraint firstItem="DQn-0k-PiK" firstAttribute="bottom" secondItem="ChS-Ng-dy7" secondAttribute="bottom" constant="-8" id="RO0-aE-7ly"/>
+                            <constraint firstAttribute="trailing" secondItem="PLB-qs-uDr" secondAttribute="trailing" constant="24" id="SFB-qG-bPu"/>
                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="GRA-nS-MLg" secondAttribute="trailing" constant="19" id="XId-gB-UTQ"/>
                             <constraint firstItem="DQn-0k-PiK" firstAttribute="top" secondItem="dOi-bn-WlS" secondAttribute="top" constant="4" id="aSG-LG-wX7"/>
                             <constraint firstItem="DQn-0k-PiK" firstAttribute="top" secondItem="PLB-qs-uDr" secondAttribute="top" constant="7" id="b35-xX-JRg"/>

@@ -26,7 +26,13 @@ NSString *aStr;
 NSString *a=@"true";
 static int signalscount=0;
 PFQuery *query;
+<<<<<<< HEAD
 
+=======
+NSString *First=@"@\"{\"format\":\"raw\",\"freq\":38,\"data\":";
+NSString *Last=@"}\"";
+NSString *Full=@"";
+>>>>>>> origin/master
 NSString *CurrentStatus;
 NSInteger btnindex;
 
@@ -105,17 +111,27 @@ int temprature;
     [super viewDidLoad];
     _Peripheral=[[IRKit sharedInstance].peripherals objectAtIndex:0];
     _panelView.layer.borderColor =AC_PANEL_BORDER_COLOR;
-    NSLog(@"------------%@",_nameOfAc);
+    NSLog(@"Name of AC%@",_nameOfAc);
      defaults = [NSUserDefaults standardUserDefaults];
     //[defaults setObject:[NSString stringWithFormat:@"swtchof"] forKey:@"farenheit"];
     lastValue= [defaults objectForKey:@"farenheit"];
     
+<<<<<<< HEAD
     [defaults synchronize];
     query = [PFQuery queryWithClassName:@"AcList"];
 
    // dataPart = [PFObject objectWithClassName:@"AcList"];
      _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
     
+=======
+
+    [defaults synchronize];
+
+    query = [PFQuery queryWithClassName:@"AcList"];
+    
+    _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
+ signalNames=@[@"Acoff",@"Acon",@"auto",@"cool",@"dry",@"fan",@"heat",@"timeroff",@"timeron",@"turboff",@"turboon",@"nightoff",@"nighton",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
+>>>>>>> origin/master
     
    // Init UISlider
     [self initializeForSlider];
@@ -279,10 +295,8 @@ if(signalscount < signalNames.count){
                     [alert show];
                     
                 }
-            }];
-           
+          }];
         }
-     
     }];
     
     }else{
