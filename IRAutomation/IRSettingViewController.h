@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "constant.h"
 
+
 @interface IRSettingViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 {
@@ -20,11 +21,21 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *mytabelview;
 
+
+//@property (nonatomic,strong) CLLocationManager *locationmanager;
+
 - (void)initialize;
+//- (void)initializeLocationManager;
+
+
 
 - (IBAction)OpenClose:(id)sender;
 
+
 - (IBAction)backToAppliances:(id)sender;
+- (void) switchChanged:(id)sender;
 @end
 
 NSUserDefaults *defaults;
+NSString *lastValue;
+NSString *notification_Last_state;

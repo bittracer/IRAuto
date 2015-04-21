@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,5 +40,11 @@
         
     }];
 
+}
+- (IBAction)openURL:(id)sender {
+    UIApplication *ourApplication = [UIApplication sharedApplication];
+    NSString *ourPath = @"http://www.infostretch.com/about";
+    NSURL *ourURL = [NSURL URLWithString:ourPath];
+    [ourApplication openURL:ourURL];
 }
 @end

@@ -43,10 +43,7 @@ UITextField *_UITextField;
     _UITextField.placeholder = @"Appliance Name";
     _UITextField.keyboardType = UIKeyboardTypeEmailAddress;
     [alert show];
-    
-    
-    
-    
+
 }
 
 
@@ -58,10 +55,7 @@ UITextField *_UITextField;
         
         // This will create the class on parse
         object = [PFObject objectWithClassName:@"AcList"];
-        
-//        IRAcViewController *temp= [[IRAcViewController alloc]init];
-//        temp.nameOfAc=_UITextField.text;
-        
+                
         [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if(succeeded){
 

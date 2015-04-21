@@ -214,8 +214,7 @@
     // Now add the view as an input accessory view to the selected textfield.
     [textField setInputAccessoryView:_inputAccView];
     
-    // Set the active field. We' ll need that if we want to move properly
-    // between our textfields.
+    //select active textfield
     _activeField = textField;
 }
 
@@ -290,34 +289,28 @@
 -(void)createInputAccessoryView:(UITextField *)actextfield{
     // Create the view that will play the part of the input accessory view.
   
-    _inputAccView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 310.0, 40.0)];
+        _inputAccView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 310.0, 40.0)];
     
-    // Set the view’s background color. We’ ll set it here to gray. Use any color you want.
-    [_inputAccView setBackgroundColor:[UIColor lightGrayColor]];
-    [_inputAccView setAlpha: 0.8];
+    // Set the view’s background color.
+        [_inputAccView setBackgroundColor:[UIColor lightGrayColor]];
+        [_inputAccView setAlpha: 0.8];
     
-    
-   //  the previous button.
-  
-        
+        //the previous button
         _btnPrev = [UIButton buttonWithType: UIButtonTypeCustom];
         [_btnPrev setFrame: CGRectMake(20.0, 0.0, 80.0, 40.0)];
         [_btnPrev setTitle: @"Previous" forState: UIControlStateNormal];
         // [_btnPrev setBackgroundColor:[UIColor grayColor]];
         [_btnPrev addTarget: self action: @selector(gotoPrevTextfield) forControlEvents: UIControlEventTouchUpInside];
         [_inputAccView addSubview:_btnPrev];
-    
-    
    
-    // Do the same for the two buttons left.
-    _btnNext = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_btnNext setFrame:CGRectMake(120.0f, 0.0f, 80.0f, 40.0f)];
-    [_btnNext setTitle:@"Next" forState:UIControlStateNormal];
-   // [_btnNext setBackgroundColor:[UIColor grayColor]];
-    [_btnNext addTarget:self action:@selector(gotonexttextfield) forControlEvents:UIControlEventTouchUpInside];
-    [_inputAccView addSubview:_btnNext];
+        //next and done buttons same as previous
+        _btnNext = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_btnNext setFrame:CGRectMake(120.0f, 0.0f, 80.0f, 40.0f)];
+        [_btnNext setTitle:@"Next" forState:UIControlStateNormal];
+        // [_btnNext setBackgroundColor:[UIColor grayColor]];
+        [_btnNext addTarget:self action:@selector(gotonexttextfield) forControlEvents:UIControlEventTouchUpInside];
+        [_inputAccView addSubview:_btnNext];
     
-
          _btnDone = [UIButton buttonWithType:UIButtonTypeCustom];
         [_btnDone setFrame:CGRectMake(230.0, 0.0f, 80.0f, 40.0f)];
         [_btnDone setTitle:@"Done" forState:UIControlStateNormal];
@@ -325,8 +318,8 @@
         [_inputAccView addSubview:_btnDone];
 
     
-    // Now that our buttons are ready we just have to add them to our view.
-    [_inputAccView addSubview:_btnNext];
+        //add buttons to view
+        [_inputAccView addSubview:_btnNext];
    
 }
 

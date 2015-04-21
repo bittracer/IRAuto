@@ -7,16 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import <MMDrawerController/MMDrawerController.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,CLLocationManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (nonatomic, strong)MMDrawerController *controller;
+
+@property (nonatomic, strong) CLLocationManager *manager;
+
 
 -(void)userLogin:(NSString *)root;
 
 
 @end
 
+CLLocation *location;
+NSUserDefaults *defaults;

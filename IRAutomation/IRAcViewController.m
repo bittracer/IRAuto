@@ -16,7 +16,6 @@
 #import <IRKit/IRKit.h>
 #import <IRPeripheral.h>
 #import <Parse/Parse.h>
-#import "IRDBManager.h"
 #import <IRKeys.h>
 #import <Log.h>
 #import <IRHTTPClient.h>
@@ -28,12 +27,9 @@ NSString *a=@"true";
 static int signalscount=0;
 PFQuery *query;
 
-NSString *First=@"@\"{\"format\":\"raw\",\"freq\":38,\"data\":";
-NSString *Last=@"}\"";
-NSString *Full=@"";
 NSString *CurrentStatus;
 NSInteger btnindex;
-NSInteger tempindex;
+
 
 
 @interface IRAcViewController () <RSliderViewDelegate>
@@ -50,74 +46,80 @@ NSInteger tempindex;
 
 int temprature;
 
--(void)loadView{
-  
+-(void)loadView1{
     
-    database=@[@"acstate",@"mode",@"timer",@"turbo",@"night",@"slider"];
+        remoteArray = [[NSMutableArray alloc]init];
+    signalNames=@[@"Acoff",@"Acon",@"auto",@"cool",@"dry",@"fan",@"heat",@"timeroff",@"timeron",@"turboff",@"turboon",@"nightoff",@"nighton",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
     
- signalNames=@[@"Acoff",@"Acon",@"auto",@"cool",@"dry",@"fan",@"heat",@"timeroff",@"timeron",@"turboff",@"turboon",@"nightoff",@"nighton",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
+    imagesname=@[@"Acoff",@"Acon",@"auto_active",@"cool_active",@"dry_active",@"fan_active",@"heat_active",@"timeroff",@"timeron",@"turboff",@"turboon",@"nightoff",@"nighton"];
     
-    imagesname=@[@"Acoff",@"Acon",@"auto_active",@"cool_active",@"dry_active",@"fan_active",@"heat_active",@"timeroff",@"timeron",@"turbooff",@"turboon",@"nightoff",@"nighton"];
-    
-    
-    //fetch data from local databse
-    
-    NSArray *data = [[IRDBManager getSharedInstance] fetchdataFromDB];
-
-    //set slider and temprature label tp previously set value
-    
-    point1.x=point1.x+(int)data[5];
-    [horSlider changeStarForegroundViewWithPoint:point1];
-    
-    //sets images of all buttons in UI
+        NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+        [dictionary setValue:@"Acoff" forKey:@"acstate"];
+        [dictionary setValue:@"" forKey:@"mode"];
+        [dictionary setValue:@"timeroff" forKey:@"timer"];
+        [dictionary setValue:@"turboff" forKey:@"turbo"];
+        [dictionary setValue:@"nightoff" forKey:@"night"];
+        [dictionary setValue:@"" forKey:@"slider"];
     
   
-    for (int k=0; k<5; k++) {
-
-        if (k==1) {
-            int i=0;
-            while (signalNames[i] != data[1]) {
-                i++;
+    //check if data is already entered in database
+    BOOL check=[ACRemoteModelService recordExist];
+    if (!check) {
+        //if not and dtabase is empty insert defualts to Local DB
+         [IRDatabase executeInsert_ReplaceQueryForTable:@"acremote" jsonArray:[NSArray arrayWithObject:dictionary]];
+    }
+    
+    //fetch all values from local database
+    NSArray *tempArray = [ACRemoteModelService getACRemotes];
+    ac=[tempArray objectAtIndex:0];
+    db=[[NSArray alloc]initWithObjects:@"acstate",@"mode",@"turbo",@"timer",@"night",@"slider", nil];
+    for(int i=0;i<6;i++){
+        [remoteArray addObject:[ac valueForKey:db[i]]];
+    }
+    
+    
+    //set all values in UI from Local DB
+    for (int i=0; i<remoteArray.count-1; i++) {
+        if (![remoteArray[i] isEqualToString:@""] && ![remoteArray[i] isEqualToString:@"<null>"]  ) {
+            
+            NSUInteger tag=[signalNames indexOfObject:remoteArray[i]];
+            
+            if ( tag==0 || tag==7 || tag==9 || tag==11) {
+                tag++;
             }
-            [(UIButton *)([self.view viewWithTag:i]) setImage:[UIImage imageNamed:[NSString stringWithFormat:[@"%@" stringByAppendingString:@"_active"],signalNames[i]]] forState:UIControlStateNormal];
+            [(UIButton *)([self.view viewWithTag:tag]) setImage:[UIImage imageNamed:[imagesname objectAtIndex:[signalNames indexOfObject:remoteArray[i]]]] forState:UIControlStateNormal];
         }
-
-        int i=0;
-        while (signalNames[i] != data[k]) {
-            i++;
-        }
-        if (i%2 == 0) {
-            [(UIButton *)([self.view viewWithTag:i]) setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",signalNames[i]]] forState :UIControlStateNormal];
-        }
-        else{
-            [(UIButton *)([self.view viewWithTag:i++]) setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",signalNames[i]]] forState :UIControlStateNormal];}
-        
     }
 
-        
+    //set slider and temprature label from Local DB
+    if (![remoteArray[5] isEqual:[NSNull null]]) {
+        if (point1.x==0) {
+            point1.x=[remoteArray[5] floatValue];
+        }
+        [horSlider changeStarForegroundViewWithPoint:point1];
+        [self sliderValueChanged:horSlider];}
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //_Peripheral=[[IRKit sharedInstance].peripherals objectAtIndex:0];
+    _Peripheral=[[IRKit sharedInstance].peripherals objectAtIndex:0];
     _panelView.layer.borderColor =AC_PANEL_BORDER_COLOR;
     NSLog(@"------------%@",_nameOfAc);
      defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[NSString stringWithFormat:@"false"] forKey:@"onoff"];
-    [defaults setObject:[NSString stringWithFormat:@"swtchof"] forKey:@"farenheit"];
+    //[defaults setObject:[NSString stringWithFormat:@"swtchof"] forKey:@"farenheit"];
+    lastValue= [defaults objectForKey:@"farenheit"];
     
-<<<<<<< HEAD
     [defaults synchronize];
-=======
     query = [PFQuery queryWithClassName:@"AcList"];
 
    // dataPart = [PFObject objectWithClassName:@"AcList"];
      _dataPart[@"nameOfAc"]=[NSString stringWithFormat:@"%@",_nameOfAc];
-    signalNames=@[@"Acoff",@"Acon",@"Auto",@"Cool",@"Dry",@"Fan",@"Heat",@"Timer",@"Night",@"Turbo",@"SwingH",@"SwingV",@"Temp16",@"Temp17",@"Temp18",@"Temp19",@"Temp20",@"Temp21",@"Temp22",@"Temp23",@"Temp24",@"Temp25",@"Temp26",@"Temp27",@"Temp28",@"Temp29",@"Temp30"];
->>>>>>> origin/master
+    
     
    // Init UISlider
-    [self initialize];
+    [self initializeForSlider];
+    [self loadView1];
 
 }
 
@@ -139,7 +141,7 @@ int temprature;
 
 #pragma mark - Initialize Slider
 
--(void) initialize{
+-(void) initializeForSlider{
     
     horSlider = [[RS_SliderView alloc] initWithFrame:CGRectMake(10, 340, 300, 100) andOrientation:Horizontal];
     horSlider.delegate = self;
@@ -303,74 +305,64 @@ if(signalscount < signalNames.count){
     
 }
 
+//Fetch signals from Parse
+
 - (void)FetchData:(NSInteger)tag
 {
-<<<<<<< HEAD
-  
+    
     NSInteger temptag=tag-1;
-    PFQuery *query = [PFQuery queryWithClassName:@"Signals"];
-    [query selectKeys:@[@"state",@"signalData"]];
-
-
-=======
-    
-    NSInteger temptag=tag-4;
-    
-    
-    CurrentStatus =[defaults objectForKey:@"onoff"];
-    
->>>>>>> origin/master
-    if(tag==1){
-            if (![[[IRDBManager getSharedInstance] fetchparti:@"acstate" columnid:tag-1] isEqualToString:@"acoff"]) {
-                tag--;
-                btnindex=tag;}
-    }
-    else if (tag==8 && tag==10)
-    {
-        if (![[[IRDBManager getSharedInstance] fetchparti:database[tag-6] columnid:tag-6] isEqualToString:database[tag-6]]) {
-            tag--;
-            btnindex=tag;}
-    }
-<<<<<<< HEAD
-    else if (tag==12)
-    {
-        if (![[[IRDBManager getSharedInstance] fetchparti:@"turbo" columnid:tag-9] isEqualToString:@"turbooff"]) {
-            tag--;
-            btnindex=tag;}
-    }
-    else if(temptag>=15 && temptag<=29){
+    if(temptag>=15 && temptag<=29){
         
-        btnindex=0;
-        tempindex=temptag;
-        [query whereKey:@"state" equalTo:signalNames[temptag]];
-=======
-    if(temptag>=12 && temptag<=26){
-        [query selectKeys:@[@"nameOfAc",[NSString stringWithFormat:@"%@",signalNames[temptag]]]];
-        [query whereKey:@"nameOfAC" equalTo:_nameOfAc];
-        
->>>>>>> origin/master
+        tag=temptag;
+        btnindex=tag;
     }
     else{
-        [query selectKeys:@[@"nameOfAc",[NSString stringWithFormat:@"%@",signalNames[temptag]]]];
-        [query whereKey:@"nameOfAc" equalTo:_nameOfAc];
+        
+        NSArray *tempArray = [ACRemoteModelService getACRemotes];
+        ac=[tempArray objectAtIndex:0];
+   
+    switch (tag) {
+        case AC:
+            if (![[ac valueForKey:@"acstate"] isEqualToString:@"Acoff"]) {
+                tag--;
+            }
+            break;
+            
+        case TIMER:
+            if (![[ac valueForKey:@"timer"] isEqualToString:@"timeroff"]) {
+                tag--;
+            }
+            break;
+        case TURBO:
+            if (![[ac valueForKey:@"turbo"] isEqualToString:@"turboff"]) {
+                tag--;
+            }
+            break;
+            
+        case NIGHT:
+            if (![[ac valueForKey:@"night"] isEqualToString:@"nightoff"]) {
+                tag--;
+            }
+            break;
+        default:
+            break;
     }
+}
+    
+        btnindex=tag;
+        [query selectKeys:@[@"nameOfAc",[NSString stringWithFormat:@"%@",signalNames[tag]]]];
+        [query whereKey:@"nameOfAc" equalTo:_nameOfAc];
+
     
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
             for (PFObject *object in objects) {
-//                
-//                NSLog(@"objectid %@",object.objectId);
-//                NSLog(@"%@state",object[@"state]]);
-                _dataPart= object[[NSString stringWithFormat:@"%@",signalNames[temptag]]];
+
+                _dataPart= object[[NSString stringWithFormat:@"%@",signalNames[tag]]];
                 
             }
-            
-            Full=@"";
-            Full=[Full stringByAppendingString:[NSString stringWithFormat:@"%@",First]];
-            Full=[Full stringByAppendingString:[NSString stringWithFormat:@"%@",_dataPart]];
-            Full=[Full stringByAppendingString:[NSString stringWithFormat:@"%@",Last]];
             
             
             if(_Peripheral.isReachableViaWifi)
@@ -404,18 +396,17 @@ if(signalscount < signalNames.count){
         [attributedString setAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica-light" size:10.0]
                                       , NSBaselineOffsetAttributeName : @22} range:NSMakeRange(2, 2)];
     
-    NSString *swtch= [defaults objectForKey:@"farenheit"];
     
-    if ([swtch isEqualToString:@"swtchon"]) {
+    if ([lastValue isEqualToString:@"swtchon"]) {
         
         //convert temprature to farenheit
-        
         attributedString = [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"%d\u00b0f", (int)((((sender.value*14)+16)*1.8)+32)]];
         _temprature.attributedText = attributedString;
         
     }
     else{
         
+        //Temprature in celcius
         attributedString = [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"%d\u00b0c", temprature +16]];
         _temprature.attributedText = attributedString;
     }
@@ -485,109 +476,127 @@ NSMutableAttributedString *attributedString;
 
 - (void)requestviaInternet
 {
-        NSString *deviceid=_Peripheral.deviceid;
+    NSString *deviceid=_Peripheral.deviceid;
     
-        NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
-        NSMutableDictionary *realParams=[[NSMutableDictionary alloc]init];
-        req.cachePolicy     = NSURLRequestReloadIgnoringLocalCacheData;
-        req.timeoutInterval = 10;
-        [realParams setObject:Full forKey:@"message"];
-        [realParams setObject:[IRKit sharedInstance].clientkey forKey:@"clientkey"];
-        [realParams setObject:deviceid forKey:@"deviceid"];
-    
-        NSData *data = [[self stringOfURLEncodedDictionary: realParams] dataUsingEncoding: NSUTF8StringEncoding];
-
-        [req setHTTPMethod:@"POST"];
-        [req setValue: [NSString stringWithFormat: @"%lu", (unsigned long)[data length]] forHTTPHeaderField: @"Content-Length"];
-        [req setValue: @"application/x-www-form-urlencoded" forHTTPHeaderField: @"Content-Type"];
-        [req setHTTPBody:data];
-        NSLog(@"Request---%@",req);
-        [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-            NSInteger status= (long)((NSHTTPURLResponse *)response).statusCode;
-            if(status == 200)
-            {
-                [self insertDataToLocalDB];
-                
-            }
-
-        }];
-    
-}
-
-#pragma mark - RequestviaWifi
-
-- (void)requestviawifi
-{
+    NSMutableDictionary *payload = @{}.mutableCopy;
+    payload[ @"freq" ]   = @38 ;
+    payload[ @"data" ]   = _dataPart;
+    payload[ @"format" ] =@"raw" ;
     
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
-    [req setHTTPBody:[Full dataUsingEncoding:NSUTF8StringEncoding]];
+    NSMutableDictionary *realParams=[[NSMutableDictionary alloc]init];
+    req.cachePolicy     = NSURLRequestReloadIgnoringLocalCacheData;
+    req.timeoutInterval = 100;
+    NSData *jsonData      = [NSJSONSerialization dataWithJSONObject: payload options: 0 error: nil];
+    NSString *json        = [[NSString alloc] initWithData: jsonData encoding: NSUTF8StringEncoding];
+    [realParams setObject:json forKey:@"message"];
+    [realParams setObject:[IRKit sharedInstance].clientkey forKey:@"clientkey"];
+    [realParams setObject:deviceid forKey:@"deviceid"];
+    
+    NSData *data = [[self stringOfURLEncodedDictionary: realParams] dataUsingEncoding: NSUTF8StringEncoding];
+    
+    [req setHTTPBody:data];
     [req setHTTPMethod:@"POST"];
-     
+    [req setValue: [NSString stringWithFormat: @"%lu", (unsigned long)[data length]] forHTTPHeaderField: @"Content-Length"];
+    [req setValue: @"application/x-www-form-urlencoded" forHTTPHeaderField: @"Content-Type"];
+    NSLog(@"Request---%@",req);
     [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        
+        NSLog(@"%ld", (long)((NSHTTPURLResponse *)response).statusCode);
+        NSLog(@"%@", (NSHTTPURLResponse *)response);
         NSInteger status= (long)((NSHTTPURLResponse *)response).statusCode;
         if(status == 200)
         {
             [self insertDataToLocalDB];
-
+            
         }
         
     }];
     
 }
+#pragma mark - RequestviaWifi
 
+- (void)requestviawifi
+{
+    
+    NSMutableDictionary *payload = @{}.mutableCopy;
+    payload[ @"freq" ]   = @38 ;
+    payload[ @"data" ]   = _dataPart;
+    payload[ @"format" ] =@"raw" ;
+    
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
+    NSData *data = [NSJSONSerialization dataWithJSONObject: payload options: 0 error: nil];
+    [req setHTTPBody:data];
+    [req setHTTPMethod:@"POST"];
+    
+    [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSLog(@"%ld", (long)((NSHTTPURLResponse *)response).statusCode);
+        NSLog(@"%@", (NSHTTPURLResponse *)response);
+        NSInteger status= (long)((NSHTTPURLResponse *)response).statusCode;
+        if(status == 200)
+        {
+            [self insertDataToLocalDB];
+            
+        }
+
+        
+    }];
+    
+}
 
 #pragma mark -Data insertion to Local Database
 
 - (void) insertDataToLocalDB
 {
-    BOOL success = NO;
-    NSString *alertString = @"Data Insertion to local DB failed";
     
-    if (btnindex==0 && btnindex==1)
+    NSArray *tempArray = [ACRemoteModelService getACRemotes];
+    ac= [tempArray objectAtIndex:0];
+    if (btnindex==0 || btnindex==1)
     {
-        
-        success = [[IRDBManager getSharedInstance]save:database[0] value:signalNames[btnindex]];
-        if (success == NO) {
-            
-            alert = [[UIAlertView alloc]initWithTitle:
-                     alertString message:nil
-                                             delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            alert.tag=DATABASE_NOT_UPDATED;
-            [alert show];
-        }
-      [(UIButton *)([self.view viewWithTag:1]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
+        [ac setValue:signalNames[btnindex] forKey:@"acstate"];
+        [ACRemoteModelService updateRemote:ac];
+        [(UIButton *)([self.view viewWithTag:AC]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
     }
     else if (btnindex>=2 && btnindex<=6) {
 
-    success = [[IRDBManager getSharedInstance]save:database[1] value:signalNames[btnindex]];
-          [(UIButton *)([self.view viewWithTag:btnindex]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
+        //Reset button which was previously set
+        if (![[ac valueForKey:@"mode"] isEqualToString:@""]) {
+                 NSInteger prev=[signalNames  indexOfObject:[ac valueForKey:@"mode"]];
+                 [(UIButton *)([self.view viewWithTag:prev]) setImage:[UIImage imageNamed:signalNames[prev]] forState:UIControlStateNormal];
+             }
+        //set current pressed button
+        [ac setValue:signalNames[btnindex] forKey:@"mode"];
+             [ACRemoteModelService updateRemote:ac];
+        [(UIButton *)([self.view viewWithTag:btnindex]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
     }
-    else if (btnindex==8)
+    else if (btnindex==7 || btnindex==8)
     {
-        success = [[IRDBManager getSharedInstance]save:database[btnindex-6] value:signalNames[btnindex]];
-         [(UIButton *)([self.view viewWithTag:8]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
+        [ac setValue:signalNames[btnindex] forKey:@"timer"];
+        [ACRemoteModelService updateRemote:ac];
+        [(UIButton *)([self.view viewWithTag:TIMER]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
     }
-    else if (btnindex==10)
+    else if (btnindex== 9 || btnindex==10)
     {
-        success = [[IRDBManager getSharedInstance]save:database[btnindex-6] value:signalNames[btnindex]];
-        [(UIButton *)([self.view viewWithTag:10]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
+        [ac setValue:signalNames[btnindex] forKey:@"turbo"];
+        [ACRemoteModelService updateRemote:ac];
+        [(UIButton *)([self.view viewWithTag:TURBO]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
     }
-    else if (btnindex ==12)
+    else if (btnindex == 12 || btnindex ==11)
     {
-        success = [[IRDBManager getSharedInstance]save:database[btnindex-9] value:signalNames[btnindex]];
-        [(UIButton *)([self.view viewWithTag:12]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
+        [ac setValue:signalNames[btnindex] forKey:@"night"];
+        [ACRemoteModelService updateRemote:ac];
+        [(UIButton *)([self.view viewWithTag:NIGHT]) setImage:[UIImage imageNamed:imagesname[btnindex]] forState:UIControlStateNormal];
         
     }
-       else if (tempindex>=15 && tempindex<=29)
+       else if (btnindex>=15 && btnindex<=29)
     {
-        success = [[IRDBManager getSharedInstance]save:database[5] value:[NSString stringWithFormat:@"%f",point1. x]];
+        [ac setValue:[NSString stringWithFormat:@"%f",point1.x] forKey:@"slider"];
+        [ACRemoteModelService updateRemote:ac];
 
     }
 }
 
-//add/retrive data to parse
 
+#pragma mark - String Encoding for NSURLRequest
 
 - (NSString *)stringOfURLEncodedDictionary:(NSDictionary *)params {
     if (!params) {
@@ -607,7 +616,7 @@ NSMutableAttributedString *attributedString;
     return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
                                                                                  (__bridge CFStringRef)string,
                                                                                  NULL,
-                                                                                 (CFStringRef)@"!*'\"();:@&=+$,/?%#[]% ",
+                                                                                 (CFStringRef)@"!*'\"();:@&=+$,/?%#[]%",
                                                                                  kCFStringEncodingUTF8);
 }
 

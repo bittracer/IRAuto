@@ -52,15 +52,11 @@
     
     _becomeActiveObserver = [[NSNotificationCenter defaultCenter] addObserverForName: UIApplicationDidBecomeActiveNotification
                                                                               object: nil
-                                                                               queue: [NSOperationQueue mainQueue]
-                                                                          usingBlock:^(NSNotification *note) {
-                                                                              LOG(@"became active");
-                                                                              if (!self.stopSearchCalled) {
+        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+                    LOG(@"became active");
+                    if (!self.stopSearchCalled) {
                                                                                   
-                                                                                  [self startSearch];
-                                                                              }
-                                                                           
-                                                                          }];
+                    [self startSearch];}}];
     
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]

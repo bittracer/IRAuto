@@ -18,6 +18,8 @@
 #import <IRHTTPClient.h>
 #import <IRKeys.h>
 #import <IRGuideWifiViewController.h>
+#import "IRDatabase.h"
+#import "ACRemoteModelService.h"
 
 
 @interface AppDelegate ()
@@ -41,8 +43,22 @@
                   clientKey:@"hOkA4OBEBLweBlsDsRMyAEl3RKNzdkZxaroKZt1V"];
     
     
+    [IRDatabase setDatabasePath];
     
-     return YES;
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    }
+    
+    if ([launchOptions objectForKey:UIApplicationLaunchOptionsLocationKey])
+    {
+        _manager =[[CLLocationManager alloc]init];
+        _manager.delegate=self;
+        _manager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+        _manager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+        [_manager startMonitoringSignificantLocationChanges];
+
+    }
+          return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -50,22 +66,34 @@
    }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    defaults=[NSUserDefaults standardUserDefaults];
+    if([[defaults objectForKey:@"notification"] isEqualToString:@"swtchon"])
+    {
+        [_manager startUpdatingLocation];}
     
-   }
+}
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     
-   }
+}
+
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 
-    
-   }
+    _manager =[[CLLocationManager alloc]init];
+    _manager.delegate=self;
+    _manager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+    _manager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+
+}
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     
-   }
+}
 
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    
+}
 
 -(void)userLogin:(NSString *)root{
     
@@ -95,6 +123,38 @@
 //    self.window.rootViewController=controller;
 //    [self.window  makeKeyAndVisible];
 }
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+        NSArray *tempArray = [ACRemoteModelService getACRemotes];
+        ACRemote *ac=[tempArray objectAtIndex:0];
+        
+        if ([[ac valueForKey:@"acstate"] isEqualToString:@"Acon"]) {
+            
+            CLLocation *currentLocation=[locations lastObject];
+            
+            NSDictionary *userLoc=[[NSUserDefaults standardUserDefaults] objectForKey:@"location"];
+            
+            location=[defaults objectForKey:@"location"];
+            CLLocationDegrees lat=[[userLoc objectForKey:@"lat"] doubleValue];
+            CLLocationDegrees lon=[[userLoc objectForKey:@"long"] doubleValue];
+            location = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
+            
+            CLLocationDistance distance = [location distanceFromLocation:currentLocation];
+            if (distance >= 1) {
+                
+                UILocalNotification *localNotification=[[UILocalNotification alloc] init];
+                localNotification.alertBody = @"you forgot to TURN OFF your AC";
+                localNotification.soundName = UILocalNotificationDefaultSoundName;
+                localNotification.fireDate = [NSDate date];
+                localNotification.timeZone = [NSTimeZone defaultTimeZone];
+                [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+                [_manager stopUpdatingLocation];
+                [_manager stopMonitoringSignificantLocationChanges];}
+        
+        }
+}
+
 
 @end
 

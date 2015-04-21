@@ -47,8 +47,20 @@
 
 #define SETTING_SWITCH 50
 
+#define NOTIFICATION_ON 1
 
-#define AC_ON_OFF 1
+#define TEMP_SWITCH_PRESSED 1
+
+#define NOTIFIACTION_SWITCH_PRESSED 0
+
+
+#define AC 1
+
+#define TIMER 8
+
+#define TURBO 10
+
+#define NIGHT 12
 
 
 

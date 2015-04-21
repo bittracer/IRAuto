@@ -12,5 +12,7 @@
 - (IBAction)OpenClose:(id)sender;
 
 - (IBAction)backToAppliances:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *openUrl;
+- (IBAction)openURL:(id)sender;
 
 @end

@@ -18,12 +18,14 @@
 +(IRDBManager *)getSharedInstance;
 -(BOOL)createDB;
 
--(BOOL) save:(NSString *)column value:(id)value;
 
+- (BOOL)saveDefaults:(NSString *)column1 column2:(id)column2 column3:(id)column3 column4:(id)column4;;
+
+- (BOOL)update:(NSString *)column value:(id)value;
 
 - (NSArray *) fetchdataFromDB;
 
 
-- (NSString *)fetchparti:acstate columnid:(NSInteger)columnid;
+- (NSString *)fetchparti:state columnid:(NSInteger)columnid;
 
 @end

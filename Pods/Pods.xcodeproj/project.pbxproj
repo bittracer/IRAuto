@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		05E62F370D4AB50244C8B5DE /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C365A1720D2217A459FD78 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		09030A0D123D9A25948AC06C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C973DE83967A2ABA809E03AD /* SystemConfiguration.framework */; };
 		09A68E771103092D0B1D7B41 /* IRPeripherals+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B08A1DBA72C29AB94E7F988E /* IRPeripherals+UIKit.h */; };
 		0A194762082B416C12A1E076 /* IRHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A29B827291F1F14E1F188D3B /* IRHTTPClient.h */; };
 		0D5C81454C209F4AF967C1C4 /* NSOperationQueue+HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 5676F3568403B8CB2ACEC1FE /* NSOperationQueue+HTTP.h */; };
 		1085544690710343AB7F2C91 /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EDCE9D2C68A9261632DE6B /* UIViewController+MMDrawerController.h */; };
 		139B9D2DFD965C6F123177A7 /* IRGuidePowerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F64FB0C040F8EBD83C45C347 /* IRGuidePowerViewController.h */; };
 		152A7BF4F2E439DD9E5AEE24 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4ED62AD4B7EB29AC42C96D /* Log.m */; };
-		162A54A58D69CE88A114B358 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06C3805C2697E865DC6A522 /* UIKit.framework */; };
 		182859DD3AB664CBB6903962 /* IRWifiEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE0E9F72D9E8F6E73E36F1 /* IRWifiEditViewController.m */; };
 		18541DEE241CF6DE6FCF423D /* IRSignalSendOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9238AE76CC91B6A419ECF /* IRSignalSendOperationQueue.m */; };
 		1B5A32AA620673CB37247189 /* IRHTTPClient+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C3235E58D00297E745A518 /* IRHTTPClient+UIKit.m */; };
@@ -24,10 +22,8 @@
 		27AA7E92044B98D08A2ED0C5 /* Pods-MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2E9F9677BF4CB3627A0C67 /* Pods-MMDrawerController-dummy.m */; };
 		2A41398F846D4FA39D1221CD /* CRC8.c in Sources */ = {isa = PBXBuildFile; fileRef = DB125651DC20D927F5B2A594 /* CRC8.c */; };
 		2ABF2F5D6DAB9DEF355AD882 /* IRNewSignalScene1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFFA1AEE75E5620F11CAC74 /* IRNewSignalScene1ViewController.m */; };
-		2B6BEBDFE682C92F089887E4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B9C90519380C7B9A73BAE0 /* AVFoundation.framework */; };
 		2C2891E09F3D139741A8D874 /* IRGuidePowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BA8D634E1CE7B70B6EB93 /* IRGuidePowerViewController.m */; };
 		2CD95A2226422D22B5787127 /* IRGuideWifiViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 829D2DDDA87FC7BB6008C6F1 /* IRGuideWifiViewController.h */; };
-		315C127235499C5F20137B44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEE4B5B66E6328EC45E6D93 /* QuartzCore.framework */; };
 		39BFFDF896FDE8B0E0DBA21B /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = C1308CDD277409040A2590CC /* Log.h */; };
 		3B937F8C4C832484B8BCEFDA /* ISHTTPOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFD9B80FEA10F56D3551DA2 /* ISHTTPOperationQueue.h */; };
 		3D3646BA1C7771FC9291B878 /* IRNewSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBAE35B197F258D1DB15D4 /* IRNewSignalViewController.m */; };
@@ -36,8 +32,6 @@
 		431230B7C9426C3BA98149D7 /* IRKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9FB0C7A6B87F21896E1775 /* IRKeys.h */; };
 		46911B5EBCF4A145EF27901B /* IRSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1F1256287125CF2FEBA1FE /* IRSearcher.m */; };
 		46A9997FCEEC292AC96A3F1B /* IRProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BF8719B942CDD6D1317DC49 /* IRProgressView.h */; };
-		46B7FBD706715C5E4C9670C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DFBF6C8011FEE7D87D4D66 /* CoreGraphics.framework */; };
-		46D869EC2C2EDD5096BF49CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674049FAA40792795CF70A7C /* Foundation.framework */; };
 		48057FD26F2EDA5126E4E389 /* IRPeripherals.m in Sources */ = {isa = PBXBuildFile; fileRef = A5407F4B2DE46DD3AE457E16 /* IRPeripherals.m */; };
 		489CEE73B57DAEDB22438D36 /* IRSignalNameEditViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AAE7959C6DF0B007FA1A6E3 /* IRSignalNameEditViewController.h */; };
 		499FFE6081A630E8FC9DAA72 /* IRSignalNameEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B6D3B216111CD8E3B7E5F /* IRSignalNameEditViewController.m */; };
@@ -49,10 +43,7 @@
 		533350F9AD588C1D47551E40 /* IRSignals.m in Sources */ = {isa = PBXBuildFile; fileRef = F56AA842D28661C04AD2E101 /* IRSignals.m */; };
 		539E7DA56D9B508BF1E3778E /* IRPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EC46DF5FA64F78B9CF9D242 /* IRPersistentStore.h */; };
 		558FE951917F501C00EAF1A5 /* IRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF30BE23A9134E0192AB29 /* IRProgressView.m */; };
-		5732EB4101A5D7924B3F3899 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEE4B5B66E6328EC45E6D93 /* QuartzCore.framework */; };
 		57E4018479C543886C2E129B /* IRHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7622390BC7C451DC947B /* IRHTTPClient.m */; };
-		5AA43EE4BC175BC42D6C852E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674049FAA40792795CF70A7C /* Foundation.framework */; };
-		5DC23C805240F8008ED06D73 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA488398956063D7E2EB849 /* CoreTelephony.framework */; };
 		60EAB2A38FD666CBEF5AB1E1 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 49B5CA5BD57F711CAEC33137 /* MMDrawerBarButtonItem.h */; };
 		6472B83A33937C0B3863E8D2 /* IRFAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C62AD00D5430E078263CD9D /* IRFAQViewController.m */; };
 		6623F97D29DFD3E5F67E632A /* NSOperationQueue+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FC424E0EDAE853F8252A0D /* NSOperationQueue+HTTP.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -64,10 +55,8 @@
 		7632E423F05F29792BB13A10 /* Pods-IRKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EC3D5B6D62799DB17E4EC6 /* Pods-IRKit-dummy.m */; };
 		777396796E4345ABA4FB54DD /* IRNewPeripheralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28651240C9E45A014D57107 /* IRNewPeripheralViewController.m */; };
 		7EA717A4F317B24C3C81AED5 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BE8B6B00AB926280C0028EC /* MMDrawerController.h */; };
-		806855C17EB44FA16BD466A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674049FAA40792795CF70A7C /* Foundation.framework */; };
 		838572C131E86F008A58E2BF /* IRReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FEBED3FE7CC707AE1F510D3 /* IRReachability.h */; };
 		84744E75C791F77053E9BDEF /* IRViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A8055020BC6610E9CA597F /* IRViewHelper.m */; };
-		87E129F971FC8C3997DE34B7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2E5FDAD54D8964E2BF6047 /* MediaPlayer.framework */; };
 		88809B84582AA46E960078B5 /* CRC8.h in Headers */ = {isa = PBXBuildFile; fileRef = 647A020AB665AF65DF6736F8 /* CRC8.h */; };
 		8D5B12F2CCFB1A10C427BEA1 /* IRHTTPOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E6CC72FE58E9CF5B3467C /* IRHTTPOperationQueue.m */; };
 		90EC55CFA905685CF31B471D /* IRHTTPOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = F401A2A5BF55747E9A09E1D5 /* IRHTTPOperationQueue.h */; };
@@ -79,13 +68,11 @@
 		9E6B3E88F3DCDCEA8510E652 /* Pods-ISHTTPOperation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2852F045C78D7E591E70D848 /* Pods-ISHTTPOperation-dummy.m */; };
 		A16BEE669853CC2D8503B791 /* IRSignalSendOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01083DEBC2EDA9AE5B5311B3 /* IRSignalSendOperation.m */; };
 		A4B47064907DA728435FC308 /* IREditCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E7BDC62F3DF6BA4836A563A6 /* IREditCell.h */; };
-		A793A021199E635CE5B9178D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674049FAA40792795CF70A7C /* Foundation.framework */; };
 		A7BE987FED67C49A2B4C3D8F /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617E4BAA2CAF698DAE7D1416 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A7E1CFDF689FE2D27B19848E /* IRNewPeripheralViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B087018EE4632D4BF973B6CC /* IRNewPeripheralViewController.h */; };
 		A7F88A506F3AB00E13A08402 /* ISHTTPOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51227E4DF6BE8BC83111BBBC /* ISHTTPOperationQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A83E9DE4F599E1C7B231E269 /* IRUserDefaultsStore.h in Headers */ = {isa = PBXBuildFile; fileRef = B9191C214B105C37E448D255 /* IRUserDefaultsStore.h */; };
 		A8478A5E3F316FCC46F9FEC9 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C35668DFFB4BCA9AE2469A4C /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AC8DA30AAD5952C88615FFD8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 643D70F5146CAD8D7E1F17F6 /* AudioToolbox.framework */; };
 		ADB27DBFAC84593745EC8C9E /* IRNewSignalScene1ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BCF0E6C303C857129AF28458 /* IRNewSignalScene1ViewController.h */; };
 		AEBFA9AD5C5A6CA1894D4481 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D58F82CD0D0F2EB932A32C4 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		B2485462C1930213456EEC28 /* IRViewCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCB47CC86BB8DE5DD20E75 /* IRViewCustomizer.m */; };
@@ -94,6 +81,15 @@
 		C2FE82B7C7E9E68E887BA580 /* IRViewCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = D1D836CB831EB13C14A90FEA /* IRViewCustomizer.h */; };
 		C5C256E86A14E2535EB80B63 /* ISHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 81265302F2ECB365BE2BCA1A /* ISHTTPOperation.h */; };
 		C6B9A34260F4C88B2B217546 /* IRSearcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E704C2F64D8C2D4CE6F60D1 /* IRSearcher.h */; };
+		CE52AEE51AD7ADCC002DE680 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52AEE41AD7ADCC002DE680 /* AVFoundation.framework */; };
+		CE52AEE71AD7ADF7002DE680 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52AEE61AD7ADF7002DE680 /* AudioToolbox.framework */; };
+		CE52AEE91AD7AE08002DE680 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52AEE81AD7AE08002DE680 /* CoreGraphics.framework */; };
+		CE52AEEB1AD7AE2A002DE680 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52AEEA1AD7AE2A002DE680 /* QuartzCore.framework */; };
+		CE52AEED1AD7AE30002DE680 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52AEEC1AD7AE30002DE680 /* CoreTelephony.framework */; };
+		CE52AEEF1AD7AE4A002DE680 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52AEEE1AD7AE4A002DE680 /* Foundation.framework */; };
+		CE52AEF11AD7AE6E002DE680 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52AEF01AD7AE6E002DE680 /* SystemConfiguration.framework */; };
+		CE52AEF31AD7AE83002DE680 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52AEF21AD7AE83002DE680 /* UIKit.framework */; };
+		CE52AEF51AD7AE94002DE680 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52AEF41AD7AE94002DE680 /* MediaPlayer.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D8F73583D302B667BDE957E9 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 19B63A00881A0FB6FFF50C60 /* MMDrawerController+Subclass.h */; };
 		DA323760ED62C37D8F3F1E88 /* IRKit+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C28760605072C7D7F02256B /* IRKit+Internal.h */; };
 		DC234F999E84AE07E29634D6 /* IRNewSignalViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 913C5BDF7DF05D397544C608 /* IRNewSignalViewController.h */; };
@@ -157,7 +153,6 @@
 		0FD6B3A72DC22F8A44C5282A /* IRHTTPClient+UIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IRHTTPClient+UIKit.h"; path = "IRKit/IRKit/IRHTTPClient+UIKit.h"; sourceTree = "<group>"; };
 		0FF4E3D883F7C0C408F0604C /* IRHTTPJSONOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRHTTPJSONOperation.h; path = IRKit/IRKit/IRHTTPJSONOperation.h; sourceTree = "<group>"; };
 		11766A25B1EA017C3F5ACC3E /* Pods-ISHTTPOperation-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ISHTTPOperation-Private.xcconfig"; sourceTree = "<group>"; };
-		12DFBF6C8011FEE7D87D4D66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		14FC424E0EDAE853F8252A0D /* NSOperationQueue+HTTP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSOperationQueue+HTTP.m"; path = "ISHTTPOperation/NSOperationQueue+HTTP.m"; sourceTree = "<group>"; };
 		15C00C56ACF47251F0D0F989 /* IRWifiSecuritySelectViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRWifiSecuritySelectViewController.m; path = IRKit/IRKit/IRWifiSecuritySelectViewController.m; sourceTree = "<group>"; };
 		18F844E2DFB6E16273886C37 /* IRConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRConst.h; path = IRKit/IRKit/IRConst.h; sourceTree = "<group>"; };
@@ -176,7 +171,6 @@
 		30332FE2CFA7333636E969B1 /* IRKit+Internal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IRKit+Internal.m"; path = "IRKit/IRKit/IRKit+Internal.m"; sourceTree = "<group>"; };
 		33A786E66576E14462188C05 /* IRPeripheralNameEditViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRPeripheralNameEditViewController.h; path = IRKit/IRKit/IRPeripheralNameEditViewController.h; sourceTree = "<group>"; };
 		39AD9C06D0616282D2AAFD83 /* IRSignal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRSignal.m; path = IRKit/IRKit/IRSignal.m; sourceTree = "<group>"; };
-		39B9C90519380C7B9A73BAE0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		39FC2EF57A900EC8AB1F4E6A /* IRKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRKit.h; path = IRKit/IRKit/IRKit.h; sourceTree = "<group>"; };
 		3ADE21E5DD97DD619643C46C /* Pods-IRKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IRKit-Private.xcconfig"; sourceTree = "<group>"; };
 		3C8838BA0AC463F4099172B4 /* IRPeripheralNameEditViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRPeripheralNameEditViewController.m; path = IRKit/IRKit/IRPeripheralNameEditViewController.m; sourceTree = "<group>"; };
@@ -201,21 +195,17 @@
 		5C04678FDD6203E79125217E /* IRPeripherals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRPeripherals.h; path = IRKit/IRKit/IRPeripherals.h; sourceTree = "<group>"; };
 		5EB23B438241F48418FE7C77 /* IRSignalSendOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRSignalSendOperation.h; path = IRKit/IRKit/IRSignalSendOperation.h; sourceTree = "<group>"; };
 		617E4BAA2CAF698DAE7D1416 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
-		643D70F5146CAD8D7E1F17F6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 		647A020AB665AF65DF6736F8 /* CRC8.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRC8.h; path = IRKit/IRKit/CRC8.h; sourceTree = "<group>"; };
 		64C365A1720D2217A459FD78 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
-		674049FAA40792795CF70A7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6EFFA1AEE75E5620F11CAC74 /* IRNewSignalScene1ViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRNewSignalScene1ViewController.m; path = IRKit/IRKit/IRNewSignalScene1ViewController.m; sourceTree = "<group>"; };
 		773A5D84B102D72A659FD887 /* IRPeripheralCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRPeripheralCell.m; path = IRKit/IRKit/IRPeripheralCell.m; sourceTree = "<group>"; };
 		7ACD7FD5FBE99519D86B4A6F /* Pods-IRKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IRKit.xcconfig"; sourceTree = "<group>"; };
 		7BF8719B942CDD6D1317DC49 /* IRProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRProgressView.h; path = IRKit/IRKit/IRProgressView.h; sourceTree = "<group>"; };
-		7EEE4B5B66E6328EC45E6D93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		7FEBAE35B197F258D1DB15D4 /* IRNewSignalViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRNewSignalViewController.m; path = IRKit/IRKit/IRNewSignalViewController.m; sourceTree = "<group>"; };
 		81265302F2ECB365BE2BCA1A /* ISHTTPOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISHTTPOperation.h; path = ISHTTPOperation/ISHTTPOperation.h; sourceTree = "<group>"; };
 		829D2DDDA87FC7BB6008C6F1 /* IRGuideWifiViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRGuideWifiViewController.h; path = IRKit/IRKit/IRGuideWifiViewController.h; sourceTree = "<group>"; };
 		82E64308AEAC6B455B61FBD4 /* Pods-MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
 		856E7CD33E7A9D29E974353F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		8C2E5FDAD54D8964E2BF6047 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		8D4FB0A36F3480D30680FF03 /* IRSignalSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRSignalSequence.m; path = IRKit/IRKit/IRSignalSequence.m; sourceTree = "<group>"; };
 		8D58F82CD0D0F2EB932A32C4 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
 		913C5BDF7DF05D397544C608 /* IRNewSignalViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRNewSignalViewController.h; path = IRKit/IRKit/IRNewSignalViewController.h; sourceTree = "<group>"; };
@@ -246,8 +236,16 @@
 		C28651240C9E45A014D57107 /* IRNewPeripheralViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRNewPeripheralViewController.m; path = IRKit/IRKit/IRNewPeripheralViewController.m; sourceTree = "<group>"; };
 		C35668DFFB4BCA9AE2469A4C /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
 		C881E41D69471E41EF2C5336 /* IRPeripherals+UIKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IRPeripherals+UIKit.m"; path = "IRKit/IRKit/IRPeripherals+UIKit.m"; sourceTree = "<group>"; };
-		C973DE83967A2ABA809E03AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		D06C3805C2697E865DC6A522 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		CE52AEE41AD7ADCC002DE680 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = "<absolute>"; };
+		CE52AEE61AD7ADF7002DE680 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		CE52AEE81AD7AE08002DE680 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = "<absolute>"; };
+		CE52AEEA1AD7AE2A002DE680 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		CE52AEEC1AD7AE30002DE680 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = "<absolute>"; };
+		CE52AEEE1AD7AE4A002DE680 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		CE52AEF01AD7AE6E002DE680 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		CE52AEF21AD7AE83002DE680 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = "<absolute>"; };
+		CE52AEF41AD7AE94002DE680 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		CE52AEF91AD7AF3A002DE680 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "../../../Library/Developer/Xcode/DerivedData/IRAutomation-fjeayazjhlbctyedfuzpquvvtwrp/Build/Products/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		D1D836CB831EB13C14A90FEA /* IRViewCustomizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRViewCustomizer.h; path = IRKit/IRKit/IRViewCustomizer.h; sourceTree = "<group>"; };
 		D1EB2CA3A0ECD70B0194D282 /* IRUserDefaultsStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRUserDefaultsStore.m; path = IRKit/IRKit/IRUserDefaultsStore.m; sourceTree = "<group>"; };
 		D7F9DCF1A9CD44443DB89DEB /* IRSignals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRSignals.h; path = IRKit/IRKit/IRSignals.h; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 		F64FB0C040F8EBD83C45C347 /* IRGuidePowerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRGuidePowerViewController.h; path = IRKit/IRKit/IRGuidePowerViewController.h; sourceTree = "<group>"; };
 		F6D0175733D1C6F4AD3C2160 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
 		FC2E9F9677BF4CB3627A0C67 /* Pods-MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MMDrawerController-dummy.m"; sourceTree = "<group>"; };
-		FDA488398956063D7E2EB849 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		FEE9A784A36F086630D77C88 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -277,7 +274,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				806855C17EB44FA16BD466A1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,15 +281,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B6BEBDFE682C92F089887E4 /* AVFoundation.framework in Frameworks */,
-				AC8DA30AAD5952C88615FFD8 /* AudioToolbox.framework in Frameworks */,
-				46B7FBD706715C5E4C9670C5 /* CoreGraphics.framework in Frameworks */,
-				5DC23C805240F8008ED06D73 /* CoreTelephony.framework in Frameworks */,
-				A793A021199E635CE5B9178D /* Foundation.framework in Frameworks */,
-				87E129F971FC8C3997DE34B7 /* MediaPlayer.framework in Frameworks */,
-				5732EB4101A5D7924B3F3899 /* QuartzCore.framework in Frameworks */,
-				09030A0D123D9A25948AC06C /* SystemConfiguration.framework in Frameworks */,
-				162A54A58D69CE88A114B358 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +288,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D869EC2C2EDD5096BF49CB /* Foundation.framework in Frameworks */,
+				CE52AEEB1AD7AE2A002DE680 /* QuartzCore.framework in Frameworks */,
+				CE52AEF31AD7AE83002DE680 /* UIKit.framework in Frameworks */,
+				CE52AEF11AD7AE6E002DE680 /* SystemConfiguration.framework in Frameworks */,
+				CE52AEF51AD7AE94002DE680 /* MediaPlayer.framework in Frameworks */,
+				CE52AEE91AD7AE08002DE680 /* CoreGraphics.framework in Frameworks */,
+				CE52AEE51AD7ADCC002DE680 /* AVFoundation.framework in Frameworks */,
+				CE52AEED1AD7AE30002DE680 /* CoreTelephony.framework in Frameworks */,
+				CE52AEEF1AD7AE4A002DE680 /* Foundation.framework in Frameworks */,
+				CE52AEE71AD7ADF7002DE680 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,8 +304,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AA43EE4BC175BC42D6C852E /* Foundation.framework in Frameworks */,
-				315C127235499C5F20137B44 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,15 +313,15 @@
 		00B3DBF5D9D885662BB70EA5 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				39B9C90519380C7B9A73BAE0 /* AVFoundation.framework */,
-				643D70F5146CAD8D7E1F17F6 /* AudioToolbox.framework */,
-				12DFBF6C8011FEE7D87D4D66 /* CoreGraphics.framework */,
-				FDA488398956063D7E2EB849 /* CoreTelephony.framework */,
-				674049FAA40792795CF70A7C /* Foundation.framework */,
-				8C2E5FDAD54D8964E2BF6047 /* MediaPlayer.framework */,
-				7EEE4B5B66E6328EC45E6D93 /* QuartzCore.framework */,
-				C973DE83967A2ABA809E03AD /* SystemConfiguration.framework */,
-				D06C3805C2697E865DC6A522 /* UIKit.framework */,
+				CE52AEF41AD7AE94002DE680 /* MediaPlayer.framework */,
+				CE52AEF21AD7AE83002DE680 /* UIKit.framework */,
+				CE52AEF01AD7AE6E002DE680 /* SystemConfiguration.framework */,
+				CE52AEEE1AD7AE4A002DE680 /* Foundation.framework */,
+				CE52AEE41AD7ADCC002DE680 /* AVFoundation.framework */,
+				CE52AEEC1AD7AE30002DE680 /* CoreTelephony.framework */,
+				CE52AEEA1AD7AE2A002DE680 /* QuartzCore.framework */,
+				CE52AEE81AD7AE08002DE680 /* CoreGraphics.framework */,
+				CE52AEE61AD7ADF7002DE680 /* AudioToolbox.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -359,6 +352,7 @@
 		1DCFABB6D05E040D8195A982 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE52AEF91AD7AF3A002DE680 /* libPods.a */,
 				00B3DBF5D9D885662BB70EA5 /* iOS */,
 			);
 			name = Frameworks;
@@ -970,6 +964,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/IRAutomation-fjeayazjhlbctyedfuzpquvvtwrp/Build/Products/Debug-iphoneos",
+				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
@@ -1088,6 +1086,10 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/IRAutomation-fjeayazjhlbctyedfuzpquvvtwrp/Build/Products/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";

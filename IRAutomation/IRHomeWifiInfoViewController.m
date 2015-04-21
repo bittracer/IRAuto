@@ -16,9 +16,12 @@
 #import "IRAdminViewConroller.h"
 
 static NSString *ssidCache = nil;
+CLLocation *currentLocation;
+
 
 @interface IRHomeWifiInfoViewController ()
 
+@property (nonatomic,strong) CLLocationManager *locationManager;
 
 @end
 
@@ -26,8 +29,11 @@ static NSString *ssidCache = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self fetchCurrentLocation];
+    defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
+    
     self.navigationItem.hidesBackButton = YES;
-    // Do any additional setup after loading the view.
     [self registerForKeyboardNotifications];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -36,7 +42,24 @@ static NSString *ssidCache = nil;
     
     [self.view addGestureRecognizer:tap];
     [self initpickerView];
+    }
+
+- (void)fetchCurrentLocation
+{
+    
+    _locationManager = [CLLocationManager new];
+    _locationManager.delegate=self;
+        if ([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+    
+            [_locationManager requestAlwaysAuthorization];
+            [_locationManager requestWhenInUseAuthorization];
+
+    }
+    _locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+    _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+    [_locationManager startUpdatingLocation];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -229,6 +252,32 @@ static NSString *ssidCache = nil;
     _security.inputView = myPickerView;
     _security.inputAccessoryView = toolBar;
     
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+    [self fetchCurrentLocation];
+}
+
+// Location Manager Delegate Methods
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    currentLocation=[locations lastObject];
+    NSNumber *lat = [NSNumber numberWithDouble:currentLocation.coordinate.latitude];
+    NSNumber *lon = [NSNumber numberWithDouble:currentLocation.coordinate.longitude];
+    NSDictionary *userLocation=@{@"lat":lat,@"long":lon};
+
+    
+    [defaults setObject:userLocation forKey:@"location"];
+    [defaults synchronize];
+    NSLog(@"loc %@",currentLocation);
+    [_locationManager stopUpdatingLocation];
 }
 
 

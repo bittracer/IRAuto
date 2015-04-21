@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ACRemote.h"
+#import "ACRemoteModelService.h"
 #import <IRKit/IRPeripheral.h>
 #import <IRKit+Internal.h>
 #import "RS_SliderView.h"
@@ -31,13 +33,13 @@
 @property (nonatomic , weak) PFObject *otherObject;
 @property (nonatomic,retain) NSString *nameOfAc;
 @property (nonatomic) PFObject *dataPart;
+@property (nonatomic) NSMutableArray *trial;
 
 //IRkit
 - (NSString *)stringOfURLEncodedDictionary:(NSDictionary *)params ;
 @property (nonatomic) IRPeripheral *Peripheral;
 
--(void) initialize;
--(void) retriveSignals;
+-(void) initializeForSlider;
 -(void) checkIfAlreadyCollaborated;
 
 - (void)FetchData:(NSInteger)tag;
@@ -47,12 +49,14 @@
 
 
 @end
+
 NSUserDefaults *defaults;
+ACRemote *ac;
 NSArray *signalNames;
-<<<<<<< HEAD
+NSArray *db;
+NSMutableArray *remoteArray;
+NSMutableArray *data;
 NSArray *imagesname;
-NSArray *database;
 RS_SliderView *horSlider;
-=======
-RS_SliderView *horSlider;
->>>>>>> origin/master
+NSString *lastValue;
+

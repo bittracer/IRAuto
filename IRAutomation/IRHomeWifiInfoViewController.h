@@ -11,10 +11,14 @@
 #import <IRWifiEditViewController.h>
 #import <IRGuideWifiViewController.h>
 #import <IRSearcher.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CLLocationManagerDelegate.h>
+#import <CoreLocation/CLLocationManager.h>
 
 @interface IRHomeWifiInfoViewController : UIViewController <
             IRGuideWifiViewControllerDelegate,
-            UIAlertViewDelegate,UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+            UIAlertViewDelegate,UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate,CLLocationManagerDelegate>
 {
     UIPickerView *myPickerView;
     NSArray *pickerArray;
@@ -28,5 +32,8 @@
 
 - (IBAction)submitBtnPressed;
 @property (nonatomic) IRKeys *keys;
+
+- (void)fetchCurrentLocation;
 @end
 
+NSUserDefaults *defaults;
